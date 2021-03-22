@@ -1,7 +1,7 @@
 { "name": "wix-events-ng-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -29,9 +29,230 @@
   "operations": [],
   "callbacks": [],
   "messages":
-    [ { "name": "CalendarLinks_2113971438",
+    [ { "name": "AddressLocation_4060359820",
         "locations":
-          [ { "lineno": 19,
+          [ { "lineno": 75,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "coordinates of the physical address",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "latitude",
+              "type": "number",
+              "optional": true },
+            { "name": "longitude",
+              "type": "number",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "AddressLocation_4245737262",
+        "locations":
+          [ { "lineno": 67,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "coordinates of the physical address",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "latitude",
+              "type": "number" },
+            { "name": "longitude",
+              "type": "number" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Address_36504914659",
+        "locations":
+          [ { "lineno": 22,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Full [address](https://www.wix.com/velo/reference/$w/addressinput/value) derived from formatted single line `address`.",
+            "description":
+              [ "When `full_address` is used to create or update the event, deprecated `address` and `coordinates` are ignored.",
+                "",
+                "Migration notes:",
+                "- `full_address.formatted_address` is equivalent to `address`.",
+                "- `full_address.geocode` is equivalent to `coordinates`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "addressLine1",
+              "type": "string",
+              "doc": "Main address line (usually street and number) as free text",
+              "optional": true },
+            { "name": "streetAddress",
+              "type": "wix-events-ng-backend.StreetAddress_4873634501",
+              "doc": "a break down of the street to number and street name",
+              "optional": true },
+            { "name": "formatted",
+              "type": "string",
+              "doc": "A string containing the human-readable address of this location",
+              "optional": true },
+            { "name": "addressLine2",
+              "type": "string",
+              "doc": "Free text providing more detailed address info. Usually contains Apt, Suite, Floor",
+              "optional": true },
+            { "name": "location",
+              "type": "wix-events-ng-backend.AddressLocation_4060359820",
+              "doc": "coordinates of the physical address",
+              "optional": true },
+            { "name": "city",
+              "type": "string",
+              "doc": "city name",
+              "optional": true },
+            { "name": "subdivision",
+              "type": "string",
+              "doc": "subdivision (usually state or region) code according to ISO 3166-2",
+              "optional": true },
+            { "name": "country",
+              "type": "string",
+              "doc": "country code",
+              "optional": true },
+            { "name": "postalCode",
+              "type": "string",
+              "doc": "zip/postal code",
+              "optional": true } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "street",
+                  "members":
+                    [ "addressLine1",
+                      "streetAddress" ] } ] },
+        "labels":
+          [ "new" ] },
+      { "name": "Address_37895245474",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Full [address](https://www.wix.com/velo/reference/$w/addressinput/value) derived from formatted single line `address`.",
+            "description":
+              [ "When `full_address` is used to create or update the event, deprecated `address` and `coordinates` are ignored.",
+                "",
+                "Migration notes:",
+                "- `full_address.formatted_address` is equivalent to `address`.",
+                "- `full_address.geocode` is equivalent to `coordinates`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "addressLine1",
+              "type": "string",
+              "doc": "Main address line (usually street and number) as free text",
+              "optional": true },
+            { "name": "streetAddress",
+              "type": "wix-events-ng-backend.StreetAddress_5151700664",
+              "doc": "a break down of the street to number and street name",
+              "optional": true },
+            { "name": "formatted",
+              "type": "string",
+              "doc": "A string containing the human-readable address of this location" },
+            { "name": "addressLine2",
+              "type": "string",
+              "doc": "Free text providing more detailed address info. Usually contains Apt, Suite, Floor" },
+            { "name": "location",
+              "type": "wix-events-ng-backend.AddressLocation_4245737262",
+              "doc": "coordinates of the physical address" },
+            { "name": "city",
+              "type": "string",
+              "doc": "city name" },
+            { "name": "subdivision",
+              "type": "string",
+              "doc": "subdivision (usually state or region) code according to ISO 3166-2" },
+            { "name": "country",
+              "type": "string",
+              "doc": "country code" },
+            { "name": "postalCode",
+              "type": "string",
+              "doc": "zip/postal code" } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "street",
+                  "members":
+                    [ "addressLine1",
+                      "streetAddress" ] } ] },
+        "labels":
+          [ "new" ] },
+      { "name": "Address_68623519319",
+        "locations":
+          [ { "lineno": 43,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Full address derived from formatted single line `address`.",
+            "description":
+              [ "When `full_address` is used to create or update the event, deprecated `address` and `coordinates` are ignored.",
+                "",
+                "Migration notes:",
+                "- `full_address.formatted_address` is equivalent to `address`.",
+                "- `full_address.geocode` is equivalent to `coordinates`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "country",
+              "type": "string",
+              "doc": "country code" },
+            { "name": "subdivision",
+              "type": "string",
+              "doc": "subdivision (usually state or region) code according to ISO 3166-2" },
+            { "name": "city",
+              "type": "string",
+              "doc": "city name" },
+            { "name": "postalCode",
+              "type": "string",
+              "doc": "zip/postal code" },
+            { "name": "streetAddress",
+              "type": "wix-events-ng-backend.StreetAddress_5151700664",
+              "doc": "a break down of the street to number and street name",
+              "optional": true },
+            { "name": "addressLine",
+              "type": "string",
+              "doc": "Main address line (usually street and number) as free text",
+              "optional": true },
+            { "name": "addressLine2",
+              "type": "string",
+              "doc": "Free text providing more detailed address info. Usually contains Apt, Suite, Floor" },
+            { "name": "formattedAddress",
+              "type": "string",
+              "doc": "A string containing the human-readable address of this location" },
+            { "name": "hint",
+              "type": "string",
+              "doc": "Free text for human-to-human textual orientation aid purposes" },
+            { "name": "geocode",
+              "type": "wix-events-ng-backend.AddressLocation_4245737262",
+              "doc": "coordinates of the physical address" },
+            { "name": "countryFullname",
+              "type": "string",
+              "doc": "country full-name" },
+            { "name": "subdivisions",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-events-ng-backend.Subdivision_21897131614" ] },
+              "doc": "multi-level subdivisions from top to bottom" } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "street",
+                  "members":
+                    [ "addressLine",
+                      "streetAddress" ] } ] },
+        "labels":
+          [ "new" ] },
+      { "name": "CalendarLinks_2113971438",
+        "locations":
+          [ { "lineno": 228,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "\"Add to calendar\" URLs.",
@@ -51,7 +272,7 @@
         "labels": [] },
       { "name": "CheckoutFormMessages_6624606321",
         "locations":
-          [ { "lineno": 314,
+          [ { "lineno": 748,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Checkout form messages.",
@@ -69,6 +290,27 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "CheckoutFormMessages_6864249470",
+        "locations":
+          [ { "lineno": 740,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Checkout form messages.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Main form title for response." },
+            { "name": "checkoutLabel",
+              "type": "string",
+              "doc": "Submit form call-to-action label text." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Dashboard_2771714876",
         "locations":
           [ { "lineno": 27,
@@ -88,10 +330,80 @@
               "doc": "Summary of revenue and tickets sold.\n (Archived orders are not included)." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Dashboard_4756039482",
+        "locations":
+          [ { "lineno": 245,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event dashboard summary of RSVP / ticket sales.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvpSummary",
+              "type": "wix-events-ng-backend.Dashboard_RsvpSummary_4939655439",
+              "doc": "Guest RSVP summary." },
+            { "name": "ticketingSummary",
+              "type": "wix-events-ng-backend.Dashboard_TicketingSummary_7847058867",
+              "doc": "Summary of revenue and tickets sold.\n (Archived orders are not included)." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Dashboard_8525121059",
+        "locations":
+          [ { "lineno": 236,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event dashboard summary of RSVP / ticket sales.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvp",
+              "type": "wix-events-ng-backend.Dashboard_RsvpSummary_2031094822",
+              "doc": "Guest RSVP summary." },
+            { "name": "ticketing",
+              "type": "wix-events-ng-backend.Dashboard_TicketingSummary_8113015635",
+              "doc": "Summary of revenue and tickets sold.\n (Archived orders are not included)." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Dashboard_RsvpSummary_2031094822",
+        "locations":
+          [ { "lineno": 254,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Guest RSVP summary.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "totalRsvps",
+              "type": "number",
+              "doc": "Total number of RSVPs." },
+            { "name": "yesCount",
+              "type": "number",
+              "doc": "Number of RSVPs with status `YES`." },
+            { "name": "noCount",
+              "type": "number",
+              "doc": "Number of RSVPs with status `NO`." },
+            { "name": "waitlistCount",
+              "type": "number",
+              "doc": "Number of RSVPs in waitlist." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Dashboard_RsvpSummary_4939655439",
         "locations":
-          [ { "lineno": 36,
+          [ { "lineno": 264,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Guest RSVP summary.",
@@ -145,7 +457,72 @@
               "doc": "Price of lowest priced ticket." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Dashboard_TicketingSummary_7847058867",
+        "locations":
+          [ { "lineno": 286,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Summary of revenue and tickets sold.",
+            "description":
+              [ "(Archived orders are not included)." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "tickets",
+              "type": "number",
+              "doc": "Number of tickets sold." },
+            { "name": "revenue",
+              "type": "wix-events-ng-backend.Money_5252798586",
+              "doc": "Price of lowest priced ticket." },
+            { "name": "currencyLocked",
+              "type": "boolean",
+              "doc": "Whether currency is locked and cannot be changed (generally occurs after the first order in the specified currency has been created)." },
+            { "name": "orders",
+              "type": "number",
+              "doc": "Number of orders placed." },
+            { "name": "totalSales",
+              "type": "wix-events-ng-backend.Money_5252798586",
+              "doc": "Price of lowest priced ticket." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Dashboard_TicketingSummary_8113015635",
+        "locations":
+          [ { "lineno": 274,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Summary of revenue and tickets sold.",
+            "description":
+              [ "(Archived orders are not included)." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "totalTickets",
+              "type": "number",
+              "doc": "Number of tickets sold." },
+            { "name": "revenue",
+              "type": "wix-events-ng-backend.Money_2432563994",
+              "doc": "Price of lowest priced ticket." },
+            { "name": "currencyLocked",
+              "type": "boolean",
+              "doc": "Whether currency is locked and cannot be changed (generally occurs after the first order in the specified currency has been created)." },
+            { "name": "totalOrders",
+              "type": "number",
+              "doc": "Number of orders placed." },
+            { "name": "totalSales",
+              "type": "wix-events-ng-backend.Money_2432563994",
+              "doc": "Price of lowest priced ticket." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Event_264400458673",
         "locations":
           [ { "lineno": 58,
@@ -236,10 +613,142 @@
               "doc": "Assigned contacts label key." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Event_347469995595",
+        "locations":
+          [ { "lineno": 305,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Event ID." },
+            { "name": "location",
+              "type": "wix-events-ng-backend.Location_85938359409",
+              "doc": "Event location." },
+            { "name": "scheduling",
+              "type": "wix-events-ng-backend.Scheduling_17566201923",
+              "doc": "Event scheduling." },
+            { "name": "title",
+              "type": "string",
+              "doc": "Event title." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Event description." },
+            { "name": "about",
+              "type": "string",
+              "doc": "Rich-text content displayed in Wix UI - \"About Event\" section (HTML)." },
+            { "name": "mainImage",
+              "type": "wix-events-ng-backend.Image_5504778123",
+              "doc": "Main event image." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "Event slug URL (generated from event title)." },
+            { "name": "language",
+              "type": "string",
+              "doc": "ISO 639-1 language code of the event (used in content translations)." },
+            { "name": "created",
+              "type": "Date",
+              "doc": "Event creation timestamp." },
+            { "name": "modified",
+              "type": "Date",
+              "doc": "Event modified timestamp." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Event status.\nOne of:\n + `\"SCHEDULED\"`\n + `\"STARTED\"`\n + `\"ENDED\"`\n + `\"CANCELED\"`" },
+            { "name": "registration",
+              "type": "wix-events-ng-backend.Registration_53427365065",
+              "doc": "RSVP or ticketing registration details." },
+            { "name": "calendarLinks",
+              "type": "wix-events-ng-backend.CalendarLinks_2113971438",
+              "doc": "\"Add to calendar\" URLs." },
+            { "name": "eventPageUrl",
+              "type": "wix-events-ng-backend.SiteUrl_5300502582",
+              "doc": "Event page URL components." },
+            { "name": "form",
+              "type": "wix-events-ng-backend.Form_100569276395",
+              "doc": "Event registration form." },
+            { "name": "dashboard",
+              "type": "wix-events-ng-backend.Dashboard_4756039482",
+              "doc": "Event dashboard summary of RSVP / ticket sales." },
+            { "name": "instanceId",
+              "type": "string",
+              "doc": "Instance ID of the site where event is hosted." },
+            { "name": "guestListConfig",
+              "type": "wix-events-ng-backend.GuestListConfig_3929178950",
+              "doc": "Guest list configuration." },
+            { "name": "userId",
+              "type": "string",
+              "doc": "Event creator user ID." },
+            { "name": "feed",
+              "type": "wix-events-ng-backend.Feed_2250420887",
+              "doc": "Event discussion feed. For internal use." },
+            { "name": "onlineConferencing",
+              "type": "wix-events-ng-backend.OnlineConferencing_27208283853",
+              "doc": "Online conferencing details." },
+            { "name": "seoSettings",
+              "type": "wix-events-ng-backend.SeoSettings_7510628004",
+              "doc": "SEO settings." },
+            { "name": "assignedContactsLabel",
+              "type": "string",
+              "doc": "Assigned contacts label key." },
+            { "name": "categories",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Custom event categories." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Event_3635141956",
+        "locations":
+          [ { "lineno": 298,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Canceled event.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "settings",
+              "type": "wix-events-ng-backend.GuestListConfig_2551361168",
+              "doc": "Guest list configuration." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ExternalEvent_13029336804",
+        "locations":
+          [ { "lineno": 340,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "External registration details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "externalRegistrationUrl",
+              "type": "string",
+              "doc": "External event registration URL." },
+            { "name": "restrictedTo",
+              "type": "string",
+              "doc": "Types of users allowed to register.\nOne of:\n + `\"VISITOR\"`\n + `\"MEMBER\"`\n + `\"VISITOR_OR_MEMBER\"`" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ExternalEvent_3219994176",
         "locations":
-          [ { "lineno": 93,
+          [ { "lineno": 352,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "External registration details.",
@@ -254,9 +763,27 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "FacetCounts_708099164",
+        "locations":
+          [ { "lineno": 359,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "`key` of type string, `value` of type object",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "counts",
+              "type": "Object",
+              "doc": "Set of key-value pairs. Facet counts aggregated per value" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Feed_2250420887",
         "locations":
-          [ { "lineno": 100,
+          [ { "lineno": 366,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event discussion feed. For internal use.",
@@ -273,7 +800,7 @@
         "labels": [] },
       { "name": "FormMessages_43340367168",
         "locations":
-          [ { "lineno": 330,
+          [ { "lineno": 773,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Set of configured form messages.",
@@ -297,6 +824,54 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "FormMessages_51883945026",
+        "locations":
+          [ { "lineno": 764,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Set of configured form messages.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvp",
+              "type": "wix-events-ng-backend.RsvpFormMessages_33952434787",
+              "doc": "RSVP form messages." },
+            { "name": "checkout",
+              "type": "wix-events-ng-backend.CheckoutFormMessages_6864249470",
+              "doc": "Checkout form messages." },
+            { "name": "registrationClosed",
+              "type": "wix-events-ng-backend.RegistrationClosedMessages_10342547173",
+              "doc": "Messages shown when event registration is closed." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Form_100569276395",
+        "locations":
+          [ { "lineno": 756,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event registration form.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "controls",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-events-ng-backend.InputControl_57045575166" ] },
+              "doc": "Nested fields as an ordered list." },
+            { "name": "messages",
+              "type": "wix-events-ng-backend.FormMessages_43340367168",
+              "doc": "Set of configured form messages." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Form_94315172301",
         "locations":
           [ { "lineno": 322,
@@ -319,10 +894,29 @@
               "doc": "Set of configured form messages." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "GuestListConfig_2551361168",
+        "locations":
+          [ { "lineno": 373,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Guest list configuration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "public",
+              "type": "boolean",
+              "doc": "Whether members can see other members attending the event (defaults to true)." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "GuestListConfig_3929178950",
         "locations":
-          [ { "lineno": 107,
+          [ { "lineno": 380,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Guest list configuration.",
@@ -359,7 +953,70 @@
               "doc": "Original image height." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Image_5504778123",
+        "locations":
+          [ { "lineno": 387,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Main event image.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Wix Media image ID." },
+            { "name": "width",
+              "type": "number",
+              "doc": "Original image width." },
+            { "name": "height",
+              "type": "number",
+              "doc": "Original image height." },
+            { "name": "altText",
+              "type": "string",
+              "doc": "Image alt text. Optional." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "InputControl_50110866111",
+        "locations":
+          [ { "lineno": 829,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "A block of nested fields.",
+            "description":
+              [ "Used to aggregate similar inputs like First Name and Last Name." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "type",
+              "type": "string",
+              "doc": "Field control type.\nOne of:\n + `\"INPUT\"`\n + `\"TEXTAREA\"`\n + `\"DROPDOWN\"`\n + `\"RADIO\"`\n + `\"CHECKBOX\"`\n + `\"NAME\"`\n + `\"GUEST_CONTROL\"`\n + `\"ADDRESS_SHORT\"`\n + `\"ADDRESS_FULL\"`\n + `\"DATE\"`" },
+            { "name": "system",
+              "type": "boolean",
+              "doc": "Whether control is mandatory (such as name & email). When true, only label can be changed." },
+            { "name": "inputs",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-events-ng-backend.Input_30637413556" ] },
+              "doc": "Child inputs." },
+            { "name": "orderIndex",
+              "type": "number",
+              "doc": "Field controls are sorted by this value in ascending order." },
+            { "name": "_id",
+              "type": "string",
+              "doc": "Unique control ID." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "InputControl_50791471072",
         "locations":
           [ { "lineno": 362,
@@ -393,7 +1050,85 @@
               "doc": "Unique control ID." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "InputControl_57045575166",
+        "locations":
+          [ { "lineno": 852,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "A block of nested fields.",
+            "description":
+              [ "Used to aggregate similar inputs like First Name and Last Name." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "type",
+              "type": "string",
+              "doc": "Field control type.\nOne of:\n + `\"INPUT\"`\n + `\"TEXTAREA\"`\n + `\"DROPDOWN\"`\n + `\"RADIO\"`\n + `\"CHECKBOX\"`\n + `\"NAME\"`\n + `\"GUEST_CONTROL\"`\n + `\"ADDRESS_SHORT\"`\n + `\"ADDRESS_FULL\"`\n + `\"DATE\"`" },
+            { "name": "system",
+              "type": "boolean",
+              "doc": "Whether control is mandatory (such as name & email). When true, only label can be changed." },
+            { "name": "inputs",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-events-ng-backend.Input_37572122611" ] },
+              "doc": "Child inputs." },
+            { "name": "orderIndex",
+              "type": "number",
+              "doc": "Field controls are sorted by this value in ascending order." },
+            { "name": "_id",
+              "type": "string",
+              "doc": "Unique control ID." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Input_30637413556",
+        "locations":
+          [ { "lineno": 783,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "An input of one or multiple text values",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Field name." },
+            { "name": "label",
+              "type": "string",
+              "doc": "Main field label" },
+            { "name": "additionalLabels",
+              "type": "Object",
+              "doc": "Set of key-value pairs. Additional labels for multi-valued fields such as address." },
+            { "name": "options",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Predefined choice options for fields, such as dropdown." },
+            { "name": "required",
+              "type": "boolean",
+              "doc": "Whether field is mandatory." },
+            { "name": "maxLength",
+              "type": "number",
+              "doc": "Maximum number of accepted characters (relevant for text fields)." },
+            { "name": "type",
+              "type": "string",
+              "doc": "Type which determines field format.\n Used to validate submitted response.\nOne of:\n + `\"TEXT\"`\n + `\"NUMBER\"`\n + `\"TEXT_ARRAY\"`\n + `\"DATE_TIME\"`\n + `\"ADDRESS\"`" },
+            { "name": "maxSize",
+              "type": "number",
+              "doc": "A maximum accepted values for array input.\n Only applicable for inputs of valueType: TEXT_ARRAY." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Input_31318018517",
         "locations":
           [ { "lineno": 340,
@@ -434,7 +1169,53 @@
               "doc": "A maximum accepted values for array input.\n Only applicable for inputs of valueType: TEXT_ARRAY." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Input_37572122611",
+        "locations":
+          [ { "lineno": 805,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "An input of one or multiple text values",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Field name." },
+            { "name": "label",
+              "type": "string",
+              "doc": "Main field label" },
+            { "name": "additionalLabels",
+              "type": "Object",
+              "doc": "Set of key-value pairs. Additional labels for multi-valued fields such as address." },
+            { "name": "options",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Predefined choice options for fields, such as dropdown." },
+            { "name": "mandatory",
+              "type": "boolean",
+              "doc": "Whether field is mandatory." },
+            { "name": "maxLength",
+              "type": "number",
+              "doc": "Maximum number of accepted characters (relevant for text fields)." },
+            { "name": "type",
+              "type": "string",
+              "doc": "Type which determines field format.\n Used to validate submitted response.\nOne of:\n + `\"TEXT\"`\n + `\"NUMBER\"`\n + `\"TEXT_ARRAY\"`\n + `\"DATE_TIME\"`\n + `\"ADDRESS\"`" },
+            { "name": "maxSize",
+              "type": "number",
+              "doc": "A maximum accepted values for array input.\n Only applicable for inputs of valueType: TEXT_ARRAY." },
+            { "name": "defaultOptionSelection",
+              "type": "wix-events-ng-backend.OptionSelection_4960443727",
+              "doc": "Preselected option.\n Currently only applicable for dropdown." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Location_15550153297",
         "locations":
           [ { "lineno": 123,
@@ -460,10 +1241,65 @@
               "doc": "Location type.\nOne of:\n + `\"VENUE\"`\n + `\"ONLINE\"`" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Location_47009404077",
+        "locations":
+          [ { "lineno": 397,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event location.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Location name." },
+            { "name": "fullAddress",
+              "type": "wix-events-ng-backend.Address_37895245474",
+              "doc": "Full [address](https://www.wix.com/velo/reference/$w/addressinput/value) derived from formatted single line `address`.\n When `full_address` is used to create or update the event, deprecated `address` and `coordinates` are ignored.\n\n Migration notes:\n - `full_address.formatted_address` is equivalent to `address`.\n - `full_address.geocode` is equivalent to `coordinates`." },
+            { "name": "type",
+              "type": "string",
+              "doc": "Location type.\nOne of:\n + `\"VENUE\"`\n + `\"ONLINE\"`" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Location_85938359409",
+        "locations":
+          [ { "lineno": 414,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event location.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Location name." },
+            { "name": "coordinates",
+              "type": "wix-events-ng-backend.MapCoordinates_4535947220",
+              "doc": "Location map coordinates." },
+            { "name": "address",
+              "type": "string",
+              "doc": "Single line address representation." },
+            { "name": "type",
+              "type": "string",
+              "doc": "Location type.\nOne of:\n + `\"VENUE\"`\n + `\"ONLINE\"`" },
+            { "name": "fullAddress",
+              "type": "wix-events-ng-backend.Address_68623519319",
+              "doc": "Full address derived from formatted single line `address`.\n When `full_address` is used to create or update the event, deprecated `address` and `coordinates` are ignored.\n\n Migration notes:\n - `full_address.formatted_address` is equivalent to `address`.\n - `full_address.geocode` is equivalent to `coordinates`." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "MapCoordinates_4535947220",
         "locations":
-          [ { "lineno": 136,
+          [ { "lineno": 433,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Location map coordinates.",
@@ -481,6 +1317,27 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "Money_2432563994",
+        "locations":
+          [ { "lineno": 441,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Price of lowest priced ticket.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "value",
+              "type": "string",
+              "doc": "decimal amount representation." },
+            { "name": "currency",
+              "type": "string",
+              "doc": "ISO 4217 format of the currency i.e. `USD`." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Money_3268473980",
         "locations":
           [ { "lineno": 144,
@@ -500,10 +1357,35 @@
               "doc": "ISO 4217 format of the currency i.e. `USD`." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Money_5252798586",
+        "locations":
+          [ { "lineno": 449,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Price of lowest priced ticket.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "amount",
+              "type": "string",
+              "doc": "decimal amount representation." },
+            { "name": "currency",
+              "type": "string",
+              "doc": "ISO 4217 format of the currency i.e. `USD`." },
+            { "name": "value",
+              "type": "string",
+              "doc": "Monetary amount. Decimal string with a period as a decimal separator (e.g., 3.99). Optionally, a single (-), to indicate that the amount is negative." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Negative_ResponseConfirmation_4586887728",
         "locations":
-          [ { "lineno": 405,
+          [ { "lineno": 926,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Confirmation messages shown after registration.",
@@ -523,7 +1405,7 @@
         "labels": [] },
       { "name": "OnlineConferencingConfig_7676888895",
         "locations":
-          [ { "lineno": 161,
+          [ { "lineno": 475,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -545,7 +1427,7 @@
         "labels": [] },
       { "name": "OnlineConferencingSession_12526595925",
         "locations":
-          [ { "lineno": 173,
+          [ { "lineno": 487,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -565,9 +1447,28 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "OnlineConferencing_25130554382",
+        "locations":
+          [ { "lineno": 458,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Online conferencing details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "settings",
+              "type": "wix-events-ng-backend.OnlineConferencingConfig_7676888895" },
+            { "name": "session",
+              "type": "wix-events-ng-backend.OnlineConferencingSession_12526595925" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "OnlineConferencing_27208283853",
         "locations":
-          [ { "lineno": 152,
+          [ { "lineno": 466,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Online conferencing details.",
@@ -586,9 +1487,38 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "OptionSelection_4960443727",
+        "locations":
+          [ { "lineno": 875,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Preselected option.",
+            "description":
+              [ "Currently only applicable for dropdown." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "optionIndex",
+              "type": "number",
+              "doc": "0-based index from predefined `input.options` which is selected initially.",
+              "optional": true },
+            { "name": "placeholderText",
+              "type": "string",
+              "doc": "Placeholder hint describing expected choices (such as \"Please select\").\n Considered an empty choice.",
+              "optional": true } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "selectedOption",
+                  "members":
+                    [ "optionIndex",
+                      "placeholderText" ] } ] },
+        "labels":
+          [ "new" ] },
       { "name": "Positive_ResponseConfirmation_8615945964",
         "locations":
-          [ { "lineno": 413,
+          [ { "lineno": 934,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Confirmation messages shown after registration.",
@@ -614,7 +1544,7 @@
         "labels": [] },
       { "name": "RegistrationClosedMessages_10064481409",
         "locations":
-          [ { "lineno": 385,
+          [ { "lineno": 894,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown when event registration is closed.",
@@ -632,6 +1562,57 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "RegistrationClosedMessages_10342547173",
+        "locations":
+          [ { "lineno": 886,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Messages shown when event registration is closed.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "message",
+              "type": "string",
+              "doc": "Message shown when event registration is closed." },
+            { "name": "exploreEventsLabel",
+              "type": "string",
+              "doc": "\"Explore other events\" call-to-action label text." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Registration_51185909116",
+        "locations":
+          [ { "lineno": 495,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "RSVP or ticketing registration details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "settings",
+              "type": "wix-events-ng-backend.ExternalEvent_13029336804",
+              "doc": "External registration details." },
+            { "name": "type",
+              "type": "string",
+              "doc": "Event type.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" },
+            { "name": "status",
+              "type": "string",
+              "doc": "Event registration status.\nOne of:\n + `\"NA_REGISTRATION_STATUS\"`\n + `\"CLOSED\"`\n + `\"CLOSED_MANUALLY\"`\n + `\"OPEN_RSVP\"`\n + `\"OPEN_RSVP_WAITLIST\"`\n + `\"OPEN_TICKETS\"`\n + `\"OPEN_EXTERNAL\"`" },
+            { "name": "rsvpCollection",
+              "type": "wix-events-ng-backend.RsvpCollection_12857091925",
+              "doc": "RSVP collection details." },
+            { "name": "ticketing",
+              "type": "wix-events-ng-backend.Ticketing_15045486817",
+              "doc": "Ticketing details." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Registration_51443040459",
         "locations":
           [ { "lineno": 181,
@@ -666,10 +1647,74 @@
               "doc": "Initial event type which was set when creating an event.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Registration_53427365065",
+        "locations":
+          [ { "lineno": 520,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "RSVP or ticketing registration details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "type",
+              "type": "string",
+              "doc": "Event type.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" },
+            { "name": "status",
+              "type": "string",
+              "doc": "Event registration status.\nOne of:\n + `\"NA_REGISTRATION_STATUS\"`\n + `\"CLOSED\"`\n + `\"CLOSED_MANUALLY\"`\n + `\"OPEN_RSVP\"`\n + `\"OPEN_RSVP_WAITLIST\"`\n + `\"OPEN_TICKETS\"`\n + `\"OPEN_EXTERNAL\"`" },
+            { "name": "rsvpCollection",
+              "type": "wix-events-ng-backend.RsvpCollection_10333008726",
+              "doc": "RSVP collection details." },
+            { "name": "ticketing",
+              "type": "wix-events-ng-backend.Ticketing_15758504330",
+              "doc": "Ticketing details." },
+            { "name": "external",
+              "type": "wix-events-ng-backend.ExternalEvent_3219994176",
+              "doc": "External registration details." },
+            { "name": "restrictedTo",
+              "type": "string",
+              "doc": "Types of users allowed to register.\nOne of:\n + `\"VISITOR\"`\n + `\"MEMBER\"`\n + `\"VISITOR_OR_MEMBER\"`" },
+            { "name": "initialType",
+              "type": "string",
+              "doc": "Initial event type which was set when creating an event.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "RsvpCollectionConfig_11559945607",
+        "locations":
+          [ { "lineno": 584,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "RSVP collection configuration. Can be used to set limits.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvpStatusOptions",
+              "type": "string",
+              "doc": "Defines the supported RSVP statuses.\nOne of:\n + `\"YES_ONLY\"`\n + `\"YES_AND_NO\"`",
+              "optional": true },
+            { "name": "limit",
+              "type": "number",
+              "doc": "Total guest limit available to register to the event.\n Additional guests per RSVP are counted towards total guests.",
+              "optional": true },
+            { "name": "waitlist",
+              "type": "boolean",
+              "doc": "Whether a waitlist is opened when total guest limit is reached, allowing guests to create RSVP with WAITING RSVP status.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "RsvpCollectionConfig_11838011770",
         "locations":
-          [ { "lineno": 225,
+          [ { "lineno": 571,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP collection configuration.",
@@ -692,7 +1737,7 @@
         "labels": [] },
       { "name": "RsvpCollection_10333008726",
         "locations":
-          [ { "lineno": 218,
+          [ { "lineno": 564,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP collection details.",
@@ -707,9 +1752,27 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "RsvpCollection_12857091925",
+        "locations":
+          [ { "lineno": 557,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "RSVP collection details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "settings",
+              "type": "wix-events-ng-backend.RsvpCollectionConfig_11838011770",
+              "doc": "RSVP collection configuration." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "RsvpFormMessages_19476488547",
         "locations":
-          [ { "lineno": 393,
+          [ { "lineno": 914,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP form messages.",
@@ -739,9 +1802,42 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "RsvpFormMessages_33952434787",
+        "locations":
+          [ { "lineno": 902,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "RSVP form messages.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvpYes",
+              "type": "string",
+              "doc": "Label text indicating RSVP `YES` response." },
+            { "name": "rsvpNo",
+              "type": "string",
+              "doc": "Label text indicating RSVP `NO` response." },
+            { "name": "yesMessages",
+              "type": "wix-events-ng-backend.RsvpFormMessages_Positive_16352639389",
+              "doc": "Messages shown for RSVP = `YES`." },
+            { "name": "waitingMessages",
+              "type": "wix-events-ng-backend.RsvpFormMessages_Positive_16352639389",
+              "doc": "Messages shown for RSVP = `YES`." },
+            { "name": "noMessages",
+              "type": "wix-events-ng-backend.RsvpFormMessages_Negative_7937566166",
+              "doc": "Messages shown for RSVP = `NO`." },
+            { "name": "submitRsvpLabel",
+              "type": "string",
+              "doc": "\"Submit form\" call-to-action label text." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "RsvpFormMessages_Negative_4611603004",
         "locations":
-          [ { "lineno": 423,
+          [ { "lineno": 953,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown for RSVP = `NO`.",
@@ -759,9 +1855,63 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "RsvpFormMessages_Negative_7937566166",
+        "locations":
+          [ { "lineno": 944,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Messages shown for RSVP = `NO`.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Main form title for negative response." },
+            { "name": "confirmationTitle",
+              "type": "string",
+              "doc": "Confirmation message title." },
+            { "name": "shareLabel",
+              "type": "string",
+              "doc": "\"Share event\" call-to-action label text." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "RsvpFormMessages_Positive_16352639389",
+        "locations":
+          [ { "lineno": 961,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Messages shown for RSVP = `YES`.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Main form title for positive response." },
+            { "name": "confirmationTitle",
+              "type": "string",
+              "doc": "Confirmation message title." },
+            { "name": "confirmationMessage",
+              "type": "string",
+              "doc": "Confirmation message text." },
+            { "name": "addToCalendarLabel",
+              "type": "string",
+              "doc": "\"Add to calendar\" call-to-action label text." },
+            { "name": "shareLabel",
+              "type": "string",
+              "doc": "\"Share event\" call-to-action label text." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "RsvpFormMessages_Positive_8813967668",
         "locations":
-          [ { "lineno": 431,
+          [ { "lineno": 972,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown for RSVP = `YES`.",
@@ -781,7 +1931,7 @@
         "labels": [] },
       { "name": "ScheduleConfig_13852377628",
         "locations":
-          [ { "lineno": 238,
+          [ { "lineno": 612,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Schedule configuration.",
@@ -814,9 +1964,45 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "ScheduleConfig_16229949990",
+        "locations":
+          [ { "lineno": 597,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Schedule configuration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "tbd",
+              "type": "boolean",
+              "doc": "Defines event as TBD (To Be Determined) schedule.\n When event time is not yet defined, TBD message is displayed instead of event start and end times.\n `startDate`, `endDate` and `timeZoneId` are not required when schedule is TBD." },
+            { "name": "tbdMessage",
+              "type": "string",
+              "doc": "TBD message." },
+            { "name": "startDate",
+              "type": "Date",
+              "doc": "Event start timestamp." },
+            { "name": "endDate",
+              "type": "Date",
+              "doc": "Event end timestamp." },
+            { "name": "timeZoneId",
+              "type": "string",
+              "doc": "Event time zone ID in TZ database format, e.g., `EST`, `America/Los_Angeles`." },
+            { "name": "endDateHidden",
+              "type": "boolean",
+              "doc": "Whether end date is hidden in the formatted schedule." },
+            { "name": "showTimeZone",
+              "type": "boolean",
+              "doc": "Whether time zone is displayed in formatted schedule." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Scheduling_17566201923",
         "locations":
-          [ { "lineno": 253,
+          [ { "lineno": 637,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event scheduling.",
@@ -840,9 +2026,36 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "Scheduling_22467857484",
+        "locations":
+          [ { "lineno": 627,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event scheduling.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "settings",
+              "type": "wix-events-ng-backend.ScheduleConfig_16229949990",
+              "doc": "Schedule configuration." },
+            { "name": "formatted",
+              "type": "string",
+              "doc": "Formatted schedule representation." },
+            { "name": "startDateFormatted",
+              "type": "string",
+              "doc": "Formatted start date of the event (empty for TBD schedules)." },
+            { "name": "startTimeFormatted",
+              "type": "string",
+              "doc": "Formatted start time of the event (empty for TBD schedules)." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "SeoSchema_4434305645",
         "locations":
-          [ { "lineno": 1,
+          [ { "lineno": 117,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Advanced SEO data",
@@ -862,7 +2075,7 @@
         "labels": [] },
       { "name": "SeoSchema_Tag_6403344610",
         "locations":
-          [ { "lineno": 8,
+          [ { "lineno": 124,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -893,7 +2106,7 @@
         "labels": [] },
       { "name": "SeoSettings_7510628004",
         "locations":
-          [ { "lineno": 263,
+          [ { "lineno": 647,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "SEO settings.",
@@ -911,9 +2124,30 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "SiteUrl_2853714657",
+        "locations":
+          [ { "lineno": 655,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event page URL components.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "baseUrl",
+              "type": "string",
+              "doc": "Base URL. For premium sites, this will be the domain.\n For free sites, this would be site URL (e.g `mysite.wixsite.com/mysite`)" },
+            { "name": "path",
+              "type": "string",
+              "doc": "The path to that page - e.g `/my-events/weekly-meetup-2`" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "SiteUrl_5300502582",
         "locations":
-          [ { "lineno": 271,
+          [ { "lineno": 664,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event page URL components.",
@@ -931,9 +2165,113 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "StreetAddress_4873634501",
+        "locations":
+          [ { "lineno": 92,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "a break down of the street to number and street name",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "number",
+              "type": "string",
+              "doc": "street number",
+              "optional": true },
+            { "name": "name",
+              "type": "string",
+              "doc": "street name",
+              "optional": true },
+            { "name": "apt",
+              "type": "string",
+              "doc": "apartment number",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "StreetAddress_5151700664",
+        "locations":
+          [ { "lineno": 83,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "a break down of the street to number and street name",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "number",
+              "type": "string",
+              "doc": "street number" },
+            { "name": "name",
+              "type": "string",
+              "doc": "street name" },
+            { "name": "apt",
+              "type": "string",
+              "doc": "apartment number" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Subdivision_21897131614",
+        "locations":
+          [ { "lineno": 101,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "code",
+              "type": "string",
+              "doc": "subdivision short code" },
+            { "name": "name",
+              "type": "string",
+              "doc": "subdivision full-name" },
+            { "name": "type",
+              "type": "string",
+              "doc": "One of:\n + `\"UNKNOWN_SUBDIVISION_TYPE\"`\n + `\"ADMINISTRATIVE_AREA_LEVEL_1\"`\n + `\"ADMINISTRATIVE_AREA_LEVEL_2\"`\n + `\"ADMINISTRATIVE_AREA_LEVEL_3\"`\n + `\"ADMINISTRATIVE_AREA_LEVEL_4\"`\n + `\"ADMINISTRATIVE_AREA_LEVEL_5\"`\n + `\"COUNTRY\"`" },
+            { "name": "typeInfo",
+              "type": "string",
+              "doc": "a free-text description of subdivision type" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "TaxConfig_4925741970",
+        "locations":
+          [ { "lineno": 686,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Tax configuration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "type",
+              "type": "string",
+              "doc": "Tax application settings.\nOne of:\n + `\"INCLUDED\"`\n + `\"ADDED\"`\n + `\"ADDED_AT_CHECKOUT\"`",
+              "optional": true },
+            { "name": "name",
+              "type": "string",
+              "doc": "Tax name.",
+              "optional": true },
+            { "name": "rate",
+              "type": "string",
+              "doc": "Tax rate (e.g.,`21.55`).",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "TaxConfig_5203808133",
         "locations":
-          [ { "lineno": 280,
+          [ { "lineno": 673,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Tax configuration.",
@@ -954,9 +2292,30 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "TicketingConfig_6341687258",
+        "locations":
+          [ { "lineno": 723,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Ticketing configuration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "formAssignedPerTicket",
+              "type": "boolean",
+              "doc": "Whether the form must be filled out separately for each ticket." },
+            { "name": "tax",
+              "type": "wix-events-ng-backend.TaxConfig_5203808133",
+              "doc": "Tax configuration." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "TicketingConfig_6758553378",
         "locations":
-          [ { "lineno": 305,
+          [ { "lineno": 731,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Ticketing configuration.",
@@ -1008,10 +2367,77 @@
               "doc": "Formatted price of highest priced ticket." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Ticketing_15045486817",
+        "locations":
+          [ { "lineno": 699,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Ticketing details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "currency",
+              "type": "string",
+              "doc": "Currency used in event transactions." },
+            { "name": "settings",
+              "type": "wix-events-ng-backend.TicketingConfig_6341687258",
+              "doc": "Ticketing configuration." },
+            { "name": "lowestTicketPrice",
+              "type": "wix-events-ng-backend.Money_2432563994",
+              "doc": "Price of lowest priced ticket." },
+            { "name": "highestTicketPrice",
+              "type": "wix-events-ng-backend.Money_2432563994",
+              "doc": "Price of lowest priced ticket." },
+            { "name": "lowestTicketPriceFormatted",
+              "type": "string",
+              "doc": "Formatted price of lowest priced ticket." },
+            { "name": "highestTicketPriceFormatted",
+              "type": "string",
+              "doc": "Formatted price of highest priced ticket." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Ticketing_15758504330",
+        "locations":
+          [ { "lineno": 711,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Ticketing details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "currency",
+              "type": "string",
+              "doc": "Currency used in event transactions." },
+            { "name": "config",
+              "type": "wix-events-ng-backend.TicketingConfig_6758553378",
+              "doc": "Ticketing configuration." },
+            { "name": "lowestTicketPrice",
+              "type": "wix-events-ng-backend.Money_5252798586",
+              "doc": "Price of lowest priced ticket." },
+            { "name": "highestTicketPrice",
+              "type": "wix-events-ng-backend.Money_5252798586",
+              "doc": "Price of lowest priced ticket." },
+            { "name": "lowestTicketPriceFormatted",
+              "type": "string",
+              "doc": "Formatted price of lowest priced ticket." },
+            { "name": "highestTicketPriceFormatted",
+              "type": "string",
+              "doc": "Formatted price of highest priced ticket." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "TicketsUnavailableMessages_7555249437",
         "locations":
-          [ { "lineno": 439,
+          [ { "lineno": 980,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown when event tickets are unavailable.",
@@ -1028,6 +2454,223 @@
               "doc": "\"Explore other events\" call-to-action label text." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels": [] },
+      { "name": "todo_103224103909",
+        "locations":
+          [ { "lineno": 135,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "inputGroups",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-events-ng-backend.InputControl_50110866111" ] },
+              "doc": "Nested fields as an ordered list." },
+            { "name": "messages",
+              "type": "wix-events-ng-backend.FormMessages_51883945026",
+              "doc": "Set of configured form messages." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "todo_14798325487",
+        "locations":
+          [ { "lineno": 167,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "tbd",
+              "type": "boolean",
+              "doc": "Defines event as TBD (To Be Determined) schedule.\n When event time is not yet defined, TBD message is displayed instead of event start and end times.\n `startDate`, `endDate` and `timeZoneId` are not required when schedule is TBD.",
+              "optional": true },
+            { "name": "tbdMessage",
+              "type": "string",
+              "doc": "TBD message.",
+              "optional": true },
+            { "name": "startDate",
+              "type": "Date",
+              "doc": "Event start timestamp.",
+              "optional": true },
+            { "name": "endDate",
+              "type": "Date",
+              "doc": "Event end timestamp.",
+              "optional": true },
+            { "name": "timeZoneId",
+              "type": "string",
+              "doc": "Event time zone ID in TZ database format, e.g., `EST`, `America/Los_Angeles`.",
+              "optional": true },
+            { "name": "endDateHidden",
+              "type": "boolean",
+              "doc": "Whether end date is hidden in the formatted schedule.",
+              "optional": true },
+            { "name": "showTimeZone",
+              "type": "boolean",
+              "doc": "Whether time zone is displayed in formatted schedule.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "todo_16562783175",
+        "locations":
+          [ { "lineno": 182,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvpCollection",
+              "type": "wix-events-ng-backend.RsvpCollectionConfig_11559945607",
+              "doc": "RSVP collection configuration. Can be used to set limits.",
+              "optional": true },
+            { "name": "settings",
+              "type": "wix-events-ng-backend.todo_25677253065",
+              "doc": "todo",
+              "optional": true },
+            { "name": "ticketing",
+              "type": "wix-events-ng-backend.todo_9925903014",
+              "doc": "todo",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "todo_25677253065",
+        "locations":
+          [ { "lineno": 191,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "externalRegistrationUrl",
+              "type": "string",
+              "doc": "External event registration URL (for external events only).",
+              "optional": true },
+            { "name": "registrationPaused",
+              "type": "boolean",
+              "doc": "Whether registration is closed.",
+              "optional": true },
+            { "name": "restrictedTo",
+              "type": "string",
+              "doc": "Types of users allowed to register.\nOne of:\n + `\"VISITOR\"`\n + `\"MEMBER\"`\n + `\"VISITOR_OR_MEMBER\"`",
+              "optional": true },
+            { "name": "registrationDisabled",
+              "type": "boolean",
+              "doc": "Whether registration is disabled.",
+              "optional": true },
+            { "name": "eventType",
+              "type": "string",
+              "doc": "Initial event type. Only RSVP and TICKETS are allowed when creating an event.\n Updating this field is not allowed.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "todo_2984957200",
+        "locations":
+          [ { "lineno": 160,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "settings",
+              "type": "wix-events-ng-backend.todo_14798325487",
+              "doc": "todo",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "todo_3288143231",
+        "locations":
+          [ { "lineno": 221,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "formAssignedPerTicket",
+              "type": "boolean",
+              "doc": "Whether the form must be filled out separately for each ticket.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "todo_44662576055",
+        "locations":
+          [ { "lineno": 143,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Location name.",
+              "optional": true },
+            { "name": "fullAddress",
+              "type": "wix-events-ng-backend.Address_36504914659",
+              "doc": "Full [address](https://www.wix.com/velo/reference/$w/addressinput/value) derived from formatted single line `address`.\n When `full_address` is used to create or update the event, deprecated `address` and `coordinates` are ignored.\n\n Migration notes:\n - `full_address.formatted_address` is equivalent to `address`.\n - `full_address.geocode` is equivalent to `coordinates`.",
+              "optional": true },
+            { "name": "type",
+              "type": "string",
+              "doc": "Location type.\nOne of:\n + `\"VENUE\"`\n + `\"ONLINE\"`",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "todo_9925903014",
+        "locations":
+          [ { "lineno": 213,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "settings",
+              "type": "wix-events-ng-backend.todo_3288143231",
+              "doc": "todo",
+              "optional": true },
+            { "name": "settings",
+              "type": "wix-events-ng-backend.TaxConfig_4925741970",
+              "doc": "Tax configuration.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] } ],
   "extra":
     {  } }

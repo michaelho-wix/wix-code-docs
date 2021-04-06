@@ -1,9 +1,8 @@
-{ "name": "event",
+{ "name": "wixEvents",
   "memberOf": "wix-events-ng-backend",
   "mixes": [],
   "labels":
-    [ "changed",
-      "removed" ],
+    [ "new" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -15,8 +14,7 @@
   "properties": [],
   "operations":
     [ { "name": "cancelEvent",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "eventId",
@@ -26,7 +24,7 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-events-ng-backend.event.CancelEventResult_289445974523" ] },
+                  [ "wix-events-ng-backend.wixEvents.CancelEventResult_293524125626" ] },
             "doc": "" },
         "locations":
           [ { "lineno": 32,
@@ -39,12 +37,12 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { event } from \"wix-events-ng-backend\";",
+                    [ "import { wixEvents } from \"wix-events-ng-backend\";",
                       "",
                       "export function cancelEvent() {",
                       "  const eventId = \"a string\";",
                       "",
-                      "  return event",
+                      "  return wixEvents",
                       "    .cancelEvent(eventId)",
                       "    .then((response) => {",
                       "      console.log(response);",
@@ -60,59 +58,8 @@
         "extra":
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
-      { "name": "copy",
-        "labels":
-          [ "changed" ],
-        "nameParams": [],
-        "params":
-          [ { "name": "copyEventRequest",
-              "type": "wix-events-ng-backend.event.CopyEventRequest_630086060" } ],
-        "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-events-ng-backend.event.CopyEventResult_346390640117" ] },
-            "doc": "" },
-        "locations":
-          [ { "lineno": 13,
-              "filename": "wix_events_EventManagement_Copy_copy.js" } ],
-        "docs":
-          { "summary": "Copies an event, including its registration form, notifications and tickets configuration - scheduled two weeks from the original event.",
-            "description":
-              [ "Multilingual translations are also copied to the new event.",
-                "",
-                "When an event with same title already exists, appends (1), (2), ... to it. For example, copying an event titled \"My Event\" creates \"My Event (1)\".",
-                "Very long event titles are cropped: \"Daily stand-up ev... (2)\"." ],
-            "links": [],
-            "examples":
-              [ { "title": "basic usage",
-                  "body":
-                    [ "import { event } from \"wix-events-ng-backend\";",
-                      "",
-                      "export function copy() {",
-                      "  const copyEventRequest = {",
-                      "    eventId: \"a string\"",
-                      "  };",
-                      "",
-                      "  return event",
-                      "    .copy(copyEventRequest)",
-                      "    .then((response) => {",
-                      "      console.log(response);",
-                      "    })",
-                      "    .catch((error) => {",
-                      "      console.error(error);",
-                      "    });",
-                      "}" ],
-                  "extra":
-                    {  } } ],
-            "extra":
-              {  } },
-        "extra":
-          { "customLabels":
-              [ { "id": "maturity-beta" } ] } },
       { "name": "copyEvent",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "eventId",
@@ -122,7 +69,7 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-events-ng-backend.event.CopyEventResult_288351476310" ] },
+                  [ "wix-events-ng-backend.wixEvents.CopyEventResult_292429627413" ] },
             "doc": "" },
         "locations":
           [ { "lineno": 32,
@@ -138,12 +85,12 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { event } from \"wix-events-ng-backend\";",
+                    [ "import { wixEvents } from \"wix-events-ng-backend\";",
                       "",
                       "export function copyEvent() {",
                       "  const eventId = \"a string\";",
                       "",
-                      "  return event",
+                      "  return wixEvents",
                       "    .copyEvent(eventId)",
                       "    .then((response) => {",
                       "      console.log(response);",
@@ -160,20 +107,19 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "createEvent",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "eventInfo",
-              "type": "wix-events-ng-backend.event.EventData_61593953516",
+              "type": "wix-events-ng-backend.wixEvents.EventData_59202083984",
               "doc": "Event data." },
             { "name": "options",
-              "type": "wix-events-ng-backend.event.CreateEventRequest_4173585239" } ],
+              "type": "wix-events-ng-backend.wixEvents.CreateEventRequest_4173585239" } ],
         "ret":
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-events-ng-backend.event.CreateEventResult_291402735933" ] },
+                  [ "wix-events-ng-backend.wixEvents.CreateEventResult_295480887036" ] },
             "doc": "" },
         "locations":
           [ { "lineno": 70,
@@ -189,7 +135,7 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { event } from \"wix-events-ng-backend\";",
+                    [ "import { wixEvents } from \"wix-events-ng-backend\";",
                       "",
                       "export function createEvent() {",
                       "  const eventInfo = {",
@@ -197,7 +143,7 @@
                       "    description: \"a string\",",
                       "    location: {",
                       "      name: \"a string\",",
-                      "      fullAddress: {",
+                      "      address: {",
                       "        street: {",
                       "          addressLine1: \"a string\"",
                       "        },",
@@ -227,7 +173,7 @@
                       "    },",
                       "    mainImage: \"wix:image://v1/mediaId/filename.jpg#originWidth=42&originHeight=42\",",
                       "    registration: {",
-                      "      rsvpCollection: {",
+                      "      rsvp: {",
                       "        rsvpStatusOptions: \"YES_ONLY\",",
                       "        limit: 42,",
                       "        waitlist: true",
@@ -269,7 +215,7 @@
                       "    language: \"a string\"",
                       "  };",
                       "",
-                      "  return event",
+                      "  return wixEvents",
                       "    .createEvent(eventInfo, options)",
                       "    .then((response) => {",
                       "      console.log(response);",
@@ -286,8 +232,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "deleteEvent",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "eventId",
@@ -297,7 +242,7 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-events-ng-backend.event.DeleteEventResult_36228257" ] },
+                  [ "wix-events-ng-backend.wixEvents.DeleteEventResult_36228257" ] },
             "doc": "" },
         "locations":
           [ { "lineno": 7,
@@ -310,12 +255,12 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { event } from \"wix-events-ng-backend\";",
+                    [ "import { wixEvents } from \"wix-events-ng-backend\";",
                       "",
                       "export function deleteEvent() {",
                       "  const eventId = \"a string\";",
                       "",
-                      "  return event",
+                      "  return wixEvents",
                       "    .deleteEvent(eventId)",
                       "    .then((response) => {",
                       "      console.log(response);",
@@ -332,8 +277,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getEvent",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "eventId",
@@ -343,7 +287,7 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-events-ng-backend.event.GetEventResult_288618621341" ] },
+                  [ "wix-events-ng-backend.wixEvents.GetEventResult_292696772444" ] },
             "doc": "" },
         "locations":
           [ { "lineno": 32,
@@ -354,12 +298,12 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { event } from \"wix-events-ng-backend\";",
+                    [ "import { wixEvents } from \"wix-events-ng-backend\";",
                       "",
                       "export function getEvent() {",
                       "  const eventId = \"a string\";",
                       "",
-                      "  return event",
+                      "  return wixEvents",
                       "    .getEvent(eventId)",
                       "    .then((response) => {",
                       "      console.log(response);",
@@ -376,20 +320,19 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "list",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "listEventsRequest",
-              "type": "wix-events-ng-backend.event.ListEventsRequest_42266246431" } ],
+              "type": "wix-events-ng-backend.wixEvents.ListEventsRequest_44577661020" } ],
         "ret":
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-events-ng-backend.event.ListEventsResult_352116530757" ] },
+                  [ "wix-events-ng-backend.wixEvents.ListEventsResult_348354731344" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 41,
+          [ { "lineno": 50,
               "filename": "wix_events_EventManagement_List_list.js" } ],
         "docs":
           { "summary": "Retrieves a list of up to 100 events, given the provided [paging](https://dev.wix.com/api/rest/getting-started/pagination), [filtering & sorting](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
@@ -397,7 +340,7 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { event } from \"wix-events-ng-backend\";",
+                    [ "import { wixEvents } from \"wix-events-ng-backend\";",
                       "",
                       "export function list() {",
                       "  const listEventsRequest = {",
@@ -414,10 +357,13 @@
                       "    facet: [\"a string\"],",
                       "    userId: [\"a string\"],",
                       "    sort: \"a string\",",
-                      "    categoryId: [\"a string\"]",
+                      "    categoryFilter: {",
+                      "      categorised: true,",
+                      "      categoryId: [\"a string\"]",
+                      "    }",
                       "  };",
                       "",
-                      "  return event",
+                      "  return wixEvents",
                       "    .list(listEventsRequest)",
                       "    .then((response) => {",
                       "      console.log(response);",
@@ -433,79 +379,20 @@
         "extra":
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
-      { "name": "listEvents",
-        "labels":
-          [ "new" ],
-        "nameParams": [],
-        "params":
-          [ { "name": "listEventsRequest",
-              "type": "wix-events-ng-backend.event.ListEventsRequest_39777755927" } ],
-        "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "wix-events-ng-backend.event.ListEventsResult_269046993835" ] },
-            "doc": "" },
-        "locations":
-          [ { "lineno": 41,
-              "filename": "wix_events_EventManagement_List_listEvents.js" } ],
-        "docs":
-          { "summary": "Retrieves a list of up to 100 events, given the provided [paging](https://dev.wix.com/api/rest/getting-started/pagination), [filtering & sorting](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
-            "links": [],
-            "examples":
-              [ { "title": "basic usage",
-                  "body":
-                    [ "import { event } from \"wix-events-ng-backend\";",
-                      "",
-                      "export function listEvents() {",
-                      "  const listEventsRequest = {",
-                      "    offset: 42,",
-                      "    limit: 42,",
-                      "    fieldset: [\"FULL\"],",
-                      "    status: [\"SCHEDULED\"],",
-                      "    slug: \"a string\",",
-                      "    tag: [\"a string\"],",
-                      "    userFilter: {",
-                      "      userId: \"a string\",",
-                      "      relation: [\"ATTENDING\"],",
-                      "      global: true",
-                      "    },",
-                      "    facet: [\"a string\"],",
-                      "    userId: [\"a string\"],",
-                      "    sort: \"a string\"",
-                      "  };",
-                      "",
-                      "  return event",
-                      "    .listEvents(listEventsRequest)",
-                      "    .then((response) => {",
-                      "      console.log(response);",
-                      "    })",
-                      "    .catch((error) => {",
-                      "      console.error(error);",
-                      "    });",
-                      "}" ],
-                  "extra":
-                    {  } } ],
-            "extra":
-              {  } },
-        "extra":
-          { "customLabels":
-              [ { "id": "maturity-beta" } ] } },
       { "name": "query",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "queryEventsRequest",
-              "type": "wix-events-ng-backend.event.QueryEventsRequest_22359314085" } ],
+              "type": "wix-events-ng-backend.wixEvents.QueryEventsRequest_18691271036" } ],
         "ret":
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-events-ng-backend.event.QueryEventsResult_349836749845" ] },
+                  [ "wix-events-ng-backend.wixEvents.QueryEventsResult_346074950432" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 28,
+          [ { "lineno": 27,
               "filename": "wix_events_EventManagement_Query_query.js" } ],
         "docs":
           { "summary": "Retrieves a list of up to 1,000 events, given the provided [paging](https://dev.wix.com/api/rest/getting-started/pagination), [filtering and sorting](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
@@ -513,7 +400,7 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { event } from \"wix-events-ng-backend\";",
+                    [ "import { wixEvents } from \"wix-events-ng-backend\";",
                       "",
                       "export function query() {",
                       "  const queryEventsRequest = {",
@@ -525,11 +412,10 @@
                       "    },",
                       "    facet: [\"a string\"],",
                       "    userId: [\"a string\"],",
-                      "    sort: \"a string\",",
-                      "    categoryId: [\"a string\"]",
+                      "    sort: \"a string\"",
                       "  };",
                       "",
-                      "  return event",
+                      "  return wixEvents",
                       "    .query(queryEventsRequest)",
                       "    .then((response) => {",
                       "      console.log(response);",
@@ -546,12 +432,11 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "queryEvents",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
-          { "type": "wix-events-ng-backend.event.EventsNgQueryBuilder_23434677352",
+          { "type": "wix-events-ng-backend.wixEvents.EventsNgQueryBuilder_30235220982",
             "doc": "Contains functionality for refining a eventsNg query.\nThe `EventsNgQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the eventsNg query functions,\nrefine the query by chaining `EventsNgQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixEventsNgBackend from 'wix-eventsNg-backend';\n\nwixEventsNgBackend.queryEventsNg()\n  .eq(\"<property1>\", \"<value1>\")\n  .ascending(\"<property2>\")\n  .limit(5)\n  .find()\n  .then( (results) => {\n    console.log(results.items);\n  } );\n```" },
         "locations":
           [ { "lineno": 1220,
@@ -577,7 +462,7 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { event } from \"wix-events-ng-backend\";",
+                    [ "import { wixEvents } from \"wix-events-ng-backend\";",
                       "",
                       "export function queryEvents() {",
                       "  const options = {",
@@ -585,7 +470,7 @@
                       "    facet: [\"a string\"]",
                       "  };",
                       "",
-                      "  return event",
+                      "  return wixEvents",
                       "    .queryEvents()",
                       "    .eq(\"key\", \"value\")",
                       "    .find(options)",
@@ -604,23 +489,22 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateEvent",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "eventId",
               "type": "string",
               "doc": "Event ID." },
             { "name": "eventInfo",
-              "type": "wix-events-ng-backend.event.EventData_61408576074",
+              "type": "wix-events-ng-backend.wixEvents.EventData_59016706542",
               "doc": "Event data to update (partial)" },
             { "name": "options",
-              "type": "wix-events-ng-backend.event.UpdateEventRequest_2842136330" } ],
+              "type": "wix-events-ng-backend.wixEvents.UpdateEventRequest_2842136330" } ],
         "ret":
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-events-ng-backend.event.UpdateEventResult_288782525418" ] },
+                  [ "wix-events-ng-backend.wixEvents.UpdateEventResult_292860676521" ] },
             "doc": "" },
         "locations":
           [ { "lineno": 70,
@@ -631,7 +515,7 @@
             "examples":
               [ { "title": "basic usage",
                   "body":
-                    [ "import { event } from \"wix-events-ng-backend\";",
+                    [ "import { wixEvents } from \"wix-events-ng-backend\";",
                       "",
                       "export function updateEvent() {",
                       "  const eventId = \"a string\";",
@@ -640,7 +524,7 @@
                       "    description: \"a string\",",
                       "    location: {",
                       "      name: \"a string\",",
-                      "      fullAddress: {",
+                      "      address: {",
                       "        street: {",
                       "          addressLine1: \"a string\"",
                       "        },",
@@ -670,7 +554,7 @@
                       "    },",
                       "    mainImage: \"wix:image://v1/mediaId/filename.jpg#originWidth=42&originHeight=42\",",
                       "    registration: {",
-                      "      rsvpCollection: {",
+                      "      rsvp: {",
                       "        rsvpStatusOptions: \"YES_ONLY\",",
                       "        limit: 42,",
                       "        waitlist: true",
@@ -712,7 +596,7 @@
                       "    language: \"a string\"",
                       "  };",
                       "",
-                      "  return event",
+                      "  return wixEvents",
                       "    .updateEvent(eventId, eventInfo, options)",
                       "    .then((response) => {",
                       "      console.log(response);",
@@ -730,7 +614,7 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "CancelEventResult_289445974523",
+    [ { "name": "CancelEventResult_293524125626",
         "locations":
           [ { "lineno": 1,
               "filename": "wix_events_EventManagement_Cancel_cancelEvent.js" } ],
@@ -744,7 +628,7 @@
               "type": "string",
               "doc": "Event ID." },
             { "name": "location",
-              "type": "wix-events-ng-backend.Location_47009404077",
+              "type": "wix-events-ng-backend.Location_44617534545",
               "doc": "Event location." },
             { "name": "scheduling",
               "type": "wix-events-ng-backend.Scheduling_22467857484",
@@ -777,7 +661,7 @@
               "type": "string",
               "doc": "Event status.\nOne of:\n + `\"SCHEDULED\"`\n + `\"STARTED\"`\n + `\"ENDED\"`\n + `\"CANCELED\"`" },
             { "name": "registration",
-              "type": "wix-events-ng-backend.Registration_51185909116",
+              "type": "wix-events-ng-backend.Registration_57655929751",
               "doc": "RSVP or ticketing registration details." },
             { "name": "calendarLinks",
               "type": "wix-events-ng-backend.CalendarLinks_2113971438",
@@ -805,41 +689,33 @@
               "doc": "Assigned contacts label key." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "CopyEventRequest_630086060",
+        "labels": [] },
+      { "name": "CategoryFilter_5243830436",
         "locations":
           [ { "lineno": 1,
-              "filename": "wix_events_EventManagement_Copy_copy.js" } ],
+              "filename": "wix_events_EventManagement_List_list.js" } ],
         "docs":
-          { "links": [],
+          { "summary": "Category filter.",
+            "links": [],
             "examples": [],
             "extra":
               {  } },
         "members":
-          [ { "name": "eventId",
-              "type": "string",
-              "doc": "Event ID." } ],
+          [ { "name": "categorised",
+              "type": "boolean",
+              "doc": "If true - only categorised events will be returned.\n If false - only not categorised events will be returned.",
+              "optional": true },
+            { "name": "categoryId",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Category id filter.",
+              "optional": true } ],
         "extra":
           {  },
         "labels": [] },
-      { "name": "CopyEventResult_264957905506",
-        "locations":
-          [ { "lineno": 7,
-              "filename": "wix_events_EventManagement_Copy_copy.js" } ],
-        "docs":
-          { "links": [],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "event",
-              "type": "wix-events-ng-backend.Event_264400458673" } ],
-        "extra":
-          {  },
-        "labels":
-          [ "removed" ] },
-      { "name": "CopyEventResult_288351476310",
+      { "name": "CopyEventResult_292429627413",
         "locations":
           [ { "lineno": 1,
               "filename": "wix_events_EventManagement_Copy_copyEvent.js" } ],
@@ -853,7 +729,7 @@
               "type": "string",
               "doc": "Event ID." },
             { "name": "location",
-              "type": "wix-events-ng-backend.Location_47009404077",
+              "type": "wix-events-ng-backend.Location_44617534545",
               "doc": "Event location." },
             { "name": "scheduling",
               "type": "wix-events-ng-backend.Scheduling_22467857484",
@@ -886,7 +762,7 @@
               "type": "string",
               "doc": "Event status.\nOne of:\n + `\"SCHEDULED\"`\n + `\"STARTED\"`\n + `\"ENDED\"`\n + `\"CANCELED\"`" },
             { "name": "registration",
-              "type": "wix-events-ng-backend.Registration_51185909116",
+              "type": "wix-events-ng-backend.Registration_57655929751",
               "doc": "RSVP or ticketing registration details." },
             { "name": "calendarLinks",
               "type": "wix-events-ng-backend.CalendarLinks_2113971438",
@@ -914,24 +790,7 @@
               "doc": "Assigned contacts label key." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "CopyEventResult_346390640117",
-        "locations":
-          [ { "lineno": 7,
-              "filename": "wix_events_EventManagement_Copy_copy.js" } ],
-        "docs":
-          { "links": [],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "event",
-              "type": "wix-events-ng-backend.Event_345833193284" } ],
-        "extra":
-          {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CreateEventRequest_4173585239",
         "locations":
           [ { "lineno": 1,
@@ -948,9 +807,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "CreateEventResult_291402735933",
+        "labels": [] },
+      { "name": "CreateEventResult_295480887036",
         "locations":
           [ { "lineno": 10,
               "filename": "wix_events_EventManagement_CreateV2_createEvent.js" } ],
@@ -964,7 +822,7 @@
               "type": "string",
               "doc": "Event ID." },
             { "name": "location",
-              "type": "wix-events-ng-backend.Location_47009404077",
+              "type": "wix-events-ng-backend.Location_44617534545",
               "doc": "Event location." },
             { "name": "scheduling",
               "type": "wix-events-ng-backend.Scheduling_22467857484",
@@ -997,7 +855,7 @@
               "type": "string",
               "doc": "Event status.\nOne of:\n + `\"SCHEDULED\"`\n + `\"STARTED\"`\n + `\"ENDED\"`\n + `\"CANCELED\"`" },
             { "name": "registration",
-              "type": "wix-events-ng-backend.Registration_51185909116",
+              "type": "wix-events-ng-backend.Registration_57655929751",
               "doc": "RSVP or ticketing registration details." },
             { "name": "calendarLinks",
               "type": "wix-events-ng-backend.CalendarLinks_2113971438",
@@ -1025,8 +883,7 @@
               "doc": "Assigned contacts label key." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "DeleteEventResult_36228257",
         "locations":
           [ { "lineno": 1,
@@ -1042,9 +899,8 @@
               "doc": "Deleted event ID." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "EventData_61408576074",
+        "labels": [] },
+      { "name": "EventData_59016706542",
         "locations":
           [ { "lineno": 1,
               "filename": "wix_events_EventManagement_Update_updateEvent.js" } ],
@@ -1064,7 +920,7 @@
               "doc": "Event description.",
               "optional": true },
             { "name": "location",
-              "type": "wix-events-ng-backend.todo_44662576055",
+              "type": "wix-events-ng-backend.todo_42270706523",
               "doc": "todo",
               "optional": true },
             { "name": "scheduling",
@@ -1076,7 +932,7 @@
               "doc": "Main event [image](https://www.wix.com/velo/reference/$w/image/src). Printed in ticket PDF.\n Currently, only images previously saved in Wix Media are supported.",
               "optional": true },
             { "name": "registration",
-              "type": "wix-events-ng-backend.todo_16562783175",
+              "type": "wix-events-ng-backend.todo_13440308032",
               "doc": "todo",
               "optional": true },
             { "name": "guestList",
@@ -1088,14 +944,13 @@
               "doc": "Rich-text content for About Event section (HTML).",
               "optional": true },
             { "name": "videoConferencing",
-              "type": "wix-events-ng-backend.event.OnlineConferencingConfig_7398822732",
+              "type": "wix-events-ng-backend.wixEvents.OnlineConferencingConfig_7398822732",
               "doc": "Online conferencing configuration",
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "EventData_61593953516",
+        "labels": [] },
+      { "name": "EventData_59202083984",
         "locations":
           [ { "lineno": 41,
               "filename": "wix_events_EventManagement_CreateV2_createEvent.js" } ],
@@ -1114,7 +969,7 @@
               "doc": "Event description.",
               "optional": true },
             { "name": "location",
-              "type": "wix-events-ng-backend.todo_44662576055",
+              "type": "wix-events-ng-backend.todo_42270706523",
               "doc": "todo",
               "optional": true },
             { "name": "scheduling",
@@ -1126,7 +981,7 @@
               "doc": "Main event [image](https://www.wix.com/velo/reference/$w/image/src). Printed in ticket PDF.\n Currently, only images previously saved in Wix Media are supported.",
               "optional": true },
             { "name": "registration",
-              "type": "wix-events-ng-backend.todo_16562783175",
+              "type": "wix-events-ng-backend.todo_13440308032",
               "doc": "todo",
               "optional": true },
             { "name": "guestList",
@@ -1138,13 +993,12 @@
               "doc": "Rich-text content for About Event section (HTML).",
               "optional": true },
             { "name": "videoConferencing",
-              "type": "wix-events-ng-backend.event.OnlineConferencingConfig_7491511453",
+              "type": "wix-events-ng-backend.wixEvents.OnlineConferencingConfig_7491511453",
               "doc": "Online conferencing configuration",
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Event_1_3282155730",
         "locations":
           [ { "lineno": 1214,
@@ -1160,9 +1014,8 @@
               "doc": "Guest list configuration." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "Event_288618337872",
+        "labels": [] },
+      { "name": "Event_292696488975",
         "locations":
           [ { "lineno": 1183,
               "filename": "wix_events_EventManagement_QueryV2_queryEvents.js" } ],
@@ -1176,7 +1029,7 @@
               "type": "string",
               "doc": "Event ID." },
             { "name": "location",
-              "type": "wix-events-ng-backend.Location_47009404077",
+              "type": "wix-events-ng-backend.Location_44617534545",
               "doc": "Event location." },
             { "name": "scheduling",
               "type": "wix-events-ng-backend.Scheduling_22467857484",
@@ -1209,7 +1062,7 @@
               "type": "string",
               "doc": "Event status.\nOne of:\n + `\"SCHEDULED\"`\n + `\"STARTED\"`\n + `\"ENDED\"`\n + `\"CANCELED\"`" },
             { "name": "registration",
-              "type": "wix-events-ng-backend.Registration_51185909116",
+              "type": "wix-events-ng-backend.Registration_57655929751",
               "doc": "RSVP or ticketing registration details." },
             { "name": "calendarLinks",
               "type": "wix-events-ng-backend.CalendarLinks_2113971438",
@@ -1224,7 +1077,7 @@
               "type": "wix-events-ng-backend.Dashboard_8525121059",
               "doc": "Event dashboard summary of RSVP / ticket sales." },
             { "name": "guestList",
-              "type": "wix-events-ng-backend.event.Event_1_3282155730" },
+              "type": "wix-events-ng-backend.wixEvents.Event_1_3282155730" },
             { "name": "createdBy",
               "type": "string",
               "doc": "Event creator user ID." },
@@ -1236,27 +1089,8 @@
               "doc": "Assigned contacts label key." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "FacetCounts_708099164",
-        "locations":
-          [ { "lineno": 1,
-              "filename": "wix_events_EventManagement_Query_query.js" } ],
-        "docs":
-          { "summary": "`key` of type string, `value` of type object",
-            "links": [],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "counts",
-              "type": "Object",
-              "doc": "Set of key-value pairs. Facet counts aggregated per value" } ],
-        "extra":
-          {  },
-        "labels":
-          [ "removed" ] },
-      { "name": "GetEventResult_288618621341",
+        "labels": [] },
+      { "name": "GetEventResult_292696772444",
         "locations":
           [ { "lineno": 1,
               "filename": "wix_events_EventManagement_Get_getEvent.js" } ],
@@ -1270,7 +1104,7 @@
               "type": "string",
               "doc": "Event ID." },
             { "name": "location",
-              "type": "wix-events-ng-backend.Location_47009404077",
+              "type": "wix-events-ng-backend.Location_44617534545",
               "doc": "Event location." },
             { "name": "scheduling",
               "type": "wix-events-ng-backend.Scheduling_22467857484",
@@ -1303,7 +1137,7 @@
               "type": "string",
               "doc": "Event status.\nOne of:\n + `\"SCHEDULED\"`\n + `\"STARTED\"`\n + `\"ENDED\"`\n + `\"CANCELED\"`" },
             { "name": "registration",
-              "type": "wix-events-ng-backend.Registration_51185909116",
+              "type": "wix-events-ng-backend.Registration_57655929751",
               "doc": "RSVP or ticketing registration details." },
             { "name": "calendarLinks",
               "type": "wix-events-ng-backend.CalendarLinks_2113971438",
@@ -1331,80 +1165,10 @@
               "doc": "Assigned contacts label key." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "ListEventsRequest_39777755927",
+        "labels": [] },
+      { "name": "ListEventsRequest_44577661020",
         "locations":
-          [ { "lineno": 1,
-              "filename": "wix_events_EventManagement_List_listEvents.js" } ],
-        "docs":
-          { "links": [],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "offset",
-              "type": "number",
-              "doc": "Number of items to skip. See [Pagination](https://dev.wix.com/api/rest/getting-started/pagination).",
-              "optional": true },
-            { "name": "limit",
-              "type": "number",
-              "doc": "Number of items to load per page. See [Pagination](https://dev.wix.com/api/rest/getting-started/pagination).",
-              "optional": true },
-            { "name": "fieldset",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "string" ] },
-              "doc": "Controls which event properties are returned. See [Fieldset](https://dev.wix.com/api/rest/wix-events/wix-events/fieldset#wix-events_wix-events_fieldset_event-fieldset).\n Some fields require additional computation that affects latency of the service.\n Use minimum set of required fieldset for best performance.",
-              "optional": true },
-            { "name": "status",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "string" ] },
-              "doc": "Event status.",
-              "optional": true },
-            { "name": "slug",
-              "type": "string",
-              "doc": "Event URL slug.",
-              "optional": true },
-            { "name": "tag",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "string" ] },
-              "doc": "Custom tag filter.",
-              "optional": true },
-            { "name": "userFilter",
-              "type": "wix-events-ng-backend.event.UserFilter_10602551037",
-              "doc": "Wix user filter, by default any.\n Allows to filter events by user relation to the event.",
-              "optional": true },
-            { "name": "facet",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "string" ] },
-              "doc": "Filter facets to include in the response.\n See [supported facets](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
-              "optional": true },
-            { "name": "userId",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "string" ] },
-              "doc": "User ID filter, by default any",
-              "optional": true },
-            { "name": "sort",
-              "type": "string",
-              "doc": "Sort order, defaults to `\"created:asc\"`.\n See [supported fields](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
-              "optional": true } ],
-        "extra":
-          {  },
-        "labels":
-          [ "new" ] },
-      { "name": "ListEventsRequest_42266246431",
-        "locations":
-          [ { "lineno": 1,
+          [ { "lineno": 10,
               "filename": "wix_events_EventManagement_List_list.js" } ],
         "docs":
           { "links": [],
@@ -1439,7 +1203,7 @@
               "doc": "Event URL slug.",
               "optional": true },
             { "name": "userFilter",
-              "type": "wix-events-ng-backend.event.UserFilter_10602551037",
+              "type": "wix-events-ng-backend.wixEvents.UserFilter_10602551037",
               "doc": "Wix user filter, by default any.\n Allows to filter events by user relation to the event.",
               "optional": true },
             { "name": "facet",
@@ -1460,52 +1224,16 @@
               "type": "string",
               "doc": "Sort order, defaults to `\"created:asc\"`.\n See [supported fields](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
               "optional": true },
-            { "name": "categoryId",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "string" ] },
-              "doc": "Category id filter.",
+            { "name": "categoryFilter",
+              "type": "wix-events-ng-backend.wixEvents.CategoryFilter_5243830436",
+              "doc": "Category filter.",
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "ListEventsResult_269046993835",
+        "labels": [] },
+      { "name": "ListEventsResult_348354731344",
         "locations":
-          [ { "lineno": 21,
-              "filename": "wix_events_EventManagement_List_listEvents.js" } ],
-        "docs":
-          { "links": [],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "total",
-              "type": "number",
-              "doc": "Total number of events that match the given filters." },
-            { "name": "offset",
-              "type": "number",
-              "doc": "Offset." },
-            { "name": "limit",
-              "type": "number",
-              "doc": "Limit." },
-            { "name": "events",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "wix-events-ng-backend.Event_264400458673" ] },
-              "doc": "Events list." },
-            { "name": "facets",
-              "type": "Object",
-              "doc": "Set of key-value pairs. Filter facets." } ],
-        "extra":
-          {  },
-        "labels":
-          [ "new" ] },
-      { "name": "ListEventsResult_352116530757",
-        "locations":
-          [ { "lineno": 21,
+          [ { "lineno": 30,
               "filename": "wix_events_EventManagement_List_list.js" } ],
         "docs":
           { "links": [],
@@ -1526,15 +1254,14 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-events-ng-backend.Event_347469995595" ] },
+                    [ "wix-events-ng-backend.Event_343708196182" ] },
               "doc": "Events list." },
             { "name": "facets",
               "type": "Object",
               "doc": "Set of key-value pairs. Filter facets." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "OnlineConferencingConfig_7398822732",
         "locations":
           [ { "lineno": 17,
@@ -1560,8 +1287,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "OnlineConferencingConfig_7491511453",
         "locations":
           [ { "lineno": 57,
@@ -1586,67 +1312,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "QueryEventsRequest_19870823581",
-        "locations":
-          [ { "lineno": 8,
-              "filename": "wix_events_EventManagement_Query_query.js" } ],
-        "docs":
-          { "links": [],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "offset",
-              "type": "number",
-              "doc": "Number of items to skip. See [Pagination](https://dev.wix.com/api/rest/getting-started/pagination).",
-              "optional": true },
-            { "name": "limit",
-              "type": "number",
-              "doc": "Number of items to load per page. See [Pagination](https://dev.wix.com/api/rest/getting-started/pagination).",
-              "optional": true },
-            { "name": "fieldset",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "string" ] },
-              "doc": "Controls which event properties are returned. See [Fieldset](https://dev.wix.com/api/rest/wix-events/wix-events/fieldset#wix-events_wix-events_fieldset_event-fieldset).\n Some fields require additional computation that affects latency.\n Use minimum set of required fieldset for best performance.",
-              "optional": true },
-            { "name": "filter",
-              "type": "Object",
-              "doc": "Filter. See [supported fields and operators](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
-              "optional": true },
-            { "name": "tag",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "string" ] },
-              "doc": "Custom tags filter, by default any",
-              "optional": true },
-            { "name": "facet",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "string" ] },
-              "doc": "Filter facets to include in the response.\n See [supported facets](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
-              "optional": true },
-            { "name": "userId",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "string" ] },
-              "doc": "User ID filter, by default any",
-              "optional": true },
-            { "name": "sort",
-              "type": "string",
-              "doc": "Sort order, defaults to `\"created:asc\"`.\n See [supported fields](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
-              "optional": true } ],
-        "extra":
-          {  },
-        "labels":
-          [ "removed" ] },
-      { "name": "QueryEventsRequest_22359314085",
+        "labels": [] },
+      { "name": "QueryEventsRequest_18691271036",
         "locations":
           [ { "lineno": 1,
               "filename": "wix_events_EventManagement_Query_query.js" } ],
@@ -1692,21 +1359,13 @@
             { "name": "sort",
               "type": "string",
               "doc": "Sort order, defaults to `\"created:asc\"`.\n See [supported fields](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
-              "optional": true },
-            { "name": "categoryId",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "string" ] },
-              "doc": "Category id filter.",
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "QueryEventsResult_266767212923",
+        "labels": [] },
+      { "name": "QueryEventsResult_346074950432",
         "locations":
-          [ { "lineno": 25,
+          [ { "lineno": 17,
               "filename": "wix_events_EventManagement_Query_query.js" } ],
         "docs":
           { "links": [],
@@ -1727,47 +1386,14 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-events-ng-backend.Event_264400458673" ] },
+                    [ "wix-events-ng-backend.Event_343708196182" ] },
               "doc": "Events list" },
             { "name": "facets",
               "type": "Object",
               "doc": "Set of key-value pairs. Filter facets." } ],
         "extra":
           {  },
-        "labels":
-          [ "removed" ] },
-      { "name": "QueryEventsResult_349836749845",
-        "locations":
-          [ { "lineno": 18,
-              "filename": "wix_events_EventManagement_Query_query.js" } ],
-        "docs":
-          { "links": [],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "total",
-              "type": "number",
-              "doc": "Total number of events that match the given filters." },
-            { "name": "offset",
-              "type": "number",
-              "doc": "Offset." },
-            { "name": "limit",
-              "type": "number",
-              "doc": "Limit." },
-            { "name": "events",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "wix-events-ng-backend.Event_347469995595" ] },
-              "doc": "Events list" },
-            { "name": "facets",
-              "type": "Object",
-              "doc": "Set of key-value pairs. Filter facets." } ],
-        "extra":
-          {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "QueryOptions_15655099871",
         "locations":
           [ { "lineno": 1172,
@@ -1795,8 +1421,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "UpdateEventRequest_2842136330",
         "locations":
           [ { "lineno": 30,
@@ -1813,9 +1438,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
-      { "name": "UpdateEventResult_288782525418",
+        "labels": [] },
+      { "name": "UpdateEventResult_292860676521",
         "locations":
           [ { "lineno": 39,
               "filename": "wix_events_EventManagement_Update_updateEvent.js" } ],
@@ -1829,7 +1453,7 @@
               "type": "string",
               "doc": "Event ID." },
             { "name": "location",
-              "type": "wix-events-ng-backend.Location_47009404077",
+              "type": "wix-events-ng-backend.Location_44617534545",
               "doc": "Event location." },
             { "name": "scheduling",
               "type": "wix-events-ng-backend.Scheduling_22467857484",
@@ -1862,7 +1486,7 @@
               "type": "string",
               "doc": "Event status.\nOne of:\n + `\"SCHEDULED\"`\n + `\"STARTED\"`\n + `\"ENDED\"`\n + `\"CANCELED\"`" },
             { "name": "registration",
-              "type": "wix-events-ng-backend.Registration_51185909116",
+              "type": "wix-events-ng-backend.Registration_57655929751",
               "doc": "RSVP or ticketing registration details." },
             { "name": "calendarLinks",
               "type": "wix-events-ng-backend.CalendarLinks_2113971438",
@@ -1890,14 +1514,11 @@
               "doc": "Assigned contacts label key." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "UserFilter_10602551037",
         "locations":
-          [ { "lineno": 31,
-              "filename": "wix_events_EventManagement_List_list.js" },
-            { "lineno": 31,
-              "filename": "wix_events_EventManagement_List_listEvents.js" } ],
+          [ { "lineno": 40,
+              "filename": "wix_events_EventManagement_List_list.js" } ],
         "docs":
           { "summary": "Wix user filter, by default any.",
             "description":
@@ -1924,7 +1545,6 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }

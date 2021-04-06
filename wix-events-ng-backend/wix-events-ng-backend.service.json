@@ -12,10 +12,27 @@
         {  } },
   "properties":
     [ { "name": "event",
-        "labels": [],
+        "labels":
+          [ "removed" ],
         "get": true,
         "set": false,
         "type": "wix-events-ng-backend.event",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "wixEvents",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": false,
+        "type": "wix-events-ng-backend.wixEvents",
         "locations":
           [ { "lineno": 9,
               "filename": "index.js" } ],
@@ -48,8 +65,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "AddressLocation_4245737262",
         "locations":
           [ { "lineno": 67,
@@ -67,8 +83,7 @@
               "type": "number" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Address_36504914659",
         "locations":
           [ { "lineno": 22,
@@ -128,8 +143,7 @@
                   "members":
                     [ "addressLine1",
                       "streetAddress" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Address_37895245474",
         "locations":
           [ { "lineno": 1,
@@ -182,8 +196,7 @@
                   "members":
                     [ "addressLine1",
                       "streetAddress" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Address_68623519319",
         "locations":
           [ { "lineno": 43,
@@ -248,8 +261,7 @@
                   "members":
                     [ "addressLine",
                       "streetAddress" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CalendarLinks_2113971438",
         "locations":
           [ { "lineno": 228,
@@ -272,7 +284,7 @@
         "labels": [] },
       { "name": "CheckoutFormMessages_6624606321",
         "locations":
-          [ { "lineno": 748,
+          [ { "lineno": 754,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Checkout form messages.",
@@ -292,7 +304,7 @@
         "labels": [] },
       { "name": "CheckoutFormMessages_6864249470",
         "locations":
-          [ { "lineno": 740,
+          [ { "lineno": 746,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Checkout form messages.",
@@ -309,8 +321,7 @@
               "doc": "Submit form call-to-action label text." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Dashboard_2771714876",
         "locations":
           [ { "lineno": 27,
@@ -351,8 +362,7 @@
               "doc": "Summary of revenue and tickets sold.\n (Archived orders are not included)." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Dashboard_8525121059",
         "locations":
           [ { "lineno": 236,
@@ -372,8 +382,7 @@
               "doc": "Summary of revenue and tickets sold.\n (Archived orders are not included)." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Dashboard_RsvpSummary_2031094822",
         "locations":
           [ { "lineno": 254,
@@ -399,8 +408,7 @@
               "doc": "Number of RSVPs in waitlist." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Dashboard_RsvpSummary_4939655439",
         "locations":
           [ { "lineno": 264,
@@ -489,8 +497,7 @@
               "doc": "Price of lowest priced ticket." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Dashboard_TicketingSummary_8113015635",
         "locations":
           [ { "lineno": 274,
@@ -521,8 +528,7 @@
               "doc": "Price of lowest priced ticket." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Event_264400458673",
         "locations":
           [ { "lineno": 58,
@@ -615,6 +621,92 @@
           {  },
         "labels":
           [ "removed" ] },
+      { "name": "Event_343708196182",
+        "locations":
+          [ { "lineno": 305,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Event ID." },
+            { "name": "location",
+              "type": "wix-events-ng-backend.Location_85938359409",
+              "doc": "Event location." },
+            { "name": "scheduling",
+              "type": "wix-events-ng-backend.Scheduling_17566201923",
+              "doc": "Event scheduling." },
+            { "name": "title",
+              "type": "string",
+              "doc": "Event title." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Event description." },
+            { "name": "about",
+              "type": "string",
+              "doc": "Rich-text content displayed in Wix UI - \"About Event\" section (HTML)." },
+            { "name": "mainImage",
+              "type": "wix-events-ng-backend.Image_5504778123",
+              "doc": "Main event image." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "Event slug URL (generated from event title)." },
+            { "name": "language",
+              "type": "string",
+              "doc": "ISO 639-1 language code of the event (used in content translations)." },
+            { "name": "created",
+              "type": "Date",
+              "doc": "Event creation timestamp." },
+            { "name": "modified",
+              "type": "Date",
+              "doc": "Event modified timestamp." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Event status.\nOne of:\n + `\"SCHEDULED\"`\n + `\"STARTED\"`\n + `\"ENDED\"`\n + `\"CANCELED\"`" },
+            { "name": "registration",
+              "type": "wix-events-ng-backend.Registration_53427365065",
+              "doc": "RSVP or ticketing registration details." },
+            { "name": "calendarLinks",
+              "type": "wix-events-ng-backend.CalendarLinks_2113971438",
+              "doc": "\"Add to calendar\" URLs." },
+            { "name": "eventPageUrl",
+              "type": "wix-events-ng-backend.SiteUrl_5300502582",
+              "doc": "Event page URL components." },
+            { "name": "form",
+              "type": "wix-events-ng-backend.Form_100569276395",
+              "doc": "Event registration form." },
+            { "name": "dashboard",
+              "type": "wix-events-ng-backend.Dashboard_4756039482",
+              "doc": "Event dashboard summary of RSVP / ticket sales." },
+            { "name": "instanceId",
+              "type": "string",
+              "doc": "Instance ID of the site where event is hosted." },
+            { "name": "guestListConfig",
+              "type": "wix-events-ng-backend.GuestListConfig_3929178950",
+              "doc": "Guest list configuration." },
+            { "name": "userId",
+              "type": "string",
+              "doc": "Event creator user ID." },
+            { "name": "feed",
+              "type": "wix-events-ng-backend.Feed_2250420887",
+              "doc": "Event discussion feed. For internal use." },
+            { "name": "onlineConferencing",
+              "type": "wix-events-ng-backend.OnlineConferencing_27208283853",
+              "doc": "Online conferencing details." },
+            { "name": "seoSettings",
+              "type": "wix-events-ng-backend.SeoSettings_7510628004",
+              "doc": "SEO settings." },
+            { "name": "assignedContactsLabel",
+              "type": "string",
+              "doc": "Assigned contacts label key." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Event_347469995595",
         "locations":
           [ { "lineno": 305,
@@ -706,7 +798,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "Event_3635141956",
         "locations":
           [ { "lineno": 298,
@@ -723,8 +815,7 @@
               "doc": "Guest list configuration." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ExternalEvent_13029336804",
         "locations":
           [ { "lineno": 340,
@@ -745,10 +836,34 @@
         "extra":
           {  },
         "labels":
+          [ "removed" ] },
+      { "name": "ExternalEvent_22621832582",
+        "locations":
+          [ { "lineno": 339,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "External registration details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "externalRegistrationUrl",
+              "type": "string",
+              "doc": "External event registration URL." },
+            { "name": "restrictedTo",
+              "type": "string",
+              "doc": "Types of users allowed to register.\nOne of:\n + `\"VISITOR\"`\n + `\"MEMBER\"`\n + `\"VISITOR_OR_MEMBER\"`" },
+            { "name": "eventType",
+              "type": "string",
+              "doc": "Initial event type which was set when creating an event.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" } ],
+        "extra":
+          {  },
+        "labels":
           [ "new" ] },
       { "name": "ExternalEvent_3219994176",
         "locations":
-          [ { "lineno": 352,
+          [ { "lineno": 358,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "External registration details.",
@@ -765,7 +880,7 @@
         "labels": [] },
       { "name": "FacetCounts_708099164",
         "locations":
-          [ { "lineno": 359,
+          [ { "lineno": 365,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "`key` of type string, `value` of type object",
@@ -779,11 +894,10 @@
               "doc": "Set of key-value pairs. Facet counts aggregated per value" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Feed_2250420887",
         "locations":
-          [ { "lineno": 366,
+          [ { "lineno": 372,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event discussion feed. For internal use.",
@@ -800,7 +914,7 @@
         "labels": [] },
       { "name": "FormMessages_43340367168",
         "locations":
-          [ { "lineno": 773,
+          [ { "lineno": 779,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Set of configured form messages.",
@@ -826,7 +940,7 @@
         "labels": [] },
       { "name": "FormMessages_51883945026",
         "locations":
-          [ { "lineno": 764,
+          [ { "lineno": 770,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Set of configured form messages.",
@@ -846,11 +960,10 @@
               "doc": "Messages shown when event registration is closed." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Form_100569276395",
         "locations":
-          [ { "lineno": 756,
+          [ { "lineno": 762,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event registration form.",
@@ -870,8 +983,7 @@
               "doc": "Set of configured form messages." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Form_94315172301",
         "locations":
           [ { "lineno": 322,
@@ -898,7 +1010,7 @@
           [ "removed" ] },
       { "name": "GuestListConfig_2551361168",
         "locations":
-          [ { "lineno": 373,
+          [ { "lineno": 379,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Guest list configuration.",
@@ -912,11 +1024,10 @@
               "doc": "Whether members can see other members attending the event (defaults to true)." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "GuestListConfig_3929178950",
         "locations":
-          [ { "lineno": 380,
+          [ { "lineno": 386,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Guest list configuration.",
@@ -957,7 +1068,7 @@
           [ "removed" ] },
       { "name": "Image_5504778123",
         "locations":
-          [ { "lineno": 387,
+          [ { "lineno": 393,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Main event image.",
@@ -980,11 +1091,10 @@
               "doc": "Image alt text. Optional." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "InputControl_50110866111",
         "locations":
-          [ { "lineno": 829,
+          [ { "lineno": 835,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "A block of nested fields.",
@@ -1015,8 +1125,7 @@
               "doc": "Unique control ID." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "InputControl_50791471072",
         "locations":
           [ { "lineno": 362,
@@ -1054,7 +1163,7 @@
           [ "removed" ] },
       { "name": "InputControl_57045575166",
         "locations":
-          [ { "lineno": 852,
+          [ { "lineno": 858,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "A block of nested fields.",
@@ -1085,11 +1194,10 @@
               "doc": "Unique control ID." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Input_30637413556",
         "locations":
-          [ { "lineno": 783,
+          [ { "lineno": 789,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "An input of one or multiple text values",
@@ -1127,8 +1235,7 @@
               "doc": "A maximum accepted values for array input.\n Only applicable for inputs of valueType: TEXT_ARRAY." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Input_31318018517",
         "locations":
           [ { "lineno": 340,
@@ -1173,7 +1280,7 @@
           [ "removed" ] },
       { "name": "Input_37572122611",
         "locations":
-          [ { "lineno": 805,
+          [ { "lineno": 811,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "An input of one or multiple text values",
@@ -1214,8 +1321,7 @@
               "doc": "Preselected option.\n Currently only applicable for dropdown." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Location_15550153297",
         "locations":
           [ { "lineno": 123,
@@ -1243,6 +1349,30 @@
           {  },
         "labels":
           [ "removed" ] },
+      { "name": "Location_44617534545",
+        "locations":
+          [ { "lineno": 403,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event location.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Location name." },
+            { "name": "address",
+              "type": "wix-events-ng-backend.Address_37895245474",
+              "doc": "Full [address](https://www.wix.com/velo/reference/$w/addressinput/value) derived from formatted single line `address`.\n When `full_address` is used to create or update the event, deprecated `address` and `coordinates` are ignored.\n\n Migration notes:\n - `full_address.formatted_address` is equivalent to `address`.\n - `full_address.geocode` is equivalent to `coordinates`." },
+            { "name": "type",
+              "type": "string",
+              "doc": "Location type.\nOne of:\n + `\"VENUE\"`\n + `\"ONLINE\"`" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Location_47009404077",
         "locations":
           [ { "lineno": 397,
@@ -1266,10 +1396,10 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "Location_85938359409",
         "locations":
-          [ { "lineno": 414,
+          [ { "lineno": 420,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event location.",
@@ -1295,11 +1425,10 @@
               "doc": "Full address derived from formatted single line `address`.\n When `full_address` is used to create or update the event, deprecated `address` and `coordinates` are ignored.\n\n Migration notes:\n - `full_address.formatted_address` is equivalent to `address`.\n - `full_address.geocode` is equivalent to `coordinates`." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "MapCoordinates_4535947220",
         "locations":
-          [ { "lineno": 433,
+          [ { "lineno": 439,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Location map coordinates.",
@@ -1319,7 +1448,7 @@
         "labels": [] },
       { "name": "Money_2432563994",
         "locations":
-          [ { "lineno": 441,
+          [ { "lineno": 447,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Price of lowest priced ticket.",
@@ -1336,8 +1465,7 @@
               "doc": "ISO 4217 format of the currency i.e. `USD`." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Money_3268473980",
         "locations":
           [ { "lineno": 144,
@@ -1361,7 +1489,7 @@
           [ "removed" ] },
       { "name": "Money_5252798586",
         "locations":
-          [ { "lineno": 449,
+          [ { "lineno": 455,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Price of lowest priced ticket.",
@@ -1381,11 +1509,10 @@
               "doc": "Monetary amount. Decimal string with a period as a decimal separator (e.g., 3.99). Optionally, a single (-), to indicate that the amount is negative." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Negative_ResponseConfirmation_4586887728",
         "locations":
-          [ { "lineno": 926,
+          [ { "lineno": 932,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Confirmation messages shown after registration.",
@@ -1405,7 +1532,7 @@
         "labels": [] },
       { "name": "OnlineConferencingConfig_7676888895",
         "locations":
-          [ { "lineno": 475,
+          [ { "lineno": 481,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -1427,7 +1554,7 @@
         "labels": [] },
       { "name": "OnlineConferencingSession_12526595925",
         "locations":
-          [ { "lineno": 487,
+          [ { "lineno": 493,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -1449,7 +1576,7 @@
         "labels": [] },
       { "name": "OnlineConferencing_25130554382",
         "locations":
-          [ { "lineno": 458,
+          [ { "lineno": 464,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Online conferencing details.",
@@ -1464,11 +1591,10 @@
               "type": "wix-events-ng-backend.OnlineConferencingSession_12526595925" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "OnlineConferencing_27208283853",
         "locations":
-          [ { "lineno": 466,
+          [ { "lineno": 472,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Online conferencing details.",
@@ -1489,7 +1615,7 @@
         "labels": [] },
       { "name": "OptionSelection_4960443727",
         "locations":
-          [ { "lineno": 875,
+          [ { "lineno": 881,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Preselected option.",
@@ -1514,11 +1640,10 @@
                   "members":
                     [ "optionIndex",
                       "placeholderText" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Positive_ResponseConfirmation_8615945964",
         "locations":
-          [ { "lineno": 934,
+          [ { "lineno": 940,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Confirmation messages shown after registration.",
@@ -1544,7 +1669,7 @@
         "labels": [] },
       { "name": "RegistrationClosedMessages_10064481409",
         "locations":
-          [ { "lineno": 894,
+          [ { "lineno": 900,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown when event registration is closed.",
@@ -1564,7 +1689,7 @@
         "labels": [] },
       { "name": "RegistrationClosedMessages_10342547173",
         "locations":
-          [ { "lineno": 886,
+          [ { "lineno": 892,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown when event registration is closed.",
@@ -1581,8 +1706,7 @@
               "doc": "\"Explore other events\" call-to-action label text." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Registration_51185909116",
         "locations":
           [ { "lineno": 495,
@@ -1612,7 +1736,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "Registration_51443040459",
         "locations":
           [ { "lineno": 181,
@@ -1651,7 +1775,7 @@
           [ "removed" ] },
       { "name": "Registration_53427365065",
         "locations":
-          [ { "lineno": 520,
+          [ { "lineno": 526,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP or ticketing registration details.",
@@ -1683,11 +1807,40 @@
               "doc": "Initial event type which was set when creating an event.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" } ],
         "extra":
           {  },
+        "labels": [] },
+      { "name": "Registration_57655929751",
+        "locations":
+          [ { "lineno": 501,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "RSVP or ticketing registration details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "settings",
+              "type": "wix-events-ng-backend.ExternalEvent_22621832582",
+              "doc": "External registration details." },
+            { "name": "type",
+              "type": "string",
+              "doc": "Event type.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" },
+            { "name": "status",
+              "type": "string",
+              "doc": "Event registration status.\nOne of:\n + `\"NA_REGISTRATION_STATUS\"`\n + `\"CLOSED\"`\n + `\"CLOSED_MANUALLY\"`\n + `\"OPEN_RSVP\"`\n + `\"OPEN_RSVP_WAITLIST\"`\n + `\"OPEN_TICKETS\"`\n + `\"OPEN_EXTERNAL\"`" },
+            { "name": "rsvp",
+              "type": "wix-events-ng-backend.RsvpCollection_12857091925",
+              "doc": "RSVP collection details." },
+            { "name": "ticketing",
+              "type": "wix-events-ng-backend.Ticketing_15045486817",
+              "doc": "Ticketing details." } ],
+        "extra":
+          {  },
         "labels":
           [ "new" ] },
       { "name": "RsvpCollectionConfig_11559945607",
         "locations":
-          [ { "lineno": 584,
+          [ { "lineno": 590,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP collection configuration. Can be used to set limits.",
@@ -1710,11 +1863,10 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "RsvpCollectionConfig_11838011770",
         "locations":
-          [ { "lineno": 571,
+          [ { "lineno": 577,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP collection configuration.",
@@ -1737,7 +1889,7 @@
         "labels": [] },
       { "name": "RsvpCollection_10333008726",
         "locations":
-          [ { "lineno": 564,
+          [ { "lineno": 570,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP collection details.",
@@ -1754,7 +1906,7 @@
         "labels": [] },
       { "name": "RsvpCollection_12857091925",
         "locations":
-          [ { "lineno": 557,
+          [ { "lineno": 563,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP collection details.",
@@ -1768,11 +1920,10 @@
               "doc": "RSVP collection configuration." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "RsvpFormMessages_19476488547",
         "locations":
-          [ { "lineno": 914,
+          [ { "lineno": 920,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP form messages.",
@@ -1804,7 +1955,7 @@
         "labels": [] },
       { "name": "RsvpFormMessages_33952434787",
         "locations":
-          [ { "lineno": 902,
+          [ { "lineno": 908,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP form messages.",
@@ -1833,11 +1984,10 @@
               "doc": "\"Submit form\" call-to-action label text." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "RsvpFormMessages_Negative_4611603004",
         "locations":
-          [ { "lineno": 953,
+          [ { "lineno": 959,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown for RSVP = `NO`.",
@@ -1857,7 +2007,7 @@
         "labels": [] },
       { "name": "RsvpFormMessages_Negative_7937566166",
         "locations":
-          [ { "lineno": 944,
+          [ { "lineno": 950,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown for RSVP = `NO`.",
@@ -1877,11 +2027,10 @@
               "doc": "\"Share event\" call-to-action label text." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "RsvpFormMessages_Positive_16352639389",
         "locations":
-          [ { "lineno": 961,
+          [ { "lineno": 967,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown for RSVP = `YES`.",
@@ -1907,11 +2056,10 @@
               "doc": "\"Share event\" call-to-action label text." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "RsvpFormMessages_Positive_8813967668",
         "locations":
-          [ { "lineno": 972,
+          [ { "lineno": 978,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown for RSVP = `YES`.",
@@ -1931,7 +2079,7 @@
         "labels": [] },
       { "name": "ScheduleConfig_13852377628",
         "locations":
-          [ { "lineno": 612,
+          [ { "lineno": 618,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Schedule configuration.",
@@ -1966,7 +2114,7 @@
         "labels": [] },
       { "name": "ScheduleConfig_16229949990",
         "locations":
-          [ { "lineno": 597,
+          [ { "lineno": 603,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Schedule configuration.",
@@ -1998,11 +2146,10 @@
               "doc": "Whether time zone is displayed in formatted schedule." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Scheduling_17566201923",
         "locations":
-          [ { "lineno": 637,
+          [ { "lineno": 643,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event scheduling.",
@@ -2028,7 +2175,7 @@
         "labels": [] },
       { "name": "Scheduling_22467857484",
         "locations":
-          [ { "lineno": 627,
+          [ { "lineno": 633,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event scheduling.",
@@ -2051,8 +2198,7 @@
               "doc": "Formatted start time of the event (empty for TBD schedules)." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SeoSchema_4434305645",
         "locations":
           [ { "lineno": 117,
@@ -2106,7 +2252,7 @@
         "labels": [] },
       { "name": "SeoSettings_7510628004",
         "locations":
-          [ { "lineno": 647,
+          [ { "lineno": 653,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "SEO settings.",
@@ -2126,7 +2272,7 @@
         "labels": [] },
       { "name": "SiteUrl_2853714657",
         "locations":
-          [ { "lineno": 655,
+          [ { "lineno": 661,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event page URL components.",
@@ -2143,11 +2289,10 @@
               "doc": "The path to that page - e.g `/my-events/weekly-meetup-2`" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SiteUrl_5300502582",
         "locations":
-          [ { "lineno": 664,
+          [ { "lineno": 670,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event page URL components.",
@@ -2190,8 +2335,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "StreetAddress_5151700664",
         "locations":
           [ { "lineno": 83,
@@ -2214,8 +2358,7 @@
               "doc": "apartment number" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Subdivision_21897131614",
         "locations":
           [ { "lineno": 101,
@@ -2240,11 +2383,10 @@
               "doc": "a free-text description of subdivision type" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "TaxConfig_4925741970",
         "locations":
-          [ { "lineno": 686,
+          [ { "lineno": 692,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Tax configuration.",
@@ -2267,11 +2409,10 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "TaxConfig_5203808133",
         "locations":
-          [ { "lineno": 673,
+          [ { "lineno": 679,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Tax configuration.",
@@ -2294,7 +2435,7 @@
         "labels": [] },
       { "name": "TicketingConfig_6341687258",
         "locations":
-          [ { "lineno": 723,
+          [ { "lineno": 729,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Ticketing configuration.",
@@ -2311,11 +2452,10 @@
               "doc": "Tax configuration." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "TicketingConfig_6758553378",
         "locations":
-          [ { "lineno": 731,
+          [ { "lineno": 737,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Ticketing configuration.",
@@ -2371,7 +2511,7 @@
           [ "removed" ] },
       { "name": "Ticketing_15045486817",
         "locations":
-          [ { "lineno": 699,
+          [ { "lineno": 705,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Ticketing details.",
@@ -2400,11 +2540,10 @@
               "doc": "Formatted price of highest priced ticket." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Ticketing_15758504330",
         "locations":
-          [ { "lineno": 711,
+          [ { "lineno": 717,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Ticketing details.",
@@ -2433,11 +2572,10 @@
               "doc": "Formatted price of highest priced ticket." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "TicketsUnavailableMessages_7555249437",
         "locations":
-          [ { "lineno": 980,
+          [ { "lineno": 986,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown when event tickets are unavailable.",
@@ -2475,6 +2613,32 @@
             { "name": "messages",
               "type": "wix-events-ng-backend.FormMessages_51883945026",
               "doc": "Set of configured form messages." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "todo_13440308032",
+        "locations":
+          [ { "lineno": 182,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvp",
+              "type": "wix-events-ng-backend.RsvpCollectionConfig_11559945607",
+              "doc": "RSVP collection configuration. Can be used to set limits.",
+              "optional": true },
+            { "name": "settings",
+              "type": "wix-events-ng-backend.todo_25677253065",
+              "doc": "todo",
+              "optional": true },
+            { "name": "ticketing",
+              "type": "wix-events-ng-backend.todo_9925903014",
+              "doc": "todo",
+              "optional": true } ],
         "extra":
           {  },
         "labels":
@@ -2520,8 +2684,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "todo_16562783175",
         "locations":
           [ { "lineno": 182,
@@ -2548,7 +2711,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "todo_25677253065",
         "locations":
           [ { "lineno": 191,
@@ -2582,8 +2745,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "todo_2984957200",
         "locations":
           [ { "lineno": 160,
@@ -2601,8 +2763,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "todo_3288143231",
         "locations":
           [ { "lineno": 221,
@@ -2617,6 +2778,32 @@
           [ { "name": "formAssignedPerTicket",
               "type": "boolean",
               "doc": "Whether the form must be filled out separately for each ticket.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "todo_42270706523",
+        "locations":
+          [ { "lineno": 143,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Location name.",
+              "optional": true },
+            { "name": "address",
+              "type": "wix-events-ng-backend.Address_36504914659",
+              "doc": "Full [address](https://www.wix.com/velo/reference/$w/addressinput/value) derived from formatted single line `address`.\n When `full_address` is used to create or update the event, deprecated `address` and `coordinates` are ignored.\n\n Migration notes:\n - `full_address.formatted_address` is equivalent to `address`.\n - `full_address.geocode` is equivalent to `coordinates`.",
+              "optional": true },
+            { "name": "type",
+              "type": "string",
+              "doc": "Location type.\nOne of:\n + `\"VENUE\"`\n + `\"ONLINE\"`",
               "optional": true } ],
         "extra":
           {  },
@@ -2648,7 +2835,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "todo_9925903014",
         "locations":
           [ { "lineno": 213,
@@ -2661,16 +2848,12 @@
               {  } },
         "members":
           [ { "name": "settings",
-              "type": "wix-events-ng-backend.todo_3288143231",
-              "doc": "todo",
-              "optional": true },
-            { "name": "settings",
               "type": "wix-events-ng-backend.TaxConfig_4925741970",
               "doc": "Tax configuration.",
               "optional": true } ],
         "extra":
           {  },
         "labels":
-          [ "new" ] } ],
+          [ "changed" ] } ],
   "extra":
     {  } }

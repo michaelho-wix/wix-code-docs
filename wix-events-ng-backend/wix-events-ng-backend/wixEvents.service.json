@@ -2,7 +2,7 @@
   "memberOf": "wix-events-ng-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -107,11 +107,12 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "createEvent",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "eventInfo",
-              "type": "wix-events-ng-backend.wixEvents.EventData_46506843208",
+              "type": "wix-events-ng-backend.wixEvents.EventData_78315588998",
               "doc": "Event data." },
             { "name": "options",
               "type": "wix-events-ng-backend.wixEvents.CreateEventRequest_4173585239" } ],
@@ -122,7 +123,7 @@
                   [ "wix-events-ng-backend.wixEvents.CreateEventResult_294914669964" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 95,
+          [ { "lineno": 97,
               "filename": "wix_events_EventManagement_CreateV2_createEvent.js" } ],
         "docs":
           { "summary": "Creates a new event, with a default registration form in the given language.",
@@ -172,13 +173,14 @@
                       "      }",
                       "    },",
                       "    mainImage: \"wix:image://v1/mediaId/filename.jpg#originWidth=42&originHeight=42\",",
-                      "    guestList: {",
-                      "      settings: {",
-                      "        public: true",
-                      "      }",
-                      "    },",
-                      "    about: \"a string\",",
                       "    registration: {",
+                      "      rsvp: {",
+                      "        settings: {",
+                      "          rsvpStatusOptions: \"YES_ONLY\",",
+                      "          limit: 42,",
+                      "          waitlist: true",
+                      "        }",
+                      "      },",
                       "      settings: {",
                       "        externalRegistrationUrl: \"a string\",",
                       "        registrationPaused: true,",
@@ -188,8 +190,26 @@
                       "      },",
                       "      ticketing: {",
                       "        settings: {",
-                      "          formAssignedPerTicket: true",
+                      "          formAssignedPerTicket: true,",
+                      "          tax: {",
+                      "            type: \"INCLUDED\",",
+                      "            name: \"a string\",",
+                      "            rate: \"a string\"",
+                      "          }",
                       "        }",
+                      "      }",
+                      "    },",
+                      "    guestList: {",
+                      "      settings: {",
+                      "        public: true",
+                      "      }",
+                      "    },",
+                      "    about: \"a string\",",
+                      "    videoConferencing: {",
+                      "      settings: {",
+                      "        enabled: true,",
+                      "        providerId: \"a string\",",
+                      "        conferenceType: \"MEETING\"",
                       "      }",
                       "    }",
                       "  };",
@@ -359,14 +379,15 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateEvent",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "eventId",
               "type": "string",
               "doc": "Event ID." },
             { "name": "eventInfo",
-              "type": "wix-events-ng-backend.wixEvents.EventData_46043399603",
+              "type": "wix-events-ng-backend.wixEvents.EventData_68445027057",
               "doc": "Event data to update (partial)" },
             { "name": "options",
               "type": "wix-events-ng-backend.wixEvents.UpdateEventRequest_2842136330" } ],
@@ -377,7 +398,7 @@
                   [ "wix-events-ng-backend.wixEvents.UpdateEventResult_292294459449" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 87,
+          [ { "lineno": 89,
               "filename": "wix_events_EventManagement_Update_updateEvent.js" } ],
         "docs":
           { "summary": "Updates an event's parameters. See [Partial Updates](https://dev.wix.com/api/rest/wix-events/wix-events/partial-updates) for more information.",
@@ -423,13 +444,14 @@
                       "      }",
                       "    },",
                       "    mainImage: \"wix:image://v1/mediaId/filename.jpg#originWidth=42&originHeight=42\",",
-                      "    guestList: {",
-                      "      settings: {",
-                      "        public: true",
-                      "      }",
-                      "    },",
-                      "    about: \"a string\",",
                       "    registration: {",
+                      "      rsvp: {",
+                      "        settings: {",
+                      "          rsvpStatusOptions: \"YES_ONLY\",",
+                      "          limit: 42,",
+                      "          waitlist: true",
+                      "        }",
+                      "      },",
                       "      settings: {",
                       "        externalRegistrationUrl: \"a string\",",
                       "        registrationPaused: true,",
@@ -438,8 +460,26 @@
                       "      },",
                       "      ticketing: {",
                       "        settings: {",
-                      "          formAssignedPerTicket: true",
+                      "          formAssignedPerTicket: true,",
+                      "          tax: {",
+                      "            type: \"INCLUDED\",",
+                      "            name: \"a string\",",
+                      "            rate: \"a string\"",
+                      "          }",
                       "        }",
+                      "      }",
+                      "    },",
+                      "    guestList: {",
+                      "      settings: {",
+                      "        public: true",
+                      "      }",
+                      "    },",
+                      "    about: \"a string\",",
+                      "    videoConferencing: {",
+                      "      settings: {",
+                      "        enabled: true,",
+                      "        providerId: \"a string\",",
+                      "        conferenceType: \"MEETING\"",
                       "      }",
                       "    }",
                       "  };",
@@ -619,7 +659,7 @@
         "labels": [] },
       { "name": "CreateEventRequest_4173585239",
         "locations":
-          [ { "lineno": 1,
+          [ { "lineno": 10,
               "filename": "wix_events_EventManagement_CreateV2_createEvent.js" } ],
         "docs":
           { "links": [],
@@ -636,7 +676,7 @@
         "labels": [] },
       { "name": "CreateEventResult_294914669964",
         "locations":
-          [ { "lineno": 10,
+          [ { "lineno": 19,
               "filename": "wix_events_EventManagement_CreateV2_createEvent.js" } ],
         "docs":
           { "links": [],
@@ -728,7 +768,7 @@
         "labels": [] },
       { "name": "EventData_16302645512",
         "locations":
-          [ { "lineno": 18,
+          [ { "lineno": 28,
               "filename": "wix_events_EventManagement_Update_updateEvent.js" } ],
         "docs":
           { "summary": "Event data to update (partial)",
@@ -746,7 +786,7 @@
         "labels": [] },
       { "name": "EventData_16395334233",
         "locations":
-          [ { "lineno": 58,
+          [ { "lineno": 68,
               "filename": "wix_events_EventManagement_CreateV2_createEvent.js" } ],
         "docs":
           { "summary": "Event data.",
@@ -782,7 +822,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "EventData_28353402679",
         "locations":
           [ { "lineno": 65,
@@ -804,7 +845,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "EventData_46043399603",
         "locations":
           [ { "lineno": 1,
@@ -850,7 +892,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "EventData_46506843208",
         "locations":
           [ { "lineno": 41,
@@ -891,7 +934,106 @@
               "doc": "Event data." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "EventData_68445027057",
+        "locations":
+          [ { "lineno": 10,
+              "filename": "wix_events_EventManagement_Update_updateEvent.js" } ],
+        "docs":
+          { "summary": "Event data to update (partial)",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Event title.",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Event description.",
+              "optional": true },
+            { "name": "location",
+              "type": "wix-events-ng-backend.Location_42949137567",
+              "doc": "Event location.\n Address is required for non TBD event.\n Location name is required for TBD event.",
+              "optional": true },
+            { "name": "scheduling",
+              "type": "wix-events-ng-backend.wixEvents.EventData_16302645512",
+              "doc": "Event data to update (partial)",
+              "optional": true },
+            { "name": "mainImage",
+              "type": "string",
+              "doc": "Main event [image](https://www.wix.com/velo/reference/$w/image/src). Printed in ticket PDF.\n Currently, only images previously saved in Wix Media are supported.",
+              "optional": true },
+            { "name": "registration",
+              "type": "wix-events-ng-backend.wixEvents.todo_19705840109",
+              "doc": "todo",
+              "optional": true },
+            { "name": "guestList",
+              "type": "wix-events-ng-backend.EventData_3180189016",
+              "doc": "Event data.",
+              "optional": true },
+            { "name": "about",
+              "type": "string",
+              "doc": "Rich-text content for About Event section (HTML).",
+              "optional": true },
+            { "name": "videoConferencing",
+              "type": "wix-events-ng-backend.todo_9898903254",
+              "doc": "todo",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "EventData_78315588998",
+        "locations":
+          [ { "lineno": 50,
+              "filename": "wix_events_EventManagement_CreateV2_createEvent.js" } ],
+        "docs":
+          { "summary": "Event data.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Event title." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Event description.",
+              "optional": true },
+            { "name": "location",
+              "type": "wix-events-ng-backend.Location_42949137567",
+              "doc": "Event location.\n Address is required for non TBD event.\n Location name is required for TBD event." },
+            { "name": "scheduling",
+              "type": "wix-events-ng-backend.wixEvents.EventData_16395334233",
+              "doc": "Event data." },
+            { "name": "mainImage",
+              "type": "string",
+              "doc": "Main event [image](https://www.wix.com/velo/reference/$w/image/src). Printed in ticket PDF.\n Currently, only images previously saved in Wix Media are supported.",
+              "optional": true },
+            { "name": "registration",
+              "type": "wix-events-ng-backend.wixEvents.todo_29205647166",
+              "doc": "todo",
+              "optional": true },
+            { "name": "guestList",
+              "type": "wix-events-ng-backend.EventData_3180189016",
+              "doc": "Event data." },
+            { "name": "about",
+              "type": "string",
+              "doc": "Rich-text content for About Event section (HTML).",
+              "optional": true },
+            { "name": "videoConferencing",
+              "type": "wix-events-ng-backend.todo_9898903254",
+              "doc": "todo",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Event_1_3282155730",
         "locations":
           [ { "lineno": 1214,
@@ -1089,7 +1231,7 @@
         "labels": [] },
       { "name": "RegistrationConfig_17001461846",
         "locations":
-          [ { "lineno": 33,
+          [ { "lineno": 35,
               "filename": "wix_events_EventManagement_Update_updateEvent.js" } ],
         "docs":
           { "summary": "Registration configuration",
@@ -1119,7 +1261,7 @@
         "labels": [] },
       { "name": "RegistrationConfig_26501268903",
         "locations":
-          [ { "lineno": 73,
+          [ { "lineno": 75,
               "filename": "wix_events_EventManagement_CreateV2_createEvent.js" } ],
         "docs":
           { "summary": "Registration configuration",
@@ -1153,7 +1295,7 @@
         "labels": [] },
       { "name": "UpdateEventRequest_2842136330",
         "locations":
-          [ { "lineno": 47,
+          [ { "lineno": 49,
               "filename": "wix_events_EventManagement_Update_updateEvent.js" } ],
         "docs":
           { "links": [],
@@ -1170,7 +1312,7 @@
         "labels": [] },
       { "name": "UpdateEventResult_292294459449",
         "locations":
-          [ { "lineno": 56,
+          [ { "lineno": 58,
               "filename": "wix_events_EventManagement_Update_updateEvent.js" } ],
         "docs":
           { "links": [],
@@ -1243,6 +1385,60 @@
               "doc": "Assigned contacts label key." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels": [] },
+      { "name": "todo_19705840109",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_events_EventManagement_Update_updateEvent.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvp",
+              "type": "wix-events-ng-backend.todo_14060026129",
+              "doc": "todo",
+              "optional": true },
+            { "name": "settings",
+              "type": "wix-events-ng-backend.wixEvents.RegistrationConfig_17001461846",
+              "doc": "Registration configuration",
+              "optional": true },
+            { "name": "ticketing",
+              "type": "wix-events-ng-backend.RegistrationConfig_9202340013",
+              "doc": "Registration configuration",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "todo_29205647166",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_events_EventManagement_CreateV2_createEvent.js" } ],
+        "docs":
+          { "summary": "todo",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvp",
+              "type": "wix-events-ng-backend.todo_14060026129",
+              "doc": "todo",
+              "optional": true },
+            { "name": "settings",
+              "type": "wix-events-ng-backend.wixEvents.RegistrationConfig_26501268903",
+              "doc": "Registration configuration",
+              "optional": true },
+            { "name": "ticketing",
+              "type": "wix-events-ng-backend.RegistrationConfig_9202340013",
+              "doc": "Registration configuration",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] } ],
   "extra":
     {  } }

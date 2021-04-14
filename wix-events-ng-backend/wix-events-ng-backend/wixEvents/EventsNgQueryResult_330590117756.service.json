@@ -1,8 +1,7 @@
 { "name": "EventsNgQueryResult_330590117756",
   "memberOf": "wix-events-ng-backend.wixEvents",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 999,
       "filename": "wix_events_EventManagement_QueryV2_queryEvents.js" },

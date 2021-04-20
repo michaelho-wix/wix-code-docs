@@ -1,7 +1,6 @@
 { "name": "wix-multilingual-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -29,8 +28,7 @@
           {  } } ],
   "operations":
     [ { "name": "activate",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "localeId",
@@ -134,8 +132,7 @@
         "extra":
           {  } },
       { "name": "deactivate",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "localeId",
@@ -216,8 +213,7 @@
         "extra":
           {  } },
       { "name": "remove",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "localeId",
@@ -261,8 +257,7 @@
         "extra":
           {  } },
       { "name": "setDefault",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "localeId",

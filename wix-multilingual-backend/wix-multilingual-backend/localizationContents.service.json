@@ -1,7 +1,8 @@
 { "name": "localizationContents",
   "memberOf": "wix-multilingual-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 17,
       "filename": "index.js" },
@@ -97,14 +98,16 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getContentHistory",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "contentId",
               "type": "string",
               "doc": "Content uuid identifier" },
-            { "name": "getContentHistoryRequest",
-              "type": "wix-multilingual-backend.localizationContents.GetContentHistoryRequest_2765231157" } ],
+            { "name": "paging",
+              "type": "wix-multilingual-backend.Paging_1617727965",
+              "doc": "Limit results or start with a given offset" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -114,7 +117,7 @@
                         [ "wix-multilingual-backend.RevisionLocalizedContent_80424980522" ] } ] },
             "doc": "Fulfilled - List of contents, representing all content's changes through its lifecycle" },
         "locations":
-          [ { "lineno": 7,
+          [ { "lineno": 1,
               "filename": "com_wixpress_localization_Localization_GetContentHistory_getContentHistory.js" } ],
         "docs":
           { "summary": "Get content full revision log",
@@ -129,15 +132,13 @@
                       "",
                       "export function getContentHistory() {",
                       "  const contentId = \"a string\";",
-                      "  const getContentHistoryRequest = {",
-                      "    paging: {",
-                      "      limit: 42,",
-                      "      offset: 42",
-                      "    }",
+                      "  const paging = {",
+                      "    limit: 42,",
+                      "    offset: 42",
                       "  };",
                       "",
                       "  return localizationContents",
-                      "    .getContentHistory(contentId, getContentHistoryRequest)",
+                      "    .getContentHistory(contentId, paging)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -153,14 +154,16 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getContentHistoryByKey",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "contentKey",
               "type": "wix-multilingual-backend.LocalizedContentKey_12656346030",
               "doc": "Content unique key identifier" },
-            { "name": "getContentHistoryByKeyRequest",
-              "type": "wix-multilingual-backend.localizationContents.GetContentHistoryByKeyRequest_5213214045" } ],
+            { "name": "paging",
+              "type": "wix-multilingual-backend.Paging_1617727965",
+              "doc": "Limit results or start with a given offset" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -170,7 +173,7 @@
                         [ "wix-multilingual-backend.RevisionLocalizedContent_80424980522" ] } ] },
             "doc": "Fulfilled - List of contents, representing all content's changes through its lifecycle" },
         "locations":
-          [ { "lineno": 7,
+          [ { "lineno": 1,
               "filename": "com_wixpress_localization_Localization_GetContentHistoryByKey_getContentHistoryByKey.js" } ],
         "docs":
           { "summary": "Get content full revision log",
@@ -192,15 +195,13 @@
                       "    },",
                       "    entityId: \"a string\"",
                       "  };",
-                      "  const getContentHistoryByKeyRequest = {",
-                      "    paging: {",
-                      "      limit: 42,",
-                      "      offset: 42",
-                      "    }",
+                      "  const paging = {",
+                      "    limit: 42,",
+                      "    offset: 42",
                       "  };",
                       "",
                       "  return localizationContents",
-                      "    .getContentHistoryByKey(contentKey, getContentHistoryByKeyRequest)",
+                      "    .getContentHistoryByKey(contentKey, paging)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -478,7 +479,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "GetContentHistoryRequest_2765231157",
         "locations":
           [ { "lineno": 1,
@@ -495,7 +497,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "LanguageContentById_60509919808",
         "locations":
           [ { "lineno": 1,

@@ -1,8 +1,7 @@
 { "name": "locales",
   "memberOf": "wix-multilingual-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 41,
       "filename": "index.js" },

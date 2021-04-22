@@ -1,0 +1,136 @@
+{ "name": "localizationPublic",
+  "memberOf": "wix-multilingual-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 29,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "getPublishedContents",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "contentIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Selected content ids for fetching published fields" },
+            { "name": "languageMask",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Optional list of language tags. Will return partial contents containing only fields that are localized in languages from given list or empty contents if there are no such fields" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-multilingual-backend.LocalizedPublishedContent_72017215135" ] } ] },
+            "doc": "Fulfilled - List of site localized published contents" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_localizationpublic_LocalizationPublic_GetPublishedContents_getPublishedContents.js" } ],
+        "docs":
+          { "summary": "Get published contents by uuid",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { localizationPublic } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function getPublishedContents() {",
+                      "  const contentIds = [\"a string\"];",
+                      "  const languageMask = [\"a string\"];",
+                      "",
+                      "  return localizationPublic",
+                      "    .getPublishedContents(contentIds, languageMask)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "getPublishedContentsByKey",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "contentKeys",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-multilingual-backend.LocalizedContentKey_12656346030" ] },
+              "doc": "Selected content keys for fetching published fields" },
+            { "name": "languageMask",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Optional list of language tags. Will return partial contents containing only fields that are localized in languages from given list or empty contents if there are no such fields" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-multilingual-backend.LocalizedPublishedContent_72017215135" ] } ] },
+            "doc": "Fulfilled - List of site localized published contents" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_localizationpublic_LocalizationPublic_GetPublishedContentsByKey_getPublishedContentsByKey.js" } ],
+        "docs":
+          { "summary": "Get published contents by key",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { localizationPublic } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function getPublishedContentsByKey() {",
+                      "  const contentKeys = [",
+                      "    {",
+                      "      schemaKey: {",
+                      "        appId: \"a string\",",
+                      "        entityType: \"a string\",",
+                      "        scope: \"GLOBAL\"",
+                      "      },",
+                      "      entityId: \"a string\"",
+                      "    }",
+                      "  ];",
+                      "  const languageMask = [\"a string\"];",
+                      "",
+                      "  return localizationPublic",
+                      "    .getPublishedContentsByKey(contentKeys, languageMask)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }

@@ -1,0 +1,613 @@
+{ "name": "localizationContents",
+  "memberOf": "wix-multilingual-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 17,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "createOrUpdateContentsByKey",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "languageTag",
+              "type": "string",
+              "doc": "Language unique identifier in IETF BCP 47 tag format" },
+            { "name": "languageContents",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-multilingual-backend.localizationContents.LanguageContentByKey_71837304617" ] },
+              "doc": "List of site localized contents for create/update" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-multilingual-backend.LocalizedContent_78045159606" ] } ] },
+            "doc": "Fulfilled - List of all created/updated contents" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "com_wixpress_localization_Localization_CreateOrUpdateContentsByKey_createOrUpdateContentsByKey.js" } ],
+        "docs":
+          { "summary": "Add or update localized content for a given language",
+            "description":
+              [ "Identify localized content by its schema and entity",
+                "Language content will be merged with entity's list of language contents" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { localizationContents } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function createOrUpdateContentsByKey() {",
+                      "  const languageTag = \"a string\";",
+                      "  const languageContents = [",
+                      "    {",
+                      "      contentKey: {",
+                      "        schemaKey: {",
+                      "          appId: \"a string\",",
+                      "          entityType: \"a string\",",
+                      "          scope: \"GLOBAL\"",
+                      "        },",
+                      "        entityId: \"a string\"",
+                      "      },",
+                      "      languageFields: [",
+                      "        {",
+                      "          _id: \"a string\",",
+                      "          value: {",
+                      "            textValue: \"a string\"",
+                      "          },",
+                      "          updatedBy: \"SITE_OWNER\",",
+                      "          updaterId: \"a string\",",
+                      "          published: true,",
+                      "          status: \"a string\",",
+                      "          sequencePath: [",
+                      "            {",
+                      "              seqName: \"a string\",",
+                      "              itemId: \"a string\"",
+                      "            }",
+                      "          ]",
+                      "        }",
+                      "      ]",
+                      "    }",
+                      "  ];",
+                      "",
+                      "  return localizationContents",
+                      "    .createOrUpdateContentsByKey(languageTag, languageContents)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "getContentHistory",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "contentId",
+              "type": "string",
+              "doc": "Content uuid identifier" },
+            { "name": "getContentHistoryRequest",
+              "type": "wix-multilingual-backend.localizationContents.GetContentHistoryRequest_2765231157" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-multilingual-backend.RevisionLocalizedContent_80424980522" ] } ] },
+            "doc": "Fulfilled - List of contents, representing all content's changes through its lifecycle" },
+        "locations":
+          [ { "lineno": 7,
+              "filename": "com_wixpress_localization_Localization_GetContentHistory_getContentHistory.js" } ],
+        "docs":
+          { "summary": "Get content full revision log",
+            "description":
+              [ "Identify content by its uuid",
+                "Return empty response if uuid not exists" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { localizationContents } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function getContentHistory() {",
+                      "  const contentId = \"a string\";",
+                      "  const getContentHistoryRequest = {",
+                      "    paging: {",
+                      "      limit: 42,",
+                      "      offset: 42",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return localizationContents",
+                      "    .getContentHistory(contentId, getContentHistoryRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "getContentHistoryByKey",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "contentKey",
+              "type": "wix-multilingual-backend.LocalizedContentKey_12656346030",
+              "doc": "Content unique key identifier" },
+            { "name": "getContentHistoryByKeyRequest",
+              "type": "wix-multilingual-backend.localizationContents.GetContentHistoryByKeyRequest_5213214045" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-multilingual-backend.RevisionLocalizedContent_80424980522" ] } ] },
+            "doc": "Fulfilled - List of contents, representing all content's changes through its lifecycle" },
+        "locations":
+          [ { "lineno": 7,
+              "filename": "com_wixpress_localization_Localization_GetContentHistoryByKey_getContentHistoryByKey.js" } ],
+        "docs":
+          { "summary": "Get content full revision log",
+            "description":
+              [ "Identify content by schema and entity",
+                "Return empty response if key not exists" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { localizationContents } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function getContentHistoryByKey() {",
+                      "  const contentKey = {",
+                      "    schemaKey: {",
+                      "      appId: \"a string\",",
+                      "      entityType: \"a string\",",
+                      "      scope: \"GLOBAL\"",
+                      "    },",
+                      "    entityId: \"a string\"",
+                      "  };",
+                      "  const getContentHistoryByKeyRequest = {",
+                      "    paging: {",
+                      "      limit: 42,",
+                      "      offset: 42",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return localizationContents",
+                      "    .getContentHistoryByKey(contentKey, getContentHistoryByKeyRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listContents",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "filter",
+              "type": "wix-multilingual-backend.localizationContents.LocalizedContentFilter_16586053405",
+              "doc": "Filter results based on content attributes" },
+            { "name": "paging",
+              "type": "wix-multilingual-backend.Paging_1617727965",
+              "doc": "Limit results or start with a given offset" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-multilingual-backend.LocalizedContent_78045159606" ] } ] },
+            "doc": "Fulfilled - List of site localized contents that meets filter conditions. For each content it will return its most recent state" },
+        "locations":
+          [ { "lineno": 13,
+              "filename": "com_wixpress_localization_Localization_ListContents_listContents.js" } ],
+        "docs":
+          { "summary": "Search localized contents in a given site based on filter conditions",
+            "description":
+              [ "Return contents' most recent values, published and non published" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { localizationContents } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function listContents() {",
+                      "  const filter = {",
+                      "    contentIds: [\"a string\"],",
+                      "    appId: \"a string\",",
+                      "    entityType: \"a string\",",
+                      "    entityId: \"a string\",",
+                      "    languageTag: \"a string\",",
+                      "    languageMask: [\"a string\"]",
+                      "  };",
+                      "  const paging = {",
+                      "    limit: 42,",
+                      "    offset: 42",
+                      "  };",
+                      "",
+                      "  return localizationContents",
+                      "    .listContents(filter, paging)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "removeContents",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "contentIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Selected content uuid identifiers for removal" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_localization_Localization_RemoveContents_removeContents.js" } ],
+        "docs":
+          { "summary": "Remove existing localized contents",
+            "description":
+              [ "Identify localized contents by their uuid",
+                "Ignores non existing ids" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { localizationContents } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function removeContents() {",
+                      "  const contentIds = [\"a string\"];",
+                      "",
+                      "  return localizationContents",
+                      "    .removeContents(contentIds)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "removeContentsByKey",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "contentKeys",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-multilingual-backend.localizationContents.LocalizedContentKey_12563657309" ] },
+              "doc": "Selected content key identifiers for removal" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "com_wixpress_localization_Localization_RemoveContentsByKey_removeContentsByKey.js" } ],
+        "docs":
+          { "summary": "Remove existing localized contents",
+            "description":
+              [ "Identify localized contents by their schema and entity",
+                "Ignores non existing keys" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { localizationContents } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function removeContentsByKey() {",
+                      "  const contentKeys = [",
+                      "    {",
+                      "      schemaKey: {",
+                      "        appId: \"a string\",",
+                      "        entityType: \"a string\",",
+                      "        scope: \"GLOBAL\"",
+                      "      },",
+                      "      entityId: \"a string\"",
+                      "    }",
+                      "  ];",
+                      "",
+                      "  return localizationContents",
+                      "    .removeContentsByKey(contentKeys)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "updateContents",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "languageTag",
+              "type": "string",
+              "doc": "Language unique identifier in IETF BCP 47 tag format" },
+            { "name": "languageContents",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-multilingual-backend.localizationContents.LanguageContentById_60509919808" ] },
+              "doc": "List of site localized contents in a given language for update" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-multilingual-backend.LocalizedContent_78045159606" ] } ] },
+            "doc": "Fulfilled - List of all created/updated contents" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "com_wixpress_localization_Localization_UpdateContents_updateContents.js" } ],
+        "docs":
+          { "summary": "Update existing localized content for a given language",
+            "description":
+              [ "Identify localized content by its uuid",
+                "Language content will be merged with entity's list of language contents" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { localizationContents } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function updateContents() {",
+                      "  const languageTag = \"a string\";",
+                      "  const languageContents = [",
+                      "    {",
+                      "      contentId: \"a string\",",
+                      "      languageFields: [",
+                      "        {",
+                      "          _id: \"a string\",",
+                      "          value: {",
+                      "            textValue: \"a string\"",
+                      "          },",
+                      "          updatedBy: \"SITE_OWNER\",",
+                      "          updaterId: \"a string\",",
+                      "          published: true,",
+                      "          status: \"a string\",",
+                      "          sequencePath: [",
+                      "            {",
+                      "              seqName: \"a string\",",
+                      "              itemId: \"a string\"",
+                      "            }",
+                      "          ]",
+                      "        }",
+                      "      ]",
+                      "    }",
+                      "  ];",
+                      "",
+                      "  return localizationContents",
+                      "    .updateContents(languageTag, languageContents)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "GetContentHistoryByKeyRequest_5213214045",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_localization_Localization_GetContentHistoryByKey_getContentHistoryByKey.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "paging",
+              "type": "wix-multilingual-backend.Paging_1617727965",
+              "doc": "Limit results or start with a given offset",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetContentHistoryRequest_2765231157",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_localization_Localization_GetContentHistory_getContentHistory.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "paging",
+              "type": "wix-multilingual-backend.Paging_1617727965",
+              "doc": "Limit results or start with a given offset",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "LanguageContentById_60509919808",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_localization_Localization_UpdateContents_updateContents.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contentId",
+              "type": "string",
+              "doc": "Content uuid identifier",
+              "optional": true },
+            { "name": "languageFields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-multilingual-backend.LocalizedContentField_59409144780" ] },
+              "doc": "List of localized fields",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "LanguageContentByKey_71837304617",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_localization_Localization_CreateOrUpdateContentsByKey_createOrUpdateContentsByKey.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contentKey",
+              "type": "wix-multilingual-backend.LocalizedContentKey_12656346030",
+              "doc": "Content unique key identifier" },
+            { "name": "languageFields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-multilingual-backend.LocalizedContentField_59409144780" ] },
+              "doc": "List of localized fields",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "LocalizedContentFilter_16586053405",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_localization_Localization_ListContents_listContents.js" } ],
+        "docs":
+          { "summary": "Filter results based on content attributes",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contentIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Optional list of content ids",
+              "optional": true },
+            { "name": "appId",
+              "type": "string",
+              "doc": "App def id",
+              "optional": true },
+            { "name": "entityType",
+              "type": "string",
+              "doc": "Type of the connected source entity to the localized content. Using this filter without specifying also app id filter might result in slow queries",
+              "optional": true },
+            { "name": "entityId",
+              "type": "string",
+              "doc": "Id of the connected source entity to the localized content. Using this filter without specifying also entity type filter might result in slow queries",
+              "optional": true },
+            { "name": "languageTag",
+              "type": "string",
+              "doc": "IETF BCP 47 language tag filter. Show only contents having at least one field localized to this language. Using this filter without specifying also entity id filter might result in slow queries",
+              "optional": true },
+            { "name": "languageMask",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Optional list of language tags. Will return partial contents containing only fields that are localized in languages from given list or empty contents if there are no such fields",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "LocalizedContentKey_12563657309",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_localization_Localization_RemoveContentsByKey_removeContentsByKey.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "schemaKey",
+              "type": "wix-multilingual-backend.SchemaKey_9531411360",
+              "doc": "Schema unique key identifier",
+              "optional": true },
+            { "name": "entityId",
+              "type": "string",
+              "doc": "Unique identifier that represents a specific entity in the app",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

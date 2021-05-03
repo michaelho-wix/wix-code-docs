@@ -1,7 +1,8 @@
 { "name": "EventsNgQueryBuilder_30235220982",
   "memberOf": "wix-events-ng-backend.wixEvents",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "wix_events_EventManagement_QueryV2_queryEvents.js" },
@@ -319,7 +320,8 @@
         "extra":
           {  } },
       { "name": "find",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "options",
@@ -329,7 +331,7 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-events-ng-backend.wixEvents.EventsNgQueryResult_330590117756" ] },
+                  [ "wix-events-ng-backend.wixEvents.EventsNgQueryResult_323161020447" ] },
             "doc": "Fulfilled - The results of a eventsNg query, containing the retrieved items.\nWhen you execute a query with the [`find()`](wix-events-ng-backend.EventsNgQueryBuilder.html#find)\nfunction, it returns a Promise that resolves to a `EventsNgQueryResult` object.\nThis object contains the items that match the query, information about the\nquery itself, and functions for paging through the query results." },
         "locations":
           [ { "lineno": 982,

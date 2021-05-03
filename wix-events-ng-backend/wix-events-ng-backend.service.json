@@ -182,7 +182,7 @@
         "labels": [] },
       { "name": "CalendarLinks_2113971438",
         "locations":
-          [ { "lineno": 99,
+          [ { "lineno": 85,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "\"Add to calendar\" URLs.",
@@ -202,7 +202,7 @@
         "labels": [] },
       { "name": "CheckoutFormMessages_6864249470",
         "locations":
-          [ { "lineno": 438,
+          [ { "lineno": 368,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Checkout form messages.",
@@ -222,7 +222,7 @@
         "labels": [] },
       { "name": "Dashboard_8525121059",
         "locations":
-          [ { "lineno": 107,
+          [ { "lineno": 93,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event dashboard summary of RSVP / ticket sales.",
@@ -242,7 +242,7 @@
         "labels": [] },
       { "name": "Dashboard_RsvpSummary_2031094822",
         "locations":
-          [ { "lineno": 116,
+          [ { "lineno": 102,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Guest RSVP summary.",
@@ -268,7 +268,7 @@
         "labels": [] },
       { "name": "Dashboard_TicketingSummary_8113015635",
         "locations":
-          [ { "lineno": 126,
+          [ { "lineno": 112,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Summary of revenue and tickets sold.",
@@ -314,7 +314,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Event_3635141956",
         "locations":
           [ { "lineno": 138,
@@ -331,7 +332,8 @@
               "doc": "Guest list configuration." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "ExternalEvent_22621832582",
         "locations":
           [ { "lineno": 152,
@@ -354,10 +356,47 @@
               "doc": "Initial event type which was set when creating an event.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "ExternalEvent_54885249238",
+        "locations":
+          [ { "lineno": 124,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "External registration details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "externalRegistrationUrl",
+              "type": "string",
+              "doc": "External event registration URL." },
+            { "name": "restrictedTo",
+              "type": "string",
+              "doc": "Types of users allowed to register.\nOne of:\n + `\"VISITOR\"`\n + `\"MEMBER\"`\n + `\"VISITOR_OR_MEMBER\"`" },
+            { "name": "initialEventType",
+              "type": "string",
+              "doc": "Initial event type which was set when creating an event.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" },
+            { "name": "type",
+              "type": "string",
+              "doc": "Event type.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" },
+            { "name": "status",
+              "type": "string",
+              "doc": "Event registration status.\nOne of:\n + `\"NA_REGISTRATION_STATUS\"`\n + `\"CLOSED\"`\n + `\"CLOSED_MANUALLY\"`\n + `\"OPEN_RSVP\"`\n + `\"OPEN_RSVP_WAITLIST\"`\n + `\"OPEN_TICKETS\"`\n + `\"OPEN_EXTERNAL\"`" },
+            { "name": "rsvp",
+              "type": "wix-events-ng-backend.RsvpCollectionConfig_11838011770",
+              "doc": "RSVP collection configuration." },
+            { "name": "ticketing",
+              "type": "wix-events-ng-backend.Ticketing_13437514763",
+              "doc": "Ticketing details." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "FormMessages_51883945026",
         "locations":
-          [ { "lineno": 446,
+          [ { "lineno": 376,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Set of configured form messages.",
@@ -380,7 +419,7 @@
         "labels": [] },
       { "name": "GuestListConfig_2458672447",
         "locations":
-          [ { "lineno": 178,
+          [ { "lineno": 168,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Guest list configuration",
@@ -398,7 +437,7 @@
         "labels": [] },
       { "name": "GuestListConfig_2551361168",
         "locations":
-          [ { "lineno": 171,
+          [ { "lineno": 161,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Guest list configuration.",
@@ -415,7 +454,7 @@
         "labels": [] },
       { "name": "InputControl_49544649039",
         "locations":
-          [ { "lineno": 477,
+          [ { "lineno": 407,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "A block of nested fields.",
@@ -449,7 +488,7 @@
         "labels": [] },
       { "name": "Input_30071196484",
         "locations":
-          [ { "lineno": 455,
+          [ { "lineno": 385,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "An input of one or multiple text values",
@@ -493,7 +532,7 @@
         "labels": [] },
       { "name": "Label_4247800419",
         "locations":
-          [ { "lineno": 500,
+          [ { "lineno": 430,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -512,7 +551,7 @@
         "labels": [] },
       { "name": "Location_42949137567",
         "locations":
-          [ { "lineno": 202,
+          [ { "lineno": 192,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event location.",
@@ -541,7 +580,7 @@
         "labels": [] },
       { "name": "Location_44617534545",
         "locations":
-          [ { "lineno": 185,
+          [ { "lineno": 175,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event location.",
@@ -564,7 +603,7 @@
         "labels": [] },
       { "name": "Money_2432563994",
         "locations":
-          [ { "lineno": 221,
+          [ { "lineno": 211,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Price of lowest priced ticket.",
@@ -582,9 +621,34 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "OnlineConferencingConfig_20912102086",
+        "locations":
+          [ { "lineno": 219,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "enabled",
+              "type": "boolean",
+              "doc": "Whether online conferencing is enabled (not supported for TBD schedules).\n When enabled, links to join conferencing are generated and provided to guests." },
+            { "name": "providerId",
+              "type": "string",
+              "doc": "Conferencing provider ID." },
+            { "name": "conferenceType",
+              "type": "string",
+              "doc": "Conference type\nOne of:\n + `\"MEETING\"`\n + `\"WEBINAR\"`" },
+            { "name": "session",
+              "type": "wix-events-ng-backend.OnlineConferencingSession_12526595925" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "OnlineConferencingConfig_7398822732",
         "locations":
-          [ { "lineno": 249,
+          [ { "lineno": 232,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Online conferencing configuration",
@@ -607,8 +671,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "OnlineConferencingConfig_7676888895",
         "locations":
           [ { "lineno": 237,
@@ -630,10 +693,11 @@
               "doc": "Conference type\nOne of:\n + `\"MEETING\"`\n + `\"WEBINAR\"`" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "OnlineConferencingSession_12526595925",
         "locations":
-          [ { "lineno": 262,
+          [ { "lineno": 245,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -670,10 +734,11 @@
               "type": "wix-events-ng-backend.OnlineConferencingSession_12526595925" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "RegistrationClosedMessages_10342547173",
         "locations":
-          [ { "lineno": 507,
+          [ { "lineno": 437,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown when event registration is closed.",
@@ -728,7 +793,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "Registration_57655929751",
         "locations":
           [ { "lineno": 270,
@@ -757,10 +822,11 @@
               "doc": "Ticketing details." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "RsvpCollectionConfig_11559945607",
         "locations":
-          [ { "lineno": 322,
+          [ { "lineno": 266,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP collection configuration. Can be used to set limits.",
@@ -783,11 +849,10 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "RsvpCollectionConfig_11838011770",
         "locations":
-          [ { "lineno": 309,
+          [ { "lineno": 253,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP collection configuration.",
@@ -824,10 +889,11 @@
               "doc": "RSVP collection configuration." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "RsvpFormMessages_33952434787",
         "locations":
-          [ { "lineno": 515,
+          [ { "lineno": 445,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "RSVP form messages.",
@@ -859,7 +925,7 @@
         "labels": [] },
       { "name": "RsvpFormMessages_Negative_7937566166",
         "locations":
-          [ { "lineno": 527,
+          [ { "lineno": 457,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown for RSVP = `NO`.",
@@ -882,7 +948,7 @@
         "labels": [] },
       { "name": "RsvpFormMessages_Positive_16352639389",
         "locations":
-          [ { "lineno": 536,
+          [ { "lineno": 466,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Messages shown for RSVP = `YES`.",
@@ -911,7 +977,7 @@
         "labels": [] },
       { "name": "ScheduleConfig_15581128943",
         "locations":
-          [ { "lineno": 350,
+          [ { "lineno": 297,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event schedule configuration",
@@ -985,7 +1051,53 @@
               "doc": "Whether time zone is displayed in formatted schedule." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "ScheduleConfig_21932008652",
+        "locations":
+          [ { "lineno": 279,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Schedule configuration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "tbd",
+              "type": "boolean",
+              "doc": "Defines event as TBD (To Be Determined) schedule.\n When event time is not yet defined, TBD message is displayed instead of event start and end times.\n `startDate`, `endDate` and `timeZoneId` are not required when schedule is TBD." },
+            { "name": "tbdMessage",
+              "type": "string",
+              "doc": "TBD message." },
+            { "name": "startDate",
+              "type": "Date",
+              "doc": "Event start timestamp." },
+            { "name": "endDate",
+              "type": "Date",
+              "doc": "Event end timestamp." },
+            { "name": "timeZoneId",
+              "type": "string",
+              "doc": "Event time zone ID in TZ database format, e.g., `EST`, `America/Los_Angeles`." },
+            { "name": "endDateHidden",
+              "type": "boolean",
+              "doc": "Whether end date is hidden in the formatted schedule." },
+            { "name": "showTimeZone",
+              "type": "boolean",
+              "doc": "Whether time zone is displayed in formatted schedule." },
+            { "name": "formatted",
+              "type": "string",
+              "doc": "Formatted schedule representation." },
+            { "name": "startDateFormatted",
+              "type": "string",
+              "doc": "Formatted start date of the event (empty for TBD schedules)." },
+            { "name": "startTimeFormatted",
+              "type": "string",
+              "doc": "Formatted start time of the event (empty for TBD schedules)." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Scheduling_22467857484",
         "locations":
           [ { "lineno": 365,
@@ -1011,10 +1123,11 @@
               "doc": "Formatted start time of the event (empty for TBD schedules)." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "SiteUrl_2853714657",
         "locations":
-          [ { "lineno": 375,
+          [ { "lineno": 312,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Event page URL components.",
@@ -1083,7 +1196,7 @@
         "labels": [] },
       { "name": "TaxConfig_4925741970",
         "locations":
-          [ { "lineno": 397,
+          [ { "lineno": 334,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Tax configuration.",
@@ -1106,11 +1219,10 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "TaxConfig_5203808133",
         "locations":
-          [ { "lineno": 384,
+          [ { "lineno": 321,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Tax configuration.",
@@ -1152,7 +1264,7 @@
           [ "removed" ] },
       { "name": "TicketingConfig_5878243653",
         "locations":
-          [ { "lineno": 430,
+          [ { "lineno": 360,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Ticketing configuration.",
@@ -1171,8 +1283,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "TicketingConfig_6341687258",
         "locations":
           [ { "lineno": 422,
@@ -1192,7 +1303,44 @@
               "doc": "Tax configuration." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Ticketing_13437514763",
+        "locations":
+          [ { "lineno": 347,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Ticketing details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "currency",
+              "type": "string",
+              "doc": "Currency used in event transactions." },
+            { "name": "formAssignedPerTicket",
+              "type": "boolean",
+              "doc": "Whether the form must be filled out separately for each ticket." },
+            { "name": "tax",
+              "type": "wix-events-ng-backend.TaxConfig_5203808133",
+              "doc": "Tax configuration." },
+            { "name": "lowestTicketPrice",
+              "type": "wix-events-ng-backend.Money_2432563994",
+              "doc": "Price of lowest priced ticket." },
+            { "name": "highestTicketPrice",
+              "type": "wix-events-ng-backend.Money_2432563994",
+              "doc": "Price of lowest priced ticket." },
+            { "name": "lowestTicketPriceFormatted",
+              "type": "string",
+              "doc": "Formatted price of lowest priced ticket." },
+            { "name": "highestTicketPriceFormatted",
+              "type": "string",
+              "doc": "Formatted price of highest priced ticket." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Ticketing_15045486817",
         "locations":
           [ { "lineno": 410,
@@ -1224,7 +1372,8 @@
               "doc": "Formatted price of highest priced ticket." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "todo_102657886837",
         "locations":
           [ { "lineno": 77,
@@ -1266,7 +1415,7 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "todo_9898903254",
         "locations":
           [ { "lineno": 92,
@@ -1285,6 +1434,6 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] } ],
+          [ "removed" ] } ],
   "extra":
     {  } }

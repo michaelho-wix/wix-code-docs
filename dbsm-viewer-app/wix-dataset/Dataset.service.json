@@ -1,7 +1,8 @@
 { "name": "Dataset",
   "memberOf": "wix-dataset",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 54,
       "filename": "datasetApi.js" },
@@ -2191,7 +2192,8 @@
         "extra":
           {  } },
       { "name": "BeforeSaveHandler",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -2199,7 +2201,7 @@
               { "name": "Promise",
                 "typeParams":
                   [ "boolean" ] },
-            "doc": "Fulfilled - Indication whether to continue with save." },
+            "doc": "boolean |\nFulfilled - Indication whether to continue with save." },
         "locations":
           [ { "lineno": 61,
               "filename": "datasetApi.js" } ],

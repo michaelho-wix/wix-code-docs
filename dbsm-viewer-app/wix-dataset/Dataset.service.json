@@ -2199,7 +2199,9 @@
         "ret":
           { "type":
               [ "boolean",
-                "Promise" ] },
+                { "name": "Promise",
+                  "typeParams":
+                    [ "boolean" ] } ] },
         "locations":
           [ { "lineno": 61,
               "filename": "datasetApi.js" } ],

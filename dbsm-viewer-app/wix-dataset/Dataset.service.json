@@ -1,8 +1,7 @@
 { "name": "Dataset",
   "memberOf": "wix-dataset",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 54,
       "filename": "datasetApi.js" },
@@ -1853,8 +1852,7 @@
         "extra":
           {  } },
       { "name": "setFilter",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "filter",

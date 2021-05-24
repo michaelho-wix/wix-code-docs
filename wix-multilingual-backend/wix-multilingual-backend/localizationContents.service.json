@@ -1,8 +1,7 @@
 { "name": "localizationContents",
   "memberOf": "wix-multilingual-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 17,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "createOrUpdateContentsByKey",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "languageTag",
@@ -279,8 +277,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "removeContentFields",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "contentId",
@@ -352,8 +349,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "removeContentFieldsByKey",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "contentKey",
@@ -480,8 +476,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "removeContentsByKey",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "contentKeys",
@@ -539,8 +534,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateContents",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "languageTag",

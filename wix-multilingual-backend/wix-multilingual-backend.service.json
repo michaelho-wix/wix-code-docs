@@ -1,7 +1,6 @@
 { "name": "wix-multilingual-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -97,8 +96,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FieldSequence_5310081916",
         "locations":
           [ { "lineno": 8,
@@ -257,8 +255,7 @@
               "doc": "Auto translate mode\nOne of:\n + `\"OFF\"`\n + `\"ON\"`" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "LocalizationDocument_208086388",
         "locations":
           [ { "lineno": 36,
@@ -603,8 +600,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "LocalizedContentKey_12656346030",
         "locations":
           [ { "lineno": 149,

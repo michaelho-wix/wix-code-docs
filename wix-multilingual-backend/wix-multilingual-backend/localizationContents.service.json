@@ -1,8 +1,7 @@
 { "name": "localizationContents",
   "memberOf": "wix-multilingual-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 17,
       "filename": "index.js" },
@@ -98,8 +97,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getContentHistory",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "contentId",
@@ -154,8 +152,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getContentHistoryByKey",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "contentKey",

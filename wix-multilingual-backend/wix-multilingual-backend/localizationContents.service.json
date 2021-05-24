@@ -1,7 +1,8 @@
 { "name": "localizationContents",
   "memberOf": "wix-multilingual-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 17,
       "filename": "index.js" },
@@ -13,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "createOrUpdateContentsByKey",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "languageTag",
@@ -40,7 +42,9 @@
           { "summary": "Add or update localized content for a given language",
             "description":
               [ "Identify localized content by its schema and entity",
-                "Language content will be merged with entity's list of language contents" ],
+                "In case of update request this API acts as partial update - uploaded fields will be merged with existing language fields",
+                "This API does not support partial delete",
+                "Language content will be merged with entity's list of languages" ],
             "links": [],
             "examples":
               [ { "title": "basic usage",
@@ -274,6 +278,158 @@
         "extra":
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
+      { "name": "removeContentFields",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "contentId",
+              "type": "string",
+              "doc": "Selected content uuid identifiers for fields removal" },
+            { "name": "languageTagsMask",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Language unique identifier (in IETF BCP 47 tag format) for fields removal, remove from all languages if empty" },
+            { "name": "fieldsIdentifiers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-multilingual-backend.ContentFieldIdentifier_8703549468" ] },
+              "doc": "Field unique identifier to remove." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-multilingual-backend.LocalizedContent_78045159606" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_localization_Localization_RemoveContentFields_removeContentFields.js" } ],
+        "docs":
+          { "summary": "Remove given content fields from given languages`",
+            "description":
+              [ "Identify content by its uuid",
+                "if no language was specified the fields will be removed from all existing languages",
+                "Field is identified by its id and sequence path",
+                "No error will be thrown in case not all fields exist in all languages" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { localizationContents } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function removeContentFields() {",
+                      "  const contentId = \"a string\";",
+                      "  const languageTagsMask = [\"a string\"];",
+                      "  const fieldsIdentifiers = [",
+                      "    {",
+                      "      _id: \"a string\",",
+                      "      sequencePath: [",
+                      "        {",
+                      "          seqName: \"a string\",",
+                      "          itemId: \"a string\"",
+                      "        }",
+                      "      ]",
+                      "    }",
+                      "  ];",
+                      "",
+                      "  return localizationContents",
+                      "    .removeContentFields(contentId, languageTagsMask, fieldsIdentifiers)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "removeContentFieldsByKey",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "contentKey",
+              "type": "wix-multilingual-backend.LocalizedContentKey_12563657309" },
+            { "name": "languageTagsMask",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Language unique identifier (in IETF BCP 47 tag format) for fields removal, remove from all languages if empty" },
+            { "name": "fieldsIdentifiers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-multilingual-backend.ContentFieldIdentifier_8703549468" ] },
+              "doc": "Field unique identifier to remove." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-multilingual-backend.LocalizedContent_78045159606" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_localization_Localization_RemoveContentFieldsByKey_removeContentFieldsByKey.js" } ],
+        "docs":
+          { "summary": "Remove given content fields from given languages`",
+            "description":
+              [ "Identify content by schema and entity",
+                "if no language was specified the fields will be removed from all existing languages",
+                "Field is identified by its id and sequence path",
+                "No error will be thrown in case not all fields exist in all languages" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { localizationContents } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function removeContentFieldsByKey() {",
+                      "  const contentKey = {",
+                      "    schemaKey: {",
+                      "      appId: \"a string\",",
+                      "      entityType: \"a string\",",
+                      "      scope: \"GLOBAL\"",
+                      "    },",
+                      "    entityId: \"a string\"",
+                      "  };",
+                      "  const languageTagsMask = [\"a string\"];",
+                      "  const fieldsIdentifiers = [",
+                      "    {",
+                      "      _id: \"a string\",",
+                      "      sequencePath: [",
+                      "        {",
+                      "          seqName: \"a string\",",
+                      "          itemId: \"a string\"",
+                      "        }",
+                      "      ]",
+                      "    }",
+                      "  ];",
+                      "",
+                      "  return localizationContents",
+                      "    .removeContentFieldsByKey(contentKey, languageTagsMask, fieldsIdentifiers)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
       { "name": "removeContents",
         "labels": [],
         "nameParams": [],
@@ -324,14 +480,15 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "removeContentsByKey",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "contentKeys",
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-multilingual-backend.localizationContents.LocalizedContentKey_12563657309" ] },
+                    [ "wix-multilingual-backend.LocalizedContentKey_12563657309" ] },
               "doc": "Selected content key identifiers for removal" } ],
         "ret":
           { "type":
@@ -340,7 +497,7 @@
                   [ "void" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 8,
+          [ { "lineno": 1,
               "filename": "com_wixpress_localization_Localization_RemoveContentsByKey_removeContentsByKey.js" } ],
         "docs":
           { "summary": "Remove existing localized contents",
@@ -382,7 +539,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateContents",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "languageTag",
@@ -409,7 +567,9 @@
           { "summary": "Update existing localized content for a given language",
             "description":
               [ "Identify localized content by its uuid",
-                "Language content will be merged with entity's list of language contents" ],
+                "This API acts as partial update - uploaded fields will be merged with existing language fields",
+                "This API does not support partial delete",
+                "Language content will be merged with entity's list of languages" ],
             "links": [],
             "examples":
               [ { "title": "basic usage",
@@ -607,6 +767,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] } ],
   "extra":
     {  } }

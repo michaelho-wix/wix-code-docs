@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-create-invoice-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -14,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "bookExistingSession",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -30,7 +31,7 @@
               { "name": "Promise",
                 "typeParams":
                   [ "wix-bookings-create-invoice-backend.Booking_375805639592" ] },
-            "doc": "Fulfilled - Updated booking info." },
+            "doc": "" },
         "locations":
           [ { "lineno": 21,
               "filename": "com_wix_bookings_api_v1_Bookings_Book_bookExistingSession.js" } ],
@@ -307,7 +308,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "bookNewSession",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "sessionInfo",
@@ -325,7 +327,7 @@
               { "name": "Promise",
                 "typeParams":
                   [ "wix-bookings-create-invoice-backend.Booking_375805639592" ] },
-            "doc": "Fulfilled - Updated booking info." },
+            "doc": "" },
         "locations":
           [ { "lineno": 1,
               "filename": "com_wix_bookings_api_v1_Bookings_Book_bookNewSession.js" } ],
@@ -752,7 +754,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "bookSchedule",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "scheduleId",
@@ -770,7 +773,7 @@
               { "name": "Promise",
                 "typeParams":
                   [ "wix-bookings-create-invoice-backend.Booking_375805639592" ] },
-            "doc": "Fulfilled - Updated booking info." },
+            "doc": "" },
         "locations":
           [ { "lineno": 1,
               "filename": "com_wix_bookings_api_v1_Bookings_Book_bookSchedule.js" } ],
@@ -1247,6 +1250,55 @@
         "extra":
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
+      { "name": "createInvoice",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "bookingId",
+              "type": "string",
+              "doc": "Booking ID to associate with this invoice" },
+            { "name": "options",
+              "type": "wix-bookings-create-invoice-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-create-invoice-backend.Booking_301425873383" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_api_v1_Bookings_CreateInvoice_createInvoice.js" } ],
+        "docs":
+          { "summary": "Create invoice for the provided booking id. Not supported yet.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { bookings } from \"wix-bookings-create-invoice-backend\";",
+                      "",
+                      "export function createInvoice() {",
+                      "  const bookingId = \"a string\";",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return bookings",
+                      "    .createInvoice(bookingId, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
       { "name": "createInvoiceForBooking",
         "labels": [],
         "nameParams": [],
@@ -1502,7 +1554,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "rescheduleBookingWithExistingSession",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "bookingId",
@@ -1518,7 +1571,7 @@
               { "name": "Promise",
                 "typeParams":
                   [ "wix-bookings-create-invoice-backend.Booking_375805639592" ] },
-            "doc": "Fulfilled - Updated booking info." },
+            "doc": "" },
         "locations":
           [ { "lineno": 1,
               "filename": "com_wix_bookings_api_v1_Bookings_Reschedule_rescheduleBookingWithExistingSession.js" } ],
@@ -1567,7 +1620,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "rescheduleBookingWithNewSession",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "bookingId",
@@ -1582,7 +1636,7 @@
               { "name": "Promise",
                 "typeParams":
                   [ "wix-bookings-create-invoice-backend.Booking_375805639592" ] },
-            "doc": "Fulfilled - Updated booking info." },
+            "doc": "" },
         "locations":
           [ { "lineno": 1,
               "filename": "com_wix_bookings_api_v1_Bookings_Reschedule_rescheduleBookingWithNewSession.js" } ],

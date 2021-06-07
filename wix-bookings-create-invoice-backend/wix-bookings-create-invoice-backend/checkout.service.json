@@ -1,8 +1,7 @@
 { "name": "checkout",
   "memberOf": "wix-bookings-create-invoice-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 17,
       "filename": "index.js" },

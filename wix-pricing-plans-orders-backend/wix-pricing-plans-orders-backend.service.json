@@ -1,0 +1,335 @@
+{ "name": "wix-pricing-plans-orders-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "checkout",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-pricing-plans-orders-backend.checkout",
+        "locations":
+          [ { "lineno": 21,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "orders",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-pricing-plans-orders-backend.orders",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "Buyer_7090719842",
+        "locations":
+          [ { "lineno": 43,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "ID and type of the buyer (member type only for now).",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Buyer ID" },
+            { "name": "identityType",
+              "type": "string",
+              "doc": "Buyer identity type\nOne of:\n + `\"UNDEFINED\"`\n + `\"MEMBER\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Cancellation_13497762718",
+        "locations":
+          [ { "lineno": 54,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Details about the cancellation. Present if order.canceled is true, empty otherwise.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "requestedAt",
+              "type": "Date",
+              "doc": "Date when the cancellation request was made" },
+            { "name": "cause",
+              "type": "string",
+              "doc": "Cause of the cancellation (e.g. owner, member, payment issues)\nOne of:\n + `\"UNDEFINED\"`\n + `\"OWNER_ACTION\"`\n + `\"MEMBER_ACTION\"`\n + `\"PAYMENT_FAILURE\"`\n + `\"PAYMENT_SETUP_FAILURE\"`" },
+            { "name": "cancelAt",
+              "type": "string",
+              "doc": "Indicates whether immediate or next payment date cancellation was requested when canceling\nOne of:\n + `\"UNDEFINED\"`\n + `\"IMMEDIATELY\"`\n + `\"NEXT_PAYMENT_DATE\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Duration_4756288776",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Length of one payment cycle.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "count",
+              "type": "number",
+              "doc": "Number of days, months, weeks or years. Currently limited to support only value of 1." },
+            { "name": "unit",
+              "type": "string",
+              "doc": "Days, months, weeks or years.\nOne of:\n + `\"UNDEFINED\"`\n + `\"DAY\"`\n + `\"WEEK\"`\n + `\"MONTH\"`\n + `\"YEAR\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Money_4852729394",
+        "locations":
+          [ { "lineno": 35,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Amount for a single payment (or the whole subscription if it's not a recurring plan)",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "value",
+              "type": "string",
+              "doc": "Monetary amount. Decimal string with a period as a decimal separator (e.g., 3.99)." },
+            { "name": "currency",
+              "type": "string",
+              "doc": "Currency code. Must be valid ISO 4217 currency code (e.g., USD)." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Order_102262272644",
+        "locations":
+          [ { "lineno": 73,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "ID of the order" },
+            { "name": "planId",
+              "type": "string",
+              "doc": "ID of the plan that was purchased" },
+            { "name": "subscriptionId",
+              "type": "string",
+              "doc": "ID of the associated subscription in Subscriptions service" },
+            { "name": "wixPayOrderId",
+              "type": "string",
+              "doc": "ID of the associated Wix Pay order (empty when the order is free)" },
+            { "name": "buyer",
+              "type": "wix-pricing-plans-orders-backend.Buyer_7090719842",
+              "doc": "ID and type of the buyer (member type only for now)." },
+            { "name": "planPricing",
+              "type": "wix-pricing-plans-orders-backend.Pricing_14851691891",
+              "doc": "Pricing of the plan at the time of order creation." },
+            { "name": "priceDetails",
+              "type": "wix-pricing-plans-orders-backend.PriceDetails_6109500344",
+              "doc": "Detailed price of one payment cycle." },
+            { "name": "orderType",
+              "type": "string",
+              "doc": "Online or offline\nOne of:\n + `\"UNDEFINED\"`\n + `\"ONLINE\"`\n + `\"OFFLINE\"`" },
+            { "name": "orderStatus",
+              "type": "string",
+              "doc": "Status of the order (active, expired, etc.)\nOne of:\n + `\"UNDEFINED\"`\n + `\"DRAFT\"`\n + `\"PENDING\"`\n + `\"ACTIVE\"`\n + `\"EXPIRED\"`\n + `\"SUSPENDED\"`" },
+            { "name": "canceled",
+              "type": "boolean",
+              "doc": "Order has been either canceled or set to cancel at next cycle." },
+            { "name": "cancellation",
+              "type": "wix-pricing-plans-orders-backend.Cancellation_13497762718",
+              "doc": "Details about the cancellation. Present if order.canceled is true, empty otherwise." },
+            { "name": "paymentStatus",
+              "type": "string",
+              "doc": "Status of the payment for this this order (updated manually by owner for offline orders, automatically for online orders)\nOne of:\n + `\"UNDEFINED\"`\n + `\"PAID\"`\n + `\"REFUNDED\"`\n + `\"FAILED\"`\n + `\"UNPAID\"`\n + `\"PENDING\"`" },
+            { "name": "startDate",
+              "type": "Date",
+              "doc": "Date when the order will become active" },
+            { "name": "endDate",
+              "type": "Date",
+              "doc": "Date when the order will expire" },
+            { "name": "suspensions",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-pricing-plans-orders-backend.Suspension_6924382778" ] },
+              "doc": "List of suspension and resumption dates for this order, if there were any" },
+            { "name": "initialEndDateWithSuspensions",
+              "type": "Date",
+              "doc": "Initial order expiration date that was calculated on purchase plus duration of suspensions" },
+            { "name": "planName",
+              "type": "string",
+              "doc": "Name of the plan at the time of purchase" },
+            { "name": "planDescription",
+              "type": "string",
+              "doc": "Plan description of the plan at the time of purchase" },
+            { "name": "_createdDate",
+              "type": "Date",
+              "doc": "Date when the order was created (before initiating a payment or any other actions)" },
+            { "name": "_updatedDate",
+              "type": "Date",
+              "doc": "Date when the order was last updated (for example, suspended)" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PriceDetails_6109500344",
+        "locations":
+          [ { "lineno": 116,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Detailed price of one payment cycle.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "subtotal",
+              "type": "string",
+              "doc": "Price of plan before tax. Monetary amount i.e. 3.99." },
+            { "name": "tax",
+              "type": "wix-pricing-plans-orders-backend.Tax_3607439651",
+              "doc": "Tax applied for the plan. Empty means no tax was applied." },
+            { "name": "total",
+              "type": "string",
+              "doc": "Price after tax is applied. Monetary amount i.e. 4.98. If no tax was applied, this amount matches subtotal." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Pricing_14851691891",
+        "locations":
+          [ { "lineno": 15,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Pricing of the plan at the time of order creation.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "subscription",
+              "type": "wix-pricing-plans-orders-backend.Recurrence_2933408207",
+              "doc": "Plan has recurring payments.",
+              "optional": true },
+            { "name": "singlePaymentForDuration",
+              "type": "wix-pricing-plans-orders-backend.Duration_4756288776",
+              "doc": "Length of one payment cycle.",
+              "optional": true },
+            { "name": "singlePaymentUnlimited",
+              "type": "boolean",
+              "doc": "One time payment, plan is valid until it is canceled.",
+              "optional": true },
+            { "name": "price",
+              "type": "wix-pricing-plans-orders-backend.Money_4852729394",
+              "doc": "Amount for a single payment (or the whole subscription if it's not a recurring plan)" },
+            { "name": "freeTrialDays",
+              "type": "number",
+              "doc": "Free trial period for the plan in days. It’s available only for recurring plans." } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "pricingModel",
+                  "members":
+                    [ "singlePaymentForDuration",
+                      "singlePaymentUnlimited",
+                      "subscription" ] } ] },
+        "labels": [] },
+      { "name": "Recurrence_2933408207",
+        "locations":
+          [ { "lineno": 27,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Plan has recurring payments.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "cycleDuration",
+              "type": "wix-pricing-plans-orders-backend.Duration_4756288776",
+              "doc": "Length of one payment cycle." },
+            { "name": "cycleCount",
+              "type": "number",
+              "doc": "Number of cycles. Zero for unlimited / until canceled." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Suspension_6924382778",
+        "locations":
+          [ { "lineno": 125,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "status",
+              "type": "string",
+              "doc": "Status of the suspension\nOne of:\n + `\"UNDEFINED\"`\n + `\"ACTIVE\"`\n + `\"ENDED\"`" },
+            { "name": "startsAt",
+              "type": "Date",
+              "doc": "Beginning of the suspended period" },
+            { "name": "endsAt",
+              "type": "Date",
+              "doc": "End of the suspended period (empty when suspension is still active)" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Tax_3607439651",
+        "locations":
+          [ { "lineno": 137,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Tax applied for the plan. Empty means no tax was applied.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Name of the tax i.e VAT" },
+            { "name": "includedInPrice",
+              "type": "boolean",
+              "doc": "Is tax included in the original price or added at checkout" },
+            { "name": "rate",
+              "type": "string",
+              "doc": "Tax rate in percentage i.e. 24.81%" },
+            { "name": "amount",
+              "type": "string",
+              "doc": "Monetary amount i.e. 0.99." } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

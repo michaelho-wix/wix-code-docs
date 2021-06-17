@@ -1,0 +1,517 @@
+{ "name": "orders",
+  "memberOf": "wix-pricing-plans-orders-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 5,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "cancelOrder",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string",
+              "doc": "Order ID." },
+            { "name": "cancelAt",
+              "type": "string",
+              "doc": "Order is canceled immediately or at the next payment date. One-time orders can only be canceled immediately.\n This field is required.\nOne of:\n + `\"UNDEFINED\"`\n + `\"IMMEDIATELY\"`\n + `\"NEXT_PAYMENT_DATE\"`" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_membership_v2_orders_OrderManagementService_CancelOrder_cancelOrder.js" } ],
+        "docs":
+          { "summary": "Cancels an order. For recurring orders, either immediately or at next payment date.",
+            "description":
+              [ "One time orders can only be canceled immediately." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { orders } from \"wix-pricing-plans-orders-backend\";",
+                      "",
+                      "export function cancelOrder() {",
+                      "  const id = \"a string\";",
+                      "  const cancelAt = \"UNDEFINED\";",
+                      "",
+                      "  return orders",
+                      "    .cancelOrder(id, cancelAt)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "getOrder",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "orderId",
+              "type": "string",
+              "doc": "Order ID." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-pricing-plans-orders-backend.orders.GetOrderResult_103849270115" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 44,
+              "filename": "com_wixpress_membership_v2_orders_OrderManagementService_GetOrder_getOrder.js" } ],
+        "docs":
+          { "summary": "Retrieves an order by ID.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { orders } from \"wix-pricing-plans-orders-backend\";",
+                      "",
+                      "export function getOrder() {",
+                      "  const orderId = \"a string\";",
+                      "",
+                      "  return orders",
+                      "    .getOrder(orderId)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listOrders",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "listOrdersRequest",
+              "type": "wix-pricing-plans-orders-backend.orders.ListOrdersRequest_28184878854" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-pricing-plans-orders-backend.orders.ListOrdersResult_102207462392" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 33,
+              "filename": "com_wixpress_membership_v2_orders_OrderManagementService_ListOrders_listOrders.js" } ],
+        "docs":
+          { "summary": "Retrieves all orders and details.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { orders } from \"wix-pricing-plans-orders-backend\";",
+                      "",
+                      "export function listOrders() {",
+                      "  const listOrdersRequest = {",
+                      "    buyerIds: [\"a string\"],",
+                      "    planIds: [\"a string\"],",
+                      "    canceled: true,",
+                      "    orderStatuses: [\"UNDEFINED\"],",
+                      "    paymentStatuses: [\"UNDEFINED\"],",
+                      "    limit: 42,",
+                      "    offset: 42,",
+                      "    sorting: {",
+                      "      fieldName: \"a string\",",
+                      "      order: \"ASC\"",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return orders",
+                      "    .listOrders(listOrdersRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "markAsPaid",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string",
+              "doc": "Order ID." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_membership_v2_orders_OrderManagementService_MarkAsPaid_markAsPaid.js" } ],
+        "docs":
+          { "summary": "Marks an offline order as paid. Marking separate payment cycles as paid not yet supported,",
+            "description":
+              [ "the whole order will be marked as paid regardless of being recurring or one-time." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { orders } from \"wix-pricing-plans-orders-backend\";",
+                      "",
+                      "export function markAsPaid() {",
+                      "  const id = \"a string\";",
+                      "",
+                      "  return orders",
+                      "    .markAsPaid(id)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "postponeEndDate",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string",
+              "doc": "Order ID." },
+            { "name": "endDate",
+              "type": "Date",
+              "doc": "New valid until date (timestamp). Cannot be sooner than original expiration date" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_membership_v2_orders_OrderManagementService_PostponeEndDate_postponeEndDate.js" } ],
+        "docs":
+          { "summary": "Changes order duration by moving expiration date further",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { orders } from \"wix-pricing-plans-orders-backend\";",
+                      "",
+                      "export function postponeEndDate() {",
+                      "  const id = \"a string\";",
+                      "  const endDate = new Date();",
+                      "",
+                      "  return orders",
+                      "    .postponeEndDate(id, endDate)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "resumeOrder",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string",
+              "doc": "Order ID." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_membership_v2_orders_OrderManagementService_ResumeOrder_resumeOrder.js" } ],
+        "docs":
+          { "summary": "Resume suspended order",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { orders } from \"wix-pricing-plans-orders-backend\";",
+                      "",
+                      "export function resumeOrder() {",
+                      "  const id = \"a string\";",
+                      "",
+                      "  return orders",
+                      "    .resumeOrder(id)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "suspendOrder",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string",
+              "doc": "Order ID." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_membership_v2_orders_OrderManagementService_SuspendOrder_suspendOrder.js" } ],
+        "docs":
+          { "summary": "Suspend order and it's payment schedule (for recurring orders)",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { orders } from \"wix-pricing-plans-orders-backend\";",
+                      "",
+                      "export function suspendOrder() {",
+                      "  const id = \"a string\";",
+                      "",
+                      "  return orders",
+                      "    .suspendOrder(id)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "GetOrderResult_103849270115",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_membership_v2_orders_OrderManagementService_GetOrder_getOrder.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "ID of the order" },
+            { "name": "planId",
+              "type": "string",
+              "doc": "ID of the plan that was purchased" },
+            { "name": "subscriptionId",
+              "type": "string",
+              "doc": "ID of the associated subscription in Subscriptions service" },
+            { "name": "wixPayOrderId",
+              "type": "string",
+              "doc": "ID of the associated Wix Pay order (empty when the order is free)" },
+            { "name": "buyer",
+              "type": "wix-pricing-plans-orders-backend.Buyer_7090719842",
+              "doc": "ID and type of the buyer (member type only for now)." },
+            { "name": "planPricing",
+              "type": "wix-pricing-plans-orders-backend.Pricing_14851691891",
+              "doc": "Pricing of the plan at the time of order creation." },
+            { "name": "priceDetails",
+              "type": "wix-pricing-plans-orders-backend.PriceDetails_6109500344",
+              "doc": "Detailed price of one payment cycle." },
+            { "name": "orderType",
+              "type": "string",
+              "doc": "Online or offline\nOne of:\n + `\"UNDEFINED\"`\n + `\"ONLINE\"`\n + `\"OFFLINE\"`" },
+            { "name": "orderStatus",
+              "type": "string",
+              "doc": "Status of the order (active, expired, etc.)\nOne of:\n + `\"UNDEFINED\"`\n + `\"DRAFT\"`\n + `\"PENDING\"`\n + `\"ACTIVE\"`\n + `\"EXPIRED\"`\n + `\"SUSPENDED\"`" },
+            { "name": "canceled",
+              "type": "boolean",
+              "doc": "Order has been either canceled or set to cancel at next cycle." },
+            { "name": "cancellation",
+              "type": "wix-pricing-plans-orders-backend.Cancellation_13497762718",
+              "doc": "Details about the cancellation. Present if order.canceled is true, empty otherwise." },
+            { "name": "paymentStatus",
+              "type": "string",
+              "doc": "Status of the payment for this this order (updated manually by owner for offline orders, automatically for online orders)\nOne of:\n + `\"UNDEFINED\"`\n + `\"PAID\"`\n + `\"REFUNDED\"`\n + `\"FAILED\"`\n + `\"UNPAID\"`\n + `\"PENDING\"`" },
+            { "name": "startDate",
+              "type": "Date",
+              "doc": "Date when the order will become active" },
+            { "name": "endDate",
+              "type": "Date",
+              "doc": "Date when the order will expire" },
+            { "name": "suspensions",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-pricing-plans-orders-backend.Suspension_6924382778" ] },
+              "doc": "List of suspension and resumption dates for this order, if there were any" },
+            { "name": "initialEndDateWithSuspensions",
+              "type": "Date",
+              "doc": "Initial order expiration date that was calculated on purchase plus duration of suspensions" },
+            { "name": "planName",
+              "type": "string",
+              "doc": "Name of the plan at the time of purchase" },
+            { "name": "planDescription",
+              "type": "string",
+              "doc": "Plan description of the plan at the time of purchase" },
+            { "name": "_createdDate",
+              "type": "Date",
+              "doc": "Date when the order was created (before initiating a payment or any other actions)" },
+            { "name": "_updatedDate",
+              "type": "Date",
+              "doc": "Date when the order was last updated (for example, suspended)" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListOrdersRequest_28184878854",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_membership_v2_orders_OrderManagementService_ListOrders_listOrders.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "buyerIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "ID of the member who subscribed for a paid plan.",
+              "optional": true },
+            { "name": "planIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "ID of the plan that was subscribed by the member.",
+              "optional": true },
+            { "name": "canceled",
+              "type": "boolean",
+              "doc": "Whether the order has been canceled.",
+              "optional": true },
+            { "name": "orderStatuses",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Status of the order.",
+              "optional": true },
+            { "name": "paymentStatuses",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Payment status of the order.",
+              "optional": true },
+            { "name": "limit",
+              "type": "number",
+              "doc": "Limit the number of pricing plans returned. Default limit is 50.",
+              "optional": true },
+            { "name": "offset",
+              "type": "number",
+              "doc": "Number of entries to skip.",
+              "optional": true },
+            { "name": "sorting",
+              "type": "wix-pricing-plans-orders-backend.orders.Sorting_7874645153",
+              "doc": "Sorting direction (defaults to ASC) and field to sort by. [See available fields here](https://dev.wix.com/api/rest/pricing-plans/pricing-plans/order-v2/filter-and-sort).",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListOrdersResult_102207462392",
+        "locations":
+          [ { "lineno": 14,
+              "filename": "com_wixpress_membership_v2_orders_OrderManagementService_ListOrders_listOrders.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "orders",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-pricing-plans-orders-backend.Order_102262272644" ] },
+              "doc": "List of orders matching request parameters." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Sorting_7874645153",
+        "locations":
+          [ { "lineno": 20,
+              "filename": "com_wixpress_membership_v2_orders_OrderManagementService_ListOrders_listOrders.js" } ],
+        "docs":
+          { "summary": "Sorting direction (defaults to ASC) and field to sort by. [See available fields here](https://dev.wix.com/api/rest/pricing-plans/pricing-plans/order-v2/filter-and-sort).",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "fieldName",
+              "type": "string",
+              "doc": "Name of the field to sort by.",
+              "optional": true },
+            { "name": "order",
+              "type": "string",
+              "doc": "Sort order.\n\n Defaults to `ASC`.\nOne of:\n + `\"ASC\"`\n + `\"DESC\"`",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

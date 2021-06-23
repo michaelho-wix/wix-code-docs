@@ -1,8 +1,7 @@
 { "name": "GroupsQueryBuilder_35858359973",
   "memberOf": "wix-groups-backend.createRequests",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "wix_social_groups_api_v2_GroupRequestsService_QueryGroupRequests_queryCreateRequests.js" },

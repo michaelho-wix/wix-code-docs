@@ -1,8 +1,7 @@
 { "name": "GroupsQueryResult_59946508533",
   "memberOf": "wix-groups-backend.joinRequests",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 999,
       "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_QueryJoinGroupRequests_queryJoinRequests.js" },

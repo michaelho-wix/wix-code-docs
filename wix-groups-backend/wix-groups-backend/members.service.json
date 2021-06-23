@@ -1,0 +1,785 @@
+{ "name": "members",
+  "memberOf": "wix-groups-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 29,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "addGroupMembers",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "identifiers",
+              "type": "wix-groups-backend.members.AddGroupMembersRequest_6601814160" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.members.AddGroupMembersResult_13035191820" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 14,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_AddGroupMembers_addGroupMembers.js" } ],
+        "docs":
+          { "summary": "Add site members to a specific group.",
+            "description":
+              [ "Group managers and group admins always have access to this functionality. In some cases, site owners will allow site members to use this functionality as well." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-groups-backend\";",
+                      "",
+                      "export function addGroupMembers() {",
+                      "  const identifiers = {",
+                      "    groupId: \"a string\",",
+                      "    memberIds: [\"a string\"]",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return members",
+                      "    .addGroupMembers(identifiers, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listGroupMembers",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "pagination",
+              "type": "wix-groups-backend.members.ListGroupMembersRequest_921107528" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.members.ListGroupMembersResult_15147375933" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 15,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListGroupMembers_listGroupMembers.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 group members, given the provided paging.",
+            "description":
+              [ "Groups mangers can retrieve group members of any group." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-groups-backend\";",
+                      "",
+                      "export function listGroupMembers() {",
+                      "  const groupId = \"a string\";",
+                      "  const pagination = {",
+                      "    limit: 42,",
+                      "    skip: 42",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return members",
+                      "    .listGroupMembers(groupId, pagination, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listMemberships",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "memberId",
+              "type": "string",
+              "doc": "Site member ID." },
+            { "name": "pagination",
+              "type": "wix-groups-backend.members.ListMembershipsRequest_270336837" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.members.ListMembershipsResult_24102841691" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 35,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListMemberships_listMemberships.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 members and their membership status, given the provided paging.",
+            "description":
+              [ "Groups mangers can see all memberships for any group." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-groups-backend\";",
+                      "",
+                      "export function listMemberships() {",
+                      "  const memberId = \"a string\";",
+                      "  const pagination = {",
+                      "    limit: 42,",
+                      "    skip: 42",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return members",
+                      "    .listMemberships(memberId, pagination, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "queryGroupMembers",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "wix-groups-backend.members.GroupsQueryBuilder_31395941396",
+            "doc": "Contains functionality for refining a groups query.\nThe `GroupsQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the groups query functions,\nrefine the query by chaining `GroupsQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixGroupsBackend from 'wix-groups-backend';\n\nwixGroupsBackend.queryGroups()\n  .eq(\"<property1>\", \"<value1>\")\n  .ascending(\"<property2>\")\n  .limit(5)\n  .find()\n  .then( (results) => {\n    console.log(results.items);\n  } );\n```" },
+        "locations":
+          [ { "lineno": 1180,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryGroupMembers_queryGroupMembers.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 group members, given the provided paging, sorting and filtering.",
+            "description":
+              [ "Groups mangers can retrieve group members of any group.",
+                "",
+                "Supported fields for filtering:",
+                "- `role`",
+                "",
+                "Supported fields for sorting:",
+                "- `joinedOn`",
+                "- `role`" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-groups-backend\";",
+                      "",
+                      "export function queryGroupMembers() {",
+                      "  const options = {",
+                      "    groupId: \"a string\",",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return members",
+                      "    .queryGroupMembers()",
+                      "    .eq(\"key\", \"value\")",
+                      "    .find(options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "queryMemberships",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "queryMembershipsRequest",
+              "type": "wix-groups-backend.members.QueryMembershipsRequest_26914058458" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.members.QueryMembershipsResult_19184522088" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 96,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 members and their membership status, given the provided paging and filtering.",
+            "description":
+              [ "Groups mangers can see all memberships for any group.",
+                "",
+                "Supported fields for filtering:",
+                "- `role`",
+                "- `status`",
+                "",
+                "No supported fields for sorting." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-groups-backend\";",
+                      "",
+                      "export function queryMemberships() {",
+                      "  const queryMembershipsRequest = {",
+                      "    siteMemberId: \"a string\",",
+                      "    query: {",
+                      "      filter: {",
+                      "        kind: {",
+                      "          nullValue: \"NULL_VALUE\"",
+                      "        }",
+                      "      },",
+                      "      sort: [",
+                      "        {",
+                      "          fieldName: \"a string\",",
+                      "          order: \"ASC\"",
+                      "        }",
+                      "      ],",
+                      "      paging: {",
+                      "        limit: 42,",
+                      "        offset: 42",
+                      "      },",
+                      "      fields: [\"a string\"],",
+                      "      fieldsets: [\"a string\"]",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return members",
+                      "    .queryMemberships(queryMembershipsRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "removeGroupMembers",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "identifiers",
+              "type": "wix-groups-backend.members.RemoveGroupMembersRequest_7189029613" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_RemoveGroupMembers_removeGroupMembers.js" } ],
+        "docs":
+          { "summary": "Removes site members from a specific group.",
+            "description":
+              [ "Group managers and group admins have access to this functionality." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-groups-backend\";",
+                      "",
+                      "export function removeGroupMembers() {",
+                      "  const identifiers = {",
+                      "    groupId: \"a string\",",
+                      "    memberIds: [\"a string\"]",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return members",
+                      "    .removeGroupMembers(identifiers, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "AddGroupMembersRequest_6601814160",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_AddGroupMembers_addGroupMembers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID to add members to." },
+            { "name": "memberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Site member IDs to add to group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "AddGroupMembersResult_13035191820",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_AddGroupMembers_addGroupMembers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "members",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.GroupMember_11598825520" ] },
+              "doc": "Added group members." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupRole_6888303931",
+        "locations":
+          [ { "lineno": 55,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "summary": "Group member role. When membership status is not `JOINED`, this is empty.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "value",
+              "type": "string",
+              "doc": "Group member role\n- `MEMBER` - Regular group member\n- `ADMIN` - Group admin\nOne of:\n + `\"UNKNOWN_ROLE\"`\n + `\"MEMBER\"`\n + `\"ADMIN\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListGroupMembersRequest_921107528",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListGroupMembers_listGroupMembers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "optional": true },
+            { "name": "skip",
+              "type": "number",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListGroupMembersResult_15147375933",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListGroupMembers_listGroupMembers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "members",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.GroupMember_11598825520" ] },
+              "doc": "Group members." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_3804912776" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListMembershipsRequest_270336837",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListMemberships_listMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "optional": true },
+            { "name": "skip",
+              "type": "number",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListMembershipsResult_24102841691",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListMemberships_listMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "memberships",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.members.Membership_16820952534" ] },
+              "doc": "Site member's memberships." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_3804912776" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Membership_16820952534",
+        "locations":
+          [ { "lineno": 15,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListMemberships_listMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "role",
+              "type": "string",
+              "doc": "Group member role\n- `MEMBER` - Regular group member\n- `ADMIN` - Group admin\nOne of:\n + `\"UNKNOWN_ROLE\"`\n + `\"MEMBER\"`\n + `\"ADMIN\"`" },
+            { "name": "groupId",
+              "type": "string",
+              "doc": "Site member ID." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Membership status with Group\n- `JOINED` - Site member is a group member.\n- `PENDING` - Site member has join group request with `PENDING` status for this group.\nOne of:\n + `\"UNKNOWN_STATUS\"`\n + `\"JOINED\"`\n + `\"PENDING\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Membership_17075797469",
+        "locations":
+          [ { "lineno": 68,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Site member ID." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Membership status with Group\n- `JOINED` - Site member is a group member.\n- `PENDING` - Site member has join group request with `PENDING` status for this group.\nOne of:\n + `\"UNKNOWN_STATUS\"`\n + `\"JOINED\"`\n + `\"PENDING\"`" },
+            { "name": "role",
+              "type": "wix-groups-backend.members.GroupRole_6888303931",
+              "doc": "Group member role. When membership status is not `JOINED`, this is empty." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PagingMetadata_1238886334",
+        "locations":
+          [ { "lineno": 24,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "count",
+              "type": "number",
+              "doc": "Number of items returned in the response." },
+            { "name": "offset",
+              "type": "number",
+              "doc": "Offset that was requested." },
+            { "name": "total",
+              "type": "number",
+              "doc": "Total number of items that match the query." },
+            { "name": "tooManyToCount",
+              "type": "boolean",
+              "doc": "Flag that indicates the server failed to calculate the `total` field." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Paging_1617727965",
+        "locations":
+          [ { "lineno": 16,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "summary": "Paging options to limit and skip the number of items.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "doc": "Number of items to load.",
+              "optional": true },
+            { "name": "offset",
+              "type": "number",
+              "doc": "Number of items to skip in the current sort order.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryMembershipsRequest_26914058458",
+        "locations":
+          [ { "lineno": 82,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "siteMemberId",
+              "type": "string",
+              "doc": "Site member ID." },
+            { "name": "query",
+              "type": "wix-groups-backend.members.Query_24513805503",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryMembershipsResult_19184522088",
+        "locations":
+          [ { "lineno": 89,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "memberships",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.members.Membership_17075797469" ] },
+              "doc": "Site member's memberships." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.members.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryOptions_2379466349",
+        "locations":
+          [ { "lineno": 1172,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryGroupMembers_queryGroupMembers.js" } ],
+        "docs":
+          { "summary": "The `options` parameter is an optional parameter that can be used when calling the query [`find()`](#find) function.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "suppressAuth",
+              "type": "boolean",
+              "doc": "When `true`, prevents permission checks from running for the operation.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Query_24513805503",
+        "locations":
+          [ { "lineno": 33,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "filter",
+              "type": "wix-groups-backend.members.Value_11948408011",
+              "doc": "A filter object.",
+              "optional": true },
+            { "name": "sort",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.members.Sorting_7874645153" ] },
+              "doc": "Sort object in the form `[{\"fieldName\":\"sortField1\",\"order\":\"ASC\"},{\"fieldName\":\"sortField2\",\"order\":\"DESC\"}]`",
+              "optional": true },
+            { "name": "paging",
+              "type": "wix-groups-backend.members.Paging_1617727965",
+              "doc": "Paging options to limit and skip the number of items.",
+              "optional": true },
+            { "name": "fields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Array of projected fields. A list of specific field names to return. If `fieldsets` are also specified, the union of `fieldsets` and `fields` is returned.",
+              "optional": true },
+            { "name": "fieldsets",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Array of named, predefined sets of projected fields. A array of predefined named sets of fields to be returned. Specifying multiple `fieldsets` will return the union of fields from all sets. If `fields` are also specified, the union of `fieldsets` and `fields` is returned.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RemoveGroupMembersRequest_7189029613",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_RemoveGroupMembers_removeGroupMembers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID to remove members from." },
+            { "name": "memberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Site member IDs to remove from the group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Sorting_7874645153",
+        "locations":
+          [ { "lineno": 43,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "fieldName",
+              "type": "string",
+              "doc": "Name of the field to sort by.",
+              "optional": true },
+            { "name": "order",
+              "type": "string",
+              "doc": "Sort order.\n\n Defaults to `ASC`.\nOne of:\n + `\"ASC\"`\n + `\"DESC\"`",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Value_11948408011",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "summary": "A filter object.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "nullValue",
+              "type": "string",
+              "doc": "Represents a null value.\nOne of:\n + `\"NULL_VALUE\"`",
+              "optional": true },
+            { "name": "numberValue",
+              "type": "number",
+              "doc": "Represents a double value.",
+              "optional": true },
+            { "name": "stringValue",
+              "type": "string",
+              "doc": "Represents a string value.",
+              "optional": true },
+            { "name": "boolValue",
+              "type": "boolean",
+              "doc": "Represents a boolean value.",
+              "optional": true },
+            { "name": "structValue",
+              "type": "Object",
+              "doc": "Represents a structured value.",
+              "optional": true },
+            { "name": "listValue",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.members.Value_11948408011" ] },
+              "doc": "Represents a repeated `Value`.",
+              "optional": true } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "kind",
+                  "members":
+                    [ "boolValue",
+                      "listValue",
+                      "nullValue",
+                      "numberValue",
+                      "stringValue",
+                      "structValue" ] } ] },
+        "labels": [] } ],
+  "extra":
+    {  } }

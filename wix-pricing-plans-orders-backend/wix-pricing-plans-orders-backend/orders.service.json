@@ -1,8 +1,7 @@
 { "name": "orders",
   "memberOf": "wix-pricing-plans-orders-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 5,
       "filename": "index.js" },

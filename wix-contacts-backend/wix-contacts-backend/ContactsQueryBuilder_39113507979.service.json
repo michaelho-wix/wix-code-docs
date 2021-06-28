@@ -1,10 +1,9 @@
 { "name": "ContactsQueryBuilder_39113507979",
   "memberOf": "wix-contacts-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
-    { "lineno": 680,
+    { "lineno": 681,
       "filename": "shared.js" },
   "docs":
     { "summary": "Contains functionality for refining a contacts query.",

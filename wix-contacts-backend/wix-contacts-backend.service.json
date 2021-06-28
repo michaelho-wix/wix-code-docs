@@ -1,7 +1,7 @@
 { "name": "wix-contacts-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -31,7 +31,7 @@
   "messages":
     [ { "name": "AddressLocation_4924634320",
         "locations":
-          [ { "lineno": 524,
+          [ { "lineno": 525,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Coordinates of the physical address.",
@@ -53,7 +53,7 @@
         "labels": [] },
       { "name": "AddressLocation_5110011762",
         "locations":
-          [ { "lineno": 532,
+          [ { "lineno": 533,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Coordinates of the physical address.",
@@ -73,7 +73,7 @@
         "labels": [] },
       { "name": "Address_37210032107",
         "locations":
-          [ { "lineno": 484,
+          [ { "lineno": 485,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Street [address](https://www.wix.com/velo/reference/$w/addressinput/value).",
@@ -127,7 +127,7 @@
         "labels": [] },
       { "name": "Address_38600362922",
         "locations":
-          [ { "lineno": 504,
+          [ { "lineno": 505,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Street [address](https://www.wix.com/velo/reference/$w/addressinput/value).",
@@ -285,6 +285,88 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "ContactInfo_106294058002",
+        "locations":
+          [ { "lineno": 185,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Contact's information.",
+            "description":
+              [ "To reconcile with an existing contact,",
+                "a phone or email must be provided,",
+                "or the current session identity must be attached to a contact or member.",
+                "",
+                "If no existing contact can be found,",
+                "a new contact is created with the specified information.",
+                "",
+                "<!--ONLY:REST-->",
+                "Required if there's no contextual identity or given `contactId`.",
+                "<!--END:ONLY:REST-->" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "wix-contacts-backend.ContactName_35068072",
+              "doc": "Contact's first and last name.",
+              "optional": true },
+            { "name": "company",
+              "type": "string",
+              "doc": "Contact's company name.",
+              "optional": true },
+            { "name": "jobTitle",
+              "type": "string",
+              "doc": "Contact's job title.",
+              "optional": true },
+            { "name": "locale",
+              "type": "string",
+              "doc": "Contact's locale, formatted as an\n [IETF BCP 47 language tag](https://tools.ietf.org/html/rfc5646).\n Typically, this is a lowercase 2-letter language code,\n followed by a hyphen,\n followed by an uppercase 2-letter country code.\n\n For example, German from Germany is formatted as `de-DE`,\n and U.S. English is formatted as `en-US`.",
+              "optional": true },
+            { "name": "birthdate",
+              "type": "string",
+              "doc": "Contact's birthdate, formatted as `\"YYYY-MM-DD\"`.\n\n Example: `\"2020-03-15\"` for March 15, 2020.",
+              "optional": true },
+            { "name": "profilePicture",
+              "type": "string",
+              "doc": "[Image](https://www.wix.com/velo/reference/$w/image/src).\n This can contain an image URL or a Wix Media image ID.",
+              "optional": true },
+            { "name": "emails",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-contacts-backend.ContactEmail_12381712122" ] },
+              "doc": "List of up to 50 email addresses.",
+              "optional": true },
+            { "name": "phones",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-contacts-backend.ContactPhone_15453814565" ] },
+              "doc": "List of up to 50 phone numbers.",
+              "optional": true },
+            { "name": "labelKeys",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "List of contact label keys.\n[Contact labels](https://support.wix.com/en/article/adding-labels-to-contacts-in-your-contact-list)\nhelp categorize contacts.\n\n<!--ONLY:REST-->\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[Find or Create Label](https://dev.wix.com/api/rest/contacts/labels/find-or-create-label)\nor\n[List Labels](https://dev.wix.com/api/rest/contacts/labels/list-labels)\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[`findOrCreateLabel()`](wix-crm-backend/contacts-obj/findorcreatelabel)\nor\n[`queryLabels()`](wix-crm-backend/contacts-obj/queryLabels).\n<!--END:ONLY:VELO-->",
+              "optional": true },
+            { "name": "extendedFields",
+              "type": "Object",
+              "doc": "Set of key-value pairs.\n<!--ONLY:REST-->\nContact's extended fields,\nwhere each key is the field key,\nand each value is the field's value for the contact.\n\nTo view and manage extended fields, use the\n[Extended Fields API](https://dev.wix.com/api/rest/contacts/extended-fields).\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nContact's\n[extended fields](wix-crm-backend/contacts-obj/introduction#about-extended-fields),\nwhich allow you to store additional information about your contacts.\n\nTo view or create extended fields, use\n[`findOrCreateExtendedField()`](wix-crm-backend/contacts-obj/findorcreateextendedfield),\n[`getExtendedField()`](wix-crm-backend/contacts-obj/getextendedfield), or\n[`queryExtendedFields()`](wix-crm-backend/contacts-obj/queryextendedfields).\n<!--END:ONLY:VELO-->",
+              "optional": true },
+            { "name": "addresses",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-contacts-backend.ContactAddress_42866033430" ] },
+              "doc": "List of up to 50 addresses.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ContactInfo_107173470380",
         "locations":
           [ { "lineno": 185,
@@ -365,10 +447,11 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "ContactInfo_120816989824",
         "locations":
-          [ { "lineno": 258,
+          [ { "lineno": 259,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contact's details.",
@@ -430,7 +513,7 @@
         "labels": [] },
       { "name": "ContactLabel_19402415408",
         "locations":
-          [ { "lineno": 630,
+          [ { "lineno": 631,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Label that was found or created.",
@@ -462,7 +545,7 @@
         "labels": [] },
       { "name": "ContactName_220445514",
         "locations":
-          [ { "lineno": 331,
+          [ { "lineno": 332,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contact's first and last name.",
@@ -482,7 +565,7 @@
         "labels": [] },
       { "name": "ContactName_35068072",
         "locations":
-          [ { "lineno": 323,
+          [ { "lineno": 324,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contact's first and last name.",
@@ -504,7 +587,7 @@
         "labels": [] },
       { "name": "ContactPhone_15453814565",
         "locations":
-          [ { "lineno": 339,
+          [ { "lineno": 340,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -533,7 +616,7 @@
         "labels": [] },
       { "name": "ContactPhone_21266581029",
         "locations":
-          [ { "lineno": 374,
+          [ { "lineno": 375,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -564,7 +647,7 @@
         "labels": [] },
       { "name": "ContactPicture_1998727965",
         "locations":
-          [ { "lineno": 414,
+          [ { "lineno": 415,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contact's profile picture.",
@@ -581,7 +664,7 @@
         "labels": [] },
       { "name": "ContactSource_18251037697",
         "locations":
-          [ { "lineno": 422,
+          [ { "lineno": 423,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Details about the contact's source.",
@@ -601,7 +684,7 @@
         "labels": [] },
       { "name": "ExtendedField_29199126759",
         "locations":
-          [ { "lineno": 558,
+          [ { "lineno": 559,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Extended field that was found or created.",
@@ -639,7 +722,7 @@
         "labels": [] },
       { "name": "Options_936495653",
         "locations":
-          [ { "lineno": 673,
+          [ { "lineno": 674,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Authorization options.",
@@ -657,7 +740,7 @@
         "labels": [] },
       { "name": "PrimaryContactInfo_8495030145",
         "locations":
-          [ { "lineno": 456,
+          [ { "lineno": 457,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contact's primary phone and email.",
@@ -677,7 +760,7 @@
         "labels": [] },
       { "name": "StreetAddress_7417547785",
         "locations":
-          [ { "lineno": 540,
+          [ { "lineno": 541,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Street address object, with number and name in separate fields.",
@@ -703,7 +786,7 @@
         "labels": [] },
       { "name": "StreetAddress_7695613948",
         "locations":
-          [ { "lineno": 549,
+          [ { "lineno": 550,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Street address object, with number and name in separate fields.",
@@ -726,7 +809,7 @@
         "labels": [] },
       { "name": "Value_11948408011",
         "locations":
-          [ { "lineno": 1678,
+          [ { "lineno": 1679,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "`key` of type string, `value` of type object",
@@ -775,7 +858,7 @@
         "labels": [] },
       { "name": "Value_12597229058",
         "locations":
-          [ { "lineno": 1693,
+          [ { "lineno": 1694,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "`key` of type string, `value` of type object",
@@ -839,6 +922,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] } ],
   "extra":
     {  } }

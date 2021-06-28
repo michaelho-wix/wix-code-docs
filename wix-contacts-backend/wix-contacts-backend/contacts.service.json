@@ -2,7 +2,7 @@
   "memberOf": "wix-contacts-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -14,11 +14,12 @@
   "properties": [],
   "operations":
     [ { "name": "appendOrCreateContact",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "contactInfo",
-              "type": "wix-contacts-backend.ContactInfo_107173470380",
+              "type": "wix-contacts-backend.ContactInfo_106294058002",
               "doc": "Contact's information.\nTo reconcile with an existing contact,\na phone or email must be provided,\nor the current session identity must be attached to a contact or member.\n\nIf no existing contact can be found,\na new contact is created with the specified information.\n\n<!--ONLY:REST-->\nRequired if there's no contextual identity or given `contactId`.\n<!--END:ONLY:REST-->" } ],
         "ret":
           { "type":
@@ -86,9 +87,7 @@
                       "    jobTitle: \"a string\",",
                       "    locale: \"a string\",",
                       "    birthdate: \"a string\",",
-                      "    picture: {",
-                      "      image: \"wix:image://v1/mediaId/filename.jpg#originWidth=42&originHeight=42\"",
-                      "    },",
+                      "    profilePicture: \"wix:image://v1/mediaId/filename.jpg#originWidth=42&originHeight=42\",",
                       "    emails: [",
                       "      {",
                       "        tag: \"UNTAGGED\",",
@@ -188,11 +187,12 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "createContact",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "contactInfo",
-              "type": "wix-contacts-backend.ContactInfo_107173470380",
+              "type": "wix-contacts-backend.ContactInfo_106294058002",
               "doc": "Contact info." },
             { "name": "options",
               "type": "wix-contacts-backend.contacts.CreateContactRequest_2503814619",
@@ -257,9 +257,7 @@
                       "    jobTitle: \"a string\",",
                       "    locale: \"a string\",",
                       "    birthdate: \"a string\",",
-                      "    picture: {",
-                      "      image: \"wix:image://v1/mediaId/filename.jpg#originWidth=42&originHeight=42\"",
-                      "    },",
+                      "    profilePicture: \"wix:image://v1/mediaId/filename.jpg#originWidth=42&originHeight=42\",",
                       "    emails: [",
                       "      {",
                       "        tag: \"UNTAGGED\",",
@@ -1340,11 +1338,12 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateContact",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "identifiers",
-              "type": "wix-contacts-backend.contacts.UpdateContactRequest_6128665908" },
+              "type": "wix-contacts-backend.contacts.UpdateContactRequest_5249253530" },
             { "name": "contactInfo",
               "type": "wix-contacts-backend.contacts.ContactInfo_105063031896",
               "doc": "Contact info." },
@@ -1357,7 +1356,7 @@
                   [ "wix-contacts-backend.contacts.UpdateContactResult_184364685210" ] },
             "doc": "Fulfilled - Updated contact." },
         "locations":
-          [ { "lineno": 104,
+          [ { "lineno": 105,
               "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_UpdateContact_updateContact.js" } ],
         "docs":
           { "summary": "Updates a contact's properties.",
@@ -1397,9 +1396,7 @@
                       "  const identifiers = {",
                       "    contactId: \"a string\",",
                       "    revision: 42,",
-                      "    picture: {",
-                      "      image: \"wix:image://v1/mediaId/filename.jpg#originWidth=42&originHeight=42\"",
-                      "    }",
+                      "    profilePicture: \"wix:image://v1/mediaId/filename.jpg#originWidth=42&originHeight=42\"",
                       "  };",
                       "  const contactInfo = {",
                       "    name: {",
@@ -2183,7 +2180,7 @@
         "labels": [] },
       { "name": "UpdateContactRequest_2881667278",
         "locations":
-          [ { "lineno": 73,
+          [ { "lineno": 74,
               "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_UpdateContact_updateContact.js" } ],
         "docs":
           { "links": [],
@@ -2202,6 +2199,30 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "UpdateContactRequest_5249253530",
+        "locations":
+          [ { "lineno": 63,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_UpdateContact_updateContact.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contactId",
+              "type": "string",
+              "doc": "ID of the contact to update." },
+            { "name": "revision",
+              "type": "number",
+              "doc": "Revision number.\n When updating, include the existing `revision`\n to prevent conflicting updates." },
+            { "name": "profilePicture",
+              "type": "string",
+              "doc": "[Image](https://www.wix.com/velo/reference/$w/image/src).\n This can contain an image URL or a Wix Media image ID.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "UpdateContactRequest_6128665908",
         "locations":
           [ { "lineno": 63,
@@ -2224,10 +2245,11 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "UpdateContactResult_184364685210",
         "locations":
-          [ { "lineno": 88,
+          [ { "lineno": 89,
               "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_UpdateContact_updateContact.js" } ],
         "docs":
           { "summary": "Updated contact.",

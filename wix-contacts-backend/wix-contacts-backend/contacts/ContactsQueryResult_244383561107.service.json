@@ -1,8 +1,7 @@
 { "name": "ContactsQueryResult_244383561107",
   "memberOf": "wix-contacts-backend.contacts",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 16,
       "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContacts_queryContacts.js" },

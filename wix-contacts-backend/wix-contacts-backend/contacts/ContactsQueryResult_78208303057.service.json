@@ -1,8 +1,7 @@
 { "name": "ContactsQueryResult_78208303057",
   "memberOf": "wix-contacts-backend.contacts",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "com_wixpress_contacts_labels_v4_ContactLabelsServiceV4_QueryLabels_queryLabels.js" },

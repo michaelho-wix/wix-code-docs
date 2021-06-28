@@ -1,0 +1,291 @@
+{ "name": "membershipQuestions",
+  "memberOf": "wix-groups-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 77,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "createOrReplaceAllMembershipQuestions",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "createOrReplaceAllMembershipQuestionsRequest",
+              "type": "wix-groups-backend.membershipQuestions.CreateOrReplaceAllMembershipQuestionsRequest_2034272888" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.membershipQuestions.CreateOrReplaceAllMembershipQuestionsResult_1951173725" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 23,
+              "filename": "wix_social_groups_api_v2_MembershipQuestionsService_CreateOrReplaceAllMembershipQuestions_createOrReplaceAllMembershipQuestions.js" } ],
+        "docs":
+          { "summary": "Replaces the list of membership questions for a specific group or create membership questions if none exists.",
+            "description":
+              [ "Groups managers and group admins have access to this functionality.",
+                "Saving an empty list means that no questions will be asked upon joining the group." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { membershipQuestions } from \"wix-groups-backend\";",
+                      "",
+                      "export function createOrReplaceAllMembershipQuestions() {",
+                      "  const createOrReplaceAllMembershipQuestionsRequest = {",
+                      "    groupId: \"a string\",",
+                      "    questions: [",
+                      "      {",
+                      "        required: true,",
+                      "        text: \"a string\"",
+                      "      }",
+                      "    ]",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return membershipQuestions",
+                      "    .createOrReplaceAllMembershipQuestions(createOrReplaceAllMembershipQuestionsRequest, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listAnswers",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "listAnswersRequest",
+              "type": "wix-groups-backend.membershipQuestions.ListAnswersRequest_10918399763" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.membershipQuestions.ListAnswersResult_16656642807" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 32,
+              "filename": "wix_social_groups_api_v2_MembershipQuestionsService_ListAnswers_listAnswers.js" } ],
+        "docs":
+          { "summary": "Returns the answers to membership questions for a specific group.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { membershipQuestions } from \"wix-groups-backend\";",
+                      "",
+                      "export function listAnswers() {",
+                      "  const listAnswersRequest = {",
+                      "    groupId: \"a string\",",
+                      "    memberIds: [\"a string\"],",
+                      "    paging: {",
+                      "      limit: 42,",
+                      "      offset: 42",
+                      "    }",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return membershipQuestions",
+                      "    .listAnswers(listAnswersRequest, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "CreateOrReplaceAllMembershipQuestionsRequest_2034272888",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_MembershipQuestionsService_CreateOrReplaceAllMembershipQuestions_createOrReplaceAllMembershipQuestions.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "questions",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.membershipQuestions.MembershipQuestion_1928592316" ] },
+              "doc": "New membership questions",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CreateOrReplaceAllMembershipQuestionsResult_1951173725",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_MembershipQuestionsService_CreateOrReplaceAllMembershipQuestions_createOrReplaceAllMembershipQuestions.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "questions",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.MembershipQuestion_3039072148" ] },
+              "doc": "Membership questions" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListAnswersRequest_10918399763",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_MembershipQuestionsService_ListAnswers_listAnswers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "memberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Member IDs. If the list is empty, answers for all group members will be returned.",
+              "optional": true },
+            { "name": "paging",
+              "type": "wix-groups-backend.Paging_1617727965",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListAnswersResult_16656642807",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "wix_social_groups_api_v2_MembershipQuestionsService_ListAnswers_listAnswers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "memberAnswers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.membershipQuestions.MemberMembershipQuestionAnswers_6904159122" ] },
+              "doc": "Membership questions answers of members" },
+            { "name": "questions",
+              "type": "Object",
+              "doc": "Set of key-value pairs. Membership questions by question ID. Contains only questions referenced by the answers." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "MemberMembershipQuestionAnswers_6904159122",
+        "locations":
+          [ { "lineno": 17,
+              "filename": "wix_social_groups_api_v2_MembershipQuestionsService_ListAnswers_listAnswers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "memberId",
+              "type": "string",
+              "doc": "Member ID" },
+            { "name": "answers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.membershipQuestions.MembershipQuestionAnswer_2671722151" ] },
+              "doc": "Membership questions answers" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "MembershipQuestionAnswer_2671722151",
+        "locations":
+          [ { "lineno": 24,
+              "filename": "wix_social_groups_api_v2_MembershipQuestionsService_ListAnswers_listAnswers.js" } ],
+        "docs":
+          { "summary": "Answer to a membership question",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Question ID" },
+            { "name": "text",
+              "type": "string",
+              "doc": "Answer text" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "MembershipQuestion_1928592316",
+        "locations":
+          [ { "lineno": 14,
+              "filename": "wix_social_groups_api_v2_MembershipQuestionsService_CreateOrReplaceAllMembershipQuestions_createOrReplaceAllMembershipQuestions.js" } ],
+        "docs":
+          { "summary": "Question which a site member needs to answer to join a private group.",
+            "description":
+              [ "Groups managers or group admins can update the list of membership questions." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "required",
+              "type": "boolean",
+              "doc": "Whether the answer to this question is required.",
+              "optional": true },
+            { "name": "text",
+              "type": "string",
+              "doc": "Question text",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

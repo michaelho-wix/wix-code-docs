@@ -1,0 +1,629 @@
+{ "name": "wix-groups-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "createGroupRequests",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-groups-backend.createGroupRequests",
+        "locations":
+          [ { "lineno": 21,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "groups",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-groups-backend.groups",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "joinGroupRequests",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-groups-backend.joinGroupRequests",
+        "locations":
+          [ { "lineno": 45,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "members",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-groups-backend.members",
+        "locations":
+          [ { "lineno": 33,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "membershipQuestions",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-groups-backend.membershipQuestions",
+        "locations":
+          [ { "lineno": 81,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "roles",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-groups-backend.roles",
+        "locations":
+          [ { "lineno": 57,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "rules",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-groups-backend.rules",
+        "locations":
+          [ { "lineno": 69,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "settings",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-groups-backend.settings",
+        "locations":
+          [ { "lineno": 93,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "GroupDetails_Logo_5793469391",
+        "locations":
+          [ { "lineno": 67,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group logo. You cannot upload your own logo.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "mediaId",
+              "type": "string",
+              "doc": "Logo image ID (for internal use).",
+              "optional": true },
+            { "name": "width",
+              "type": "number",
+              "doc": "Logo image width.",
+              "optional": true },
+            { "name": "height",
+              "type": "number",
+              "doc": "Logo image height.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupDetails_Logo_6071535554",
+        "locations":
+          [ { "lineno": 58,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group logo. You cannot upload your own logo.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "mediaId",
+              "type": "string",
+              "doc": "Logo image ID (for internal use)." },
+            { "name": "width",
+              "type": "number",
+              "doc": "Logo image width." },
+            { "name": "height",
+              "type": "number",
+              "doc": "Logo image height." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupDetails_Position_1657746802",
+        "locations":
+          [ { "lineno": 76,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Position of the corner of the cover image (or logo)",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "x",
+              "type": "number",
+              "doc": "horizontal coordinate" },
+            { "name": "y",
+              "type": "number",
+              "doc": "vertical coordinate" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupDetails_Position_1843124244",
+        "locations":
+          [ { "lineno": 84,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Position of the corner of the cover image (or logo)",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "x",
+              "type": "number",
+              "doc": "horizontal coordinate",
+              "optional": true },
+            { "name": "y",
+              "type": "number",
+              "doc": "vertical coordinate",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupMember_11598825520",
+        "locations":
+          [ { "lineno": 92,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "role",
+              "type": "string",
+              "doc": "Group member role\n- `MEMBER` - Regular group member\n- `ADMIN` - Group admin\nOne of:\n + `\"UNKNOWN_ROLE\"`\n + `\"MEMBER\"`\n + `\"ADMIN\"`" },
+            { "name": "memberId",
+              "type": "string",
+              "doc": "Site Member ID of Group Member" },
+            { "name": "joinedDate",
+              "type": "Date",
+              "doc": "Date and time the group Member joined the group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupRequest_55002001448",
+        "locations":
+          [ { "lineno": 106,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Site owners may choose to require that site members request approval when creating groups (available in the Wix Business Manager under Groups Application Settings).",
+            "description":
+              [ "When approval is required, only a groups manager can approve a request to create a new group.",
+                "When a group request is approved, the new group is added to the groups lists in the Wix UI." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group request ID" },
+            { "name": "status",
+              "type": "string",
+              "doc": "Status of group request.\n- `PENDING` - Pending group request.\n- `APPROVED` - Approved group request.\n- `REJECTED` - Rejected group request.\n- `CANCELLED` - Cancelled group request.\nOne of:\n + `\"UNKNOWN_STATUS\"`\n + `\"PENDING\"`\n + `\"APPROVED\"`\n + `\"REJECTED\"`\n + `\"CANCELLED\"`" },
+            { "name": "rejectionReason",
+              "type": "string",
+              "doc": "Group request rejection reason." },
+            { "name": "group",
+              "type": "wix-groups-backend.Group_43197702955",
+              "doc": "Group requested for creation." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupRole_6888303931",
+        "locations":
+          [ { "lineno": 128,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group member role. When membership status is not `JOINED`, this is empty.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "value",
+              "type": "string",
+              "doc": "Group member role\n- `MEMBER` - Regular group member\n- `ADMIN` - Group admin\nOne of:\n + `\"UNKNOWN_ROLE\"`\n + `\"MEMBER\"`\n + `\"ADMIN\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_43197702955",
+        "locations":
+          [ { "lineno": 33,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Requested group.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Group title." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "A unique part of a group's URL (e.g., 'https:/example.com/groups/slug')." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format." },
+            { "name": "teaser",
+              "type": "string",
+              "doc": "Group teaser." },
+            { "name": "privacyStatus",
+              "type": "string",
+              "doc": "Group privacy level.\n- `PUBLIC` - Anyone can see group in groups list and its content. Anyone can join group.\n- `PRIVATE` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `SECRET` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.\nOne of:\n + `\"UNKNOWN\"`\n + `\"PUBLIC\"`\n + `\"PRIVATE\"`\n + `\"SECRET\"`" },
+            { "name": "coverImage",
+              "type": "wix-groups-backend.Group_GroupDetails_7399281436",
+              "doc": "Group details." },
+            { "name": "memberTitle",
+              "type": "string",
+              "doc": "What group members are called (e.g., 'Coworkers', 'Friends', 'Students')." },
+            { "name": "settings",
+              "type": "wix-groups-backend.Group_GroupSettings_6548797592",
+              "doc": "Group settings." },
+            { "name": "lastActivityDate",
+              "type": "Date",
+              "doc": "Date and time the group was last active (e.g., last post or comment)." },
+            { "name": "createdBy",
+              "type": "string",
+              "doc": "Site member ID of the group creator." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_GroupDetails_6027800230",
+        "locations":
+          [ { "lineno": 149,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "image",
+              "type": "wix-groups-backend.GroupDetails_Logo_5793469391",
+              "doc": "Group logo. You cannot upload your own logo.",
+              "optional": true },
+            { "name": "logoPosition",
+              "type": "wix-groups-backend.GroupDetails_Position_1843124244",
+              "doc": "Position of the corner of the cover image (or logo)",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_GroupDetails_7399281436",
+        "locations":
+          [ { "lineno": 141,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "image",
+              "type": "wix-groups-backend.GroupDetails_Logo_6071535554",
+              "doc": "Group logo. You cannot upload your own logo." },
+            { "name": "position",
+              "type": "wix-groups-backend.GroupDetails_Position_1657746802",
+              "doc": "Position of the corner of the cover image (or logo)" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_GroupSettings_6085353987",
+        "locations":
+          [ { "lineno": 168,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group settings.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "membersCanInvite",
+              "type": "boolean",
+              "doc": "Whether all group members are permitted to add/invite new group members to group with any privacy level. When `false`, member additions/invitations are limited to group admins. Defaults to true.",
+              "optional": true },
+            { "name": "membersCanApprove",
+              "type": "boolean",
+              "doc": "Whether all group members are permitted to approve join group requests. When `false`, member approval is limited to the group admins.",
+              "optional": true },
+            { "name": "welcomeMemberPostEnabled",
+              "type": "boolean",
+              "doc": "Whether to create a daily post about new members.",
+              "optional": true },
+            { "name": "groupUpdatePostEnabled",
+              "type": "boolean",
+              "doc": "Whether to create a post when group details are changed.",
+              "optional": true },
+            { "name": "showMemberList",
+              "type": "boolean",
+              "doc": "Whether all group members can view the group member list.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_GroupSettings_6548797592",
+        "locations":
+          [ { "lineno": 157,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group settings.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "membersCanInvite",
+              "type": "boolean",
+              "doc": "Whether all group members are permitted to add/invite new group members to group with any privacy level. When `false`, member additions/invitations are limited to group admins. Defaults to true." },
+            { "name": "membersCanApprove",
+              "type": "boolean",
+              "doc": "Whether all group members are permitted to approve join group requests. When `false`, member approval is limited to the group admins." },
+            { "name": "welcomeMemberPostEnabled",
+              "type": "boolean",
+              "doc": "Whether to create a daily post about new members." },
+            { "name": "groupUpdatePostEnabled",
+              "type": "boolean",
+              "doc": "Whether to create a post when group details are changed." },
+            { "name": "showMemberList",
+              "type": "boolean",
+              "doc": "Whether all group members can view the group member list." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "JoinGroupRequest_10306650991",
+        "locations":
+          [ { "lineno": 179,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "To join a private group, a site member must submit a join group request, which can be approved or rejected by a group admin or a groups manager.",
+            "description":
+              [ "When a join group request is approved, the site member becomes a group member." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "memberId",
+              "type": "string",
+              "doc": "Site member ID of requester" },
+            { "name": "status",
+              "type": "string",
+              "doc": "Join group request status.\n- `PENDING` - Pending join group request.\n- `APPROVED` - Approved join group request.\n- `REJECTED` - Rejected join group request.\n- `CANCELLED` - Cancelled join group request.\nOne of:\n + `\"UNKNOWN_STATUS\"`\n + `\"PENDING\"`\n + `\"APPROVED\"`\n + `\"REJECTED\"`\n + `\"CANCELLED\"`" },
+            { "name": "rejectionReason",
+              "type": "string",
+              "doc": "Group request rejection reason." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "MembershipQuestion_3039072148",
+        "locations":
+          [ { "lineno": 213,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "`key` of type string, `value` of type object",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Question ID." },
+            { "name": "required",
+              "type": "boolean",
+              "doc": "Whether the answer to this question is required." },
+            { "name": "text",
+              "type": "string",
+              "doc": "Question text" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Membership_17075797469",
+        "locations":
+          [ { "lineno": 199,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Site member ID." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Membership status with Group\n- `JOINED` - Site member is a group member.\n- `PENDING` - Site member has join group request with `PENDING` status for this group.\nOne of:\n + `\"UNKNOWN_STATUS\"`\n + `\"JOINED\"`\n + `\"PENDING\"`" },
+            { "name": "role",
+              "type": "wix-groups-backend.GroupRole_6888303931",
+              "doc": "Group member role. When membership status is not `JOINED`, this is empty." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Options_936495653",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Authorization options.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "suppressAuth",
+              "type": "boolean",
+              "doc": "When `true`, prevents permission checks from running for the operation.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PagingMetadata_1238886334",
+        "locations":
+          [ { "lineno": 24,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "count",
+              "type": "number",
+              "doc": "The number of items returned in this response" },
+            { "name": "offset",
+              "type": "number",
+              "doc": "The offset which was requested" },
+            { "name": "total",
+              "type": "number",
+              "doc": "The total number of items that match the query" },
+            { "name": "tooManyToCount",
+              "type": "boolean",
+              "doc": "A flag that indicates the server failed to calculate 'total' field" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PagingMetadata_3804912776",
+        "locations":
+          [ { "lineno": 16,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "length",
+              "type": "number",
+              "doc": "The number of items returned in this response" },
+            { "name": "totalCount",
+              "type": "number",
+              "doc": "The total number of items that match the query" },
+            { "name": "tooManyToCount",
+              "type": "boolean",
+              "doc": "A flag that indicates the server failed to calculate 'total' field" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Paging_1617727965",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Limit number of results",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "doc": "The number of items to load",
+              "optional": true },
+            { "name": "offset",
+              "type": "number",
+              "doc": "number of items to skip in the current sort order",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Settings_12415143625",
+        "locations":
+          [ { "lineno": 222,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Groups application settings.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "sortField",
+              "type": "string",
+              "doc": "Groups list sorting.\n- `DEFAULT` - Default sorting.\n- `RECENT_ACTIVITY` - Sort by recent activity date.\n- `TITLE` - Sort by title.\n- `MEMBERS_COUNT` - Sort by members count.\nOne of:\n + `\"UNKNOWN\"`\n + `\"DEFAULT\"`\n + `\"RECENT_ACTIVITY\"`\n + `\"TITLE\"`\n + `\"MEMBER_COUNT\"`" },
+            { "name": "authorizedGroupCreators",
+              "type": "string",
+              "doc": "Who can create new groups.\n- `ONLY_OWNER` - Only groups managers can create new groups.\n- `MEMBERS` - All members are allowed to create new groups.\n- `MEMBERS_WITH_OWNER_APPROVAL` - Only groups managers can create new groups. Members can create group requests.\nOne of:\n + `\"UNKNOWN_POLICY\"`\n + `\"OWNER\"`\n + `\"MEMBERS\"`\n + `\"MEMBERS_WITH_APPROVAL\"`" },
+            { "name": "emailDigestEnabled",
+              "type": "boolean",
+              "doc": "Whether weekly email digest is enabled." } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

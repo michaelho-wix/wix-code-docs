@@ -1,0 +1,194 @@
+{ "name": "settings",
+  "memberOf": "wix-groups-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 89,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "getSettings",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.settings.GetSettingsResult_13243429901" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 7,
+              "filename": "wix_social_groups_api_v2_GroupSettingsService_GetSettings_getSettings.js" } ],
+        "docs":
+          { "summary": "Get groups application settings.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { settings } from \"wix-groups-backend\";",
+                      "",
+                      "export function getSettings() {",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return settings",
+                      "    .getSettings(options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "updateSettings",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "updateSettingsRequest",
+              "type": "wix-groups-backend.settings.UpdateSettingsRequest_13389697265" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.settings.UpdateSettingsResult_16253050176" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 40,
+              "filename": "wix_social_groups_api_v2_GroupSettingsService_UpdateSettings_updateSettings.js" } ],
+        "docs":
+          { "summary": "Update groups application settings.",
+            "description":
+              [ "Only groups managers have access to this functionality." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { settings } from \"wix-groups-backend\";",
+                      "",
+                      "export function updateSettings() {",
+                      "  const updateSettingsRequest = {",
+                      "    settings: {",
+                      "      sortField: \"UNKNOWN\",",
+                      "      authorizedGroupCreators: \"UNKNOWN_POLICY\",",
+                      "      emailDigestEnabled: true",
+                      "    }",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return settings",
+                      "    .updateSettings(updateSettingsRequest, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "GetSettingsResult_13243429901",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupSettingsService_GetSettings_getSettings.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "settings",
+              "type": "wix-groups-backend.Settings_12415143625",
+              "doc": "Groups application settings." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Settings_12137077462",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupSettingsService_UpdateSettings_updateSettings.js" } ],
+        "docs":
+          { "summary": "Groups application settings to update.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "sortField",
+              "type": "string",
+              "doc": "Groups list sorting.\n- `DEFAULT` - Default sorting.\n- `RECENT_ACTIVITY` - Sort by recent activity date.\n- `TITLE` - Sort by title.\n- `MEMBERS_COUNT` - Sort by members count.\nOne of:\n + `\"UNKNOWN\"`\n + `\"DEFAULT\"`\n + `\"RECENT_ACTIVITY\"`\n + `\"TITLE\"`\n + `\"MEMBER_COUNT\"`",
+              "optional": true },
+            { "name": "authorizedGroupCreators",
+              "type": "string",
+              "doc": "Who can create new groups.\n- `ONLY_OWNER` - Only groups managers can create new groups.\n- `MEMBERS` - All members are allowed to create new groups.\n- `MEMBERS_WITH_OWNER_APPROVAL` - Only groups managers can create new groups. Members can create group requests.\nOne of:\n + `\"UNKNOWN_POLICY\"`\n + `\"OWNER\"`\n + `\"MEMBERS\"`\n + `\"MEMBERS_WITH_APPROVAL\"`",
+              "optional": true },
+            { "name": "emailDigestEnabled",
+              "type": "boolean",
+              "doc": "Whether weekly email digest is enabled.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateSettingsRequest_13389697265",
+        "locations":
+          [ { "lineno": 28,
+              "filename": "wix_social_groups_api_v2_GroupSettingsService_UpdateSettings_updateSettings.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "settings",
+              "type": "wix-groups-backend.settings.Settings_12137077462",
+              "doc": "Groups application settings to update." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateSettingsResult_16253050176",
+        "locations":
+          [ { "lineno": 34,
+              "filename": "wix_social_groups_api_v2_GroupSettingsService_UpdateSettings_updateSettings.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "settings",
+              "type": "wix-groups-backend.Settings_12415143625",
+              "doc": "Groups application settings." } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

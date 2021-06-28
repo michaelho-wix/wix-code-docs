@@ -1,0 +1,303 @@
+{ "name": "rules",
+  "memberOf": "wix-groups-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 65,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "createOrReplaceGroupRules",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "createOrReplaceGroupRulesRequest",
+              "type": "wix-groups-backend.rules.CreateOrReplaceGroupRulesRequest_5978206009" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.rules.CreateOrReplaceGroupRulesResult_8962221227" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 43,
+              "filename": "wix_social_groups_api_v2_GroupRulesService_CreateOrReplaceGroupRules_createOrReplaceGroupRules.js" } ],
+        "docs":
+          { "summary": "Replace existing or create new group rules (all existing rules will be replaced by provides ones)",
+            "description":
+              [ "Groups managers and group admins have access to this functionality." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { rules } from \"wix-groups-backend\";",
+                      "",
+                      "export function createOrReplaceGroupRules() {",
+                      "  const createOrReplaceGroupRulesRequest = {",
+                      "    groupId: \"a string\",",
+                      "    rules: {",
+                      "      rules: [",
+                      "        {",
+                      "          title: \"a string\",",
+                      "          description: \"a string\"",
+                      "        }",
+                      "      ]",
+                      "    }",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return rules",
+                      "    .createOrReplaceGroupRules(createOrReplaceGroupRulesRequest, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "getGroupRules",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "getGroupRulesRequest",
+              "type": "wix-groups-backend.rules.GetGroupRulesRequest_611438852" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.rules.GetGroupRulesResult_925861425" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 20,
+              "filename": "wix_social_groups_api_v2_GroupRulesService_GetGroupRules_getGroupRules.js" } ],
+        "docs":
+          { "summary": "Retrieves the list of group rules.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { rules } from \"wix-groups-backend\";",
+                      "",
+                      "export function getGroupRules() {",
+                      "  const getGroupRulesRequest = {",
+                      "    groupId: \"a string\"",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return rules",
+                      "    .getGroupRules(getGroupRulesRequest, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "CreateOrReplaceGroupRulesRequest_5978206009",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupRulesService_CreateOrReplaceGroupRules_createOrReplaceGroupRules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID" },
+            { "name": "rules",
+              "type": "wix-groups-backend.rules.GroupRules_2684959244",
+              "doc": "New group rules.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CreateOrReplaceGroupRulesResult_8962221227",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupRulesService_CreateOrReplaceGroupRules_createOrReplaceGroupRules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID" },
+            { "name": "rules",
+              "type": "wix-groups-backend.rules.GroupRules_2963025407",
+              "doc": "New group rules." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetGroupRulesRequest_611438852",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupRulesService_GetGroupRules_getGroupRules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetGroupRulesResult_925861425",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "wix_social_groups_api_v2_GroupRulesService_GetGroupRules_getGroupRules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rules",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.rules.GroupRule_704491929" ] },
+              "doc": "Group rules." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupRule_704491929",
+        "locations":
+          [ { "lineno": 13,
+              "filename": "wix_social_groups_api_v2_GroupRulesService_GetGroupRules_getGroupRules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Title of the group rule." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Description of the group rule." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupRules_2684959244",
+        "locations":
+          [ { "lineno": 15,
+              "filename": "wix_social_groups_api_v2_GroupRulesService_CreateOrReplaceGroupRules_createOrReplaceGroupRules.js" } ],
+        "docs":
+          { "summary": "New group rules.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rules",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.rules.GroupRules_GroupRule_1558341640" ] },
+              "doc": "Group rules.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupRules_2963025407",
+        "locations":
+          [ { "lineno": 22,
+              "filename": "wix_social_groups_api_v2_GroupRulesService_CreateOrReplaceGroupRules_createOrReplaceGroupRules.js" } ],
+        "docs":
+          { "summary": "New group rules.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rules",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.rules.GroupRules_GroupRule_1743719082" ] },
+              "doc": "Group rules." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupRules_GroupRule_1558341640",
+        "locations":
+          [ { "lineno": 29,
+              "filename": "wix_social_groups_api_v2_GroupRulesService_CreateOrReplaceGroupRules_createOrReplaceGroupRules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Title of the group rule.",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Description of the group rule.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupRules_GroupRule_1743719082",
+        "locations":
+          [ { "lineno": 36,
+              "filename": "wix_social_groups_api_v2_GroupRulesService_CreateOrReplaceGroupRules_createOrReplaceGroupRules.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Title of the group rule." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Description of the group rule." } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

@@ -1,0 +1,215 @@
+{ "name": "currentMember",
+  "memberOf": "wix-members-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 5,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "getMember",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "fieldSet",
+              "type": "string",
+              "doc": "Predefined set of fields to return.\n\n<!--ONLY:VELO\nOne of:\n\n- `\"FULL\"`: Returns all fields.\n- `\"PUBLIC\"`: Returns `_id` and all fields under `profile`.\n\n> **Note:**\n> When returning the `\"PUBLIC\"` fieldset,\n> `profile.status`, `profile.privacyStatus`, and `profile.activityStatus`\n> are returned as `\"UNKNOWN\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"PUBLIC\"`\n + `\"FULL\"`\n + `\"EXTENDED\"`" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.Member_114186402686" ] },
+            "doc": "Fulfilled - Updated member." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_GetMyMember_getMember.js" } ],
+        "docs":
+          { "summary": "Retrieves the currently logged-in member.",
+            "description":
+              [ "<!--ONLY:VELO",
+                "This function returns a Promise that resolves to a member object.",
+                "",
+                "> **Note:**",
+                "> This function replaces the deprecated",
+                "> `wixUsersBackend.currentUser`.",
+                "> The deprecated object will continue to work, but it will not receive updates.",
+                "> To keep any existing code compatible with future changes, see the",
+                "> [migration instructions](wix-users-backend/currentuser#wix-users-backend_currentuser_migration-instructions).",
+                "<!--END:ONLY:VELO-->" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { currentMember } from \"wix-members-backend\";",
+                      "",
+                      "export function getMember() {",
+                      "  const fieldSet = \"PUBLIC\";",
+                      "",
+                      "  return currentMember",
+                      "    .getMember(fieldSet)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "makeProfilePrivate",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.Member_114186402686" ] },
+            "doc": "Fulfilled - Updated member." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_LeaveCommunity_makeProfilePrivate.js" } ],
+        "docs":
+          { "summary": "Removes the currently logged-in member from the site community and sets their profile to private.",
+            "description":
+              [ "<!--ONLY:VELO",
+                "This function returns a Promise that resolves to a member object",
+                "when the member's profile privacy is updated.",
+                "<!--END:ONLY:VELO-->",
+                "",
+                "When a member's profile is private,",
+                "they do not have access to the site's",
+                "[Members Area](https://support.wix.com/en/article/about-members-area)",
+                "features — such as chat, forum, and followers —",
+                "and their profile is hidden from other members and site visitors.",
+                "",
+                "> **Note:**",
+                "> If a public member profile changes to private —",
+                "> in other words, if a member leaves the site's community —",
+                "> their content such as forum posts and blog comments remain publicly visible." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { currentMember } from \"wix-members-backend\";",
+                      "",
+                      "export function makeProfilePrivate() {",
+                      "  return currentMember",
+                      "    .makeProfilePrivate()",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "makeProfilePublic",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.Member_114186402686" ] },
+            "doc": "Fulfilled - Updated member." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_JoinCommunity_makeProfilePublic.js" } ],
+        "docs":
+          { "summary": "Joins the currently logged-in member to the site community and their profile to public.",
+            "description":
+              [ "<!--ONLY:VELO",
+                "This function returns a Promise that resolves to a member object",
+                "when the member's profile privacy is updated.",
+                "<!--END:ONLY:VELO-->",
+                "",
+                "When a member's profile is public,",
+                "they have access to the site's",
+                "[Members Area](https://support.wix.com/en/article/about-members-area)",
+                "features — such as chat, forum, and followers —",
+                "and their profile is visible to other members and site visitors." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { currentMember } from \"wix-members-backend\";",
+                      "",
+                      "export function makeProfilePublic() {",
+                      "  return currentMember",
+                      "    .makeProfilePublic()",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "updateSlug",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "slug",
+              "type": "string",
+              "doc": "New slug." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.Member_114186402686" ] },
+            "doc": "Fulfilled - Updated member." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_UpdateMySlug_updateSlug.js" } ],
+        "docs":
+          { "summary": "Change the currently logged in member slug.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { currentMember } from \"wix-members-backend\";",
+                      "",
+                      "export function updateSlug() {",
+                      "  const slug = \"a string\";",
+                      "",
+                      "  return currentMember",
+                      "    .updateSlug(slug)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }

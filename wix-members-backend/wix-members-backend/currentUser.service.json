@@ -1,0 +1,89 @@
+{ "name": "currentUser",
+  "memberOf": "wix-members-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 29,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "getRoles",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-members-backend.currentUser.GroupInfo_18980468168" ] } ] },
+            "doc": "Fulfilled - list of groups" },
+        "locations":
+          [ { "lineno": 23,
+              "filename": "com_wixpress_members_groups_GroupsService_GetCurrentUserGroups_getRoles.js" } ],
+        "docs":
+          { "summary": "Returns a list of groups assigned to the current user",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { currentUser } from \"wix-members-backend\";",
+                      "",
+                      "export function getRoles() {",
+                      "  return currentUser",
+                      "    .getRoles()",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "GroupInfo_18980468168",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_groups_GroupsService_GetCurrentUserGroups_getRoles.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "unique group UUID" },
+            { "name": "title",
+              "type": "string",
+              "doc": "display name" },
+            { "name": "description",
+              "type": "string",
+              "doc": "group description" },
+            { "name": "color",
+              "type": "string",
+              "doc": "group color\nOne of:\n + `\"UNDEFINED\"`\n + `\"DARK_BLUE\"`\n + `\"LIGHT_BLUE\"`\n + `\"TEAL\"`\n + `\"LIGHT_GREEN\"`\n + `\"YELLOW\"`\n + `\"ORANGE\"`\n + `\"RED\"`\n + `\"VIOLET\"`\n + `\"PURPLE\"`" },
+            { "name": "creationDate",
+              "type": "Date",
+              "doc": "group creation date" },
+            { "name": "type",
+              "type": "string",
+              "doc": "type of group (e.g membership group)" } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

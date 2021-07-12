@@ -1,6 +1,7 @@
 { "name": "wix-groups-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -90,7 +91,7 @@
   "messages":
     [ { "name": "GroupDetails_Logo_5793469391",
         "locations":
-          [ { "lineno": 49,
+          [ { "lineno": 48,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Group logo. You cannot upload your own logo.",
@@ -116,7 +117,7 @@
         "labels": [] },
       { "name": "GroupDetails_Logo_6071535554",
         "locations":
-          [ { "lineno": 40,
+          [ { "lineno": 39,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Group logo. You cannot upload your own logo.",
@@ -139,7 +140,7 @@
         "labels": [] },
       { "name": "GroupDetails_Position_1657746802",
         "locations":
-          [ { "lineno": 58,
+          [ { "lineno": 57,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Position of the corner of the cover image (or logo)",
@@ -159,7 +160,7 @@
         "labels": [] },
       { "name": "GroupDetails_Position_1843124244",
         "locations":
-          [ { "lineno": 66,
+          [ { "lineno": 65,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Position of the corner of the cover image (or logo)",
@@ -181,7 +182,7 @@
         "labels": [] },
       { "name": "GroupMember_11598825520",
         "locations":
-          [ { "lineno": 74,
+          [ { "lineno": 73,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -203,7 +204,7 @@
         "labels": [] },
       { "name": "GroupRequest_50513504819",
         "locations":
-          [ { "lineno": 88,
+          [ { "lineno": 87,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Site owners may choose to require that site members request approval when creating groups (available in the Wix Business Manager under Groups Application Settings).",
@@ -235,8 +236,7 @@
           [ { "lineno": 16,
               "filename": "shared.js" } ],
         "docs":
-          { "summary": "Requested group.",
-            "links": [],
+          { "links": [],
             "examples": [],
             "extra":
               {  } },
@@ -273,10 +273,11 @@
               "doc": "Site member ID of the group creator." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "Group_GroupDetails_6027800230",
         "locations":
-          [ { "lineno": 118,
+          [ { "lineno": 117,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Group details.",
@@ -298,7 +299,7 @@
         "labels": [] },
       { "name": "Group_GroupDetails_7399281436",
         "locations":
-          [ { "lineno": 110,
+          [ { "lineno": 109,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Group details.",
@@ -318,7 +319,7 @@
         "labels": [] },
       { "name": "Group_GroupSettings_6085353987",
         "locations":
-          [ { "lineno": 137,
+          [ { "lineno": 136,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Group settings.",
@@ -352,7 +353,7 @@
         "labels": [] },
       { "name": "Group_GroupSettings_6548797592",
         "locations":
-          [ { "lineno": 126,
+          [ { "lineno": 125,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Group settings.",
@@ -381,7 +382,7 @@
         "labels": [] },
       { "name": "JoinGroupRequest_10306650991",
         "locations":
-          [ { "lineno": 148,
+          [ { "lineno": 147,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "To join a private group, a site member must submit a join group request, which can be approved or rejected by a group admin or a groups manager.",

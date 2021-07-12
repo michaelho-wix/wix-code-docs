@@ -1,7 +1,8 @@
 { "name": "joinRequests",
   "memberOf": "wix-groups-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 41,
       "filename": "index.js" },
@@ -13,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "approveJoinRequests",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "identifiers",
@@ -25,10 +27,12 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-groups-backend.joinRequests.ApproveJoinGroupRequestsResult_8994910082" ] },
-            "doc": "" },
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-groups-backend.joinRequests.JoinGroupRequest_7108516840" ] } ] },
+            "doc": "Fulfilled - Approved join group requests." },
         "locations":
-          [ { "lineno": 33,
+          [ { "lineno": 27,
               "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_ApproveJoinGroupRequests_approveJoinRequests.js" } ],
         "docs":
           { "summary": "Approves pending join group requests.",
@@ -173,7 +177,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "rejectJoinRequests",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "groupId",
@@ -192,10 +197,12 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-groups-backend.joinRequests.RejectJoinGroupRequestsResult_11302514357" ] },
-            "doc": "" },
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-groups-backend.JoinGroupRequest_10306650991" ] } ] },
+            "doc": "Fulfilled - Rejected join group requests." },
         "locations":
-          [ { "lineno": 14,
+          [ { "lineno": 8,
               "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_RejectJoinGroupRequests_rejectJoinRequests.js" } ],
         "docs":
           { "summary": "Rejects pending join group requests.",
@@ -277,10 +284,11 @@
               "doc": "Approved join group requests." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "JoinGroupRequest_7108516840",
         "locations":
-          [ { "lineno": 14,
+          [ { "lineno": 8,
               "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_ApproveJoinGroupRequests_approveJoinRequests.js" } ],
         "docs":
           { "summary": "To join a private group, a site member must submit a join group request, which can be approved or rejected by a group admin or a groups manager.",
@@ -404,6 +412,7 @@
               "doc": "Rejected join group requests." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] } ],
   "extra":
     {  } }

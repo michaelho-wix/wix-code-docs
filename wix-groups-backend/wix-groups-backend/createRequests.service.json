@@ -1,7 +1,8 @@
 { "name": "createRequests",
   "memberOf": "wix-groups-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 17,
       "filename": "index.js" },
@@ -13,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "approveCreateRequests",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "groupRequestIds",
@@ -29,10 +31,12 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-groups-backend.createRequests.ApproveGroupRequestsResult_52423286033" ] },
-            "doc": "" },
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-groups-backend.GroupRequest_50513504819" ] } ] },
+            "doc": "Fulfilled - Approved group requests." },
         "locations":
-          [ { "lineno": 7,
+          [ { "lineno": 1,
               "filename": "wix_social_groups_api_v2_GroupRequestsService_ApproveGroupRequests_approveCreateRequests.js" } ],
         "docs":
           { "summary": "Approves group requests.",
@@ -218,7 +222,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "rejectCreateRequests",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "rejections",
@@ -234,10 +239,12 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-groups-backend.createRequests.RejectGroupRequestsResult_52513614525" ] },
-            "doc": "" },
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-groups-backend.GroupRequest_50513504819" ] } ] },
+            "doc": "Fulfilled - Rejected group requests." },
         "locations":
-          [ { "lineno": 14,
+          [ { "lineno": 8,
               "filename": "wix_social_groups_api_v2_GroupRequestsService_RejectGroupRequests_rejectCreateRequests.js" } ],
         "docs":
           { "summary": "Rejects group requests.",
@@ -296,7 +303,8 @@
               "doc": "Approved group requests." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "CancelGroupRequestResult_49357700856",
         "locations":
           [ { "lineno": 1,
@@ -423,6 +431,7 @@
               "doc": "Rejected group requests." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] } ],
   "extra":
     {  } }

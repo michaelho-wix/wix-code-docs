@@ -1,7 +1,8 @@
 { "name": "groups",
   "memberOf": "wix-groups-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -13,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "createGroup",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "group",
@@ -29,10 +31,10 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-groups-backend.groups.CreateGroupResult_37214143042" ] },
+                  [ "wix-groups-backend.groups.CreateGroupResult_36246357169" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 27,
+          [ { "lineno": 44,
               "filename": "wix_social_groups_api_v2_GroupsService_CreateGroup_createGroup.js" } ],
         "docs":
           { "summary": "Creates a group.",
@@ -92,7 +94,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "deleteGroup",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "groupId",
@@ -105,10 +108,10 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-groups-backend.groups.DeleteGroupResult_39140479633" ] },
+                  [ "wix-groups-backend.groups.DeleteGroupResult_38172693760" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 7,
+          [ { "lineno": 24,
               "filename": "wix_social_groups_api_v2_GroupsService_DeleteGroup_deleteGroup.js" } ],
         "docs":
           { "summary": "Deletes a group.",
@@ -144,7 +147,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getGroup",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "groupId",
@@ -157,10 +161,10 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-groups-backend.groups.GetGroupResult_39161424194" ] },
+                  [ "wix-groups-backend.groups.GetGroupResult_38193638321" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 7,
+          [ { "lineno": 24,
               "filename": "wix_social_groups_api_v2_GroupsService_GetGroup_getGroup.js" } ],
         "docs":
           { "summary": "Retrieves a group by ID.",
@@ -193,7 +197,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getGroupBySlug",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "slug",
@@ -206,10 +211,10 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-groups-backend.groups.GetGroupBySlugResult_38944236544" ] },
+                  [ "wix-groups-backend.groups.GetGroupBySlugResult_37976450671" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 7,
+          [ { "lineno": 24,
               "filename": "wix_social_groups_api_v2_GroupsService_GetGroupBySlug_getGroupBySlug.js" } ],
         "docs":
           { "summary": "Retrieves a group by slug.",
@@ -347,7 +352,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateGroup",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "group",
@@ -360,10 +366,10 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-groups-backend.groups.UpdateGroupResult_38888899823" ] },
+                  [ "wix-groups-backend.groups.UpdateGroupResult_37921113950" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 28,
+          [ { "lineno": 45,
               "filename": "wix_social_groups_api_v2_GroupsService_UpdateGroup_updateGroup.js" } ],
         "docs":
           { "summary": "Updates a group.",
@@ -427,7 +433,51 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "CreateGroupResult_37214143042",
+    [ { "name": "CreateGroupResult_36246357169",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_CreateGroup_createGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Group title." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "A unique part of a group's URL (e.g., 'https:/example.com/groups/slug')." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format." },
+            { "name": "privacyStatus",
+              "type": "string",
+              "doc": "Group privacy level.\n- `PUBLIC` - Anyone can see group in groups list and its content. Anyone can join group.\n- `PRIVATE` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `SECRET` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.\nOne of:\n + `\"UNKNOWN\"`\n + `\"PUBLIC\"`\n + `\"PRIVATE\"`\n + `\"SECRET\"`" },
+            { "name": "coverImage",
+              "type": "wix-groups-backend.Group_GroupDetails_7399281436",
+              "doc": "Group details." },
+            { "name": "memberTitle",
+              "type": "string",
+              "doc": "What group members are called (e.g., 'Coworkers', 'Friends', 'Students')." },
+            { "name": "settings",
+              "type": "wix-groups-backend.Group_GroupSettings_6548797592",
+              "doc": "Group settings." },
+            { "name": "lastActivityDate",
+              "type": "Date",
+              "doc": "Date and time the group was last active (e.g., last post or comment)." },
+            { "name": "createdBy",
+              "type": "string",
+              "doc": "Site member ID of the group creator." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "CreateGroupResult_37214143042",
         "locations":
           [ { "lineno": 1,
               "filename": "wix_social_groups_api_v2_GroupsService_CreateGroup_createGroup.js" } ],
@@ -442,7 +492,52 @@
               "doc": "Requested group." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "DeleteGroupResult_38172693760",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_DeleteGroup_deleteGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Group title." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "A unique part of a group's URL (e.g., 'https:/example.com/groups/slug')." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format." },
+            { "name": "privacyStatus",
+              "type": "string",
+              "doc": "Group privacy level.\n- `PUBLIC` - Anyone can see group in groups list and its content. Anyone can join group.\n- `PRIVATE` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `SECRET` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.\nOne of:\n + `\"UNKNOWN\"`\n + `\"PUBLIC\"`\n + `\"PRIVATE\"`\n + `\"SECRET\"`" },
+            { "name": "coverImage",
+              "type": "wix-groups-backend.Group_GroupDetails_7399281436",
+              "doc": "Group details." },
+            { "name": "memberTitle",
+              "type": "string",
+              "doc": "What group members are called (e.g., 'Coworkers', 'Friends', 'Students')." },
+            { "name": "settings",
+              "type": "wix-groups-backend.Group_GroupSettings_6548797592",
+              "doc": "Group settings." },
+            { "name": "lastActivityDate",
+              "type": "Date",
+              "doc": "Date and time the group was last active (e.g., last post or comment)." },
+            { "name": "createdBy",
+              "type": "string",
+              "doc": "Site member ID of the group creator." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "DeleteGroupResult_39140479633",
         "locations":
           [ { "lineno": 1,
@@ -458,7 +553,52 @@
               "doc": "Requested group." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "GetGroupBySlugResult_37976450671",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_GetGroupBySlug_getGroupBySlug.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Group title." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "A unique part of a group's URL (e.g., 'https:/example.com/groups/slug')." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format." },
+            { "name": "privacyStatus",
+              "type": "string",
+              "doc": "Group privacy level.\n- `PUBLIC` - Anyone can see group in groups list and its content. Anyone can join group.\n- `PRIVATE` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `SECRET` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.\nOne of:\n + `\"UNKNOWN\"`\n + `\"PUBLIC\"`\n + `\"PRIVATE\"`\n + `\"SECRET\"`" },
+            { "name": "coverImage",
+              "type": "wix-groups-backend.Group_GroupDetails_7399281436",
+              "doc": "Group details." },
+            { "name": "memberTitle",
+              "type": "string",
+              "doc": "What group members are called (e.g., 'Coworkers', 'Friends', 'Students')." },
+            { "name": "settings",
+              "type": "wix-groups-backend.Group_GroupSettings_6548797592",
+              "doc": "Group settings." },
+            { "name": "lastActivityDate",
+              "type": "Date",
+              "doc": "Date and time the group was last active (e.g., last post or comment)." },
+            { "name": "createdBy",
+              "type": "string",
+              "doc": "Site member ID of the group creator." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "GetGroupBySlugResult_38944236544",
         "locations":
           [ { "lineno": 1,
@@ -474,7 +614,52 @@
               "doc": "Requested group." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "GetGroupResult_38193638321",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_GetGroup_getGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Group title." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "A unique part of a group's URL (e.g., 'https:/example.com/groups/slug')." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format." },
+            { "name": "privacyStatus",
+              "type": "string",
+              "doc": "Group privacy level.\n- `PUBLIC` - Anyone can see group in groups list and its content. Anyone can join group.\n- `PRIVATE` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `SECRET` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.\nOne of:\n + `\"UNKNOWN\"`\n + `\"PUBLIC\"`\n + `\"PRIVATE\"`\n + `\"SECRET\"`" },
+            { "name": "coverImage",
+              "type": "wix-groups-backend.Group_GroupDetails_7399281436",
+              "doc": "Group details." },
+            { "name": "memberTitle",
+              "type": "string",
+              "doc": "What group members are called (e.g., 'Coworkers', 'Friends', 'Students')." },
+            { "name": "settings",
+              "type": "wix-groups-backend.Group_GroupSettings_6548797592",
+              "doc": "Group settings." },
+            { "name": "lastActivityDate",
+              "type": "Date",
+              "doc": "Date and time the group was last active (e.g., last post or comment)." },
+            { "name": "createdBy",
+              "type": "string",
+              "doc": "Site member ID of the group creator." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "GetGroupResult_39161424194",
         "locations":
           [ { "lineno": 1,
@@ -490,10 +675,11 @@
               "doc": "Requested group." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Group_31091123328",
         "locations":
-          [ { "lineno": 7,
+          [ { "lineno": 24,
               "filename": "wix_social_groups_api_v2_GroupsService_CreateGroup_createGroup.js" } ],
         "docs":
           { "summary": "Group to create.",
@@ -627,6 +813,50 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "UpdateGroupResult_37921113950",
+        "locations":
+          [ { "lineno": 22,
+              "filename": "wix_social_groups_api_v2_GroupsService_UpdateGroup_updateGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Group title." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "A unique part of a group's URL (e.g., 'https:/example.com/groups/slug')." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format." },
+            { "name": "privacyStatus",
+              "type": "string",
+              "doc": "Group privacy level.\n- `PUBLIC` - Anyone can see group in groups list and its content. Anyone can join group.\n- `PRIVATE` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `SECRET` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.\nOne of:\n + `\"UNKNOWN\"`\n + `\"PUBLIC\"`\n + `\"PRIVATE\"`\n + `\"SECRET\"`" },
+            { "name": "coverImage",
+              "type": "wix-groups-backend.Group_GroupDetails_7399281436",
+              "doc": "Group details." },
+            { "name": "memberTitle",
+              "type": "string",
+              "doc": "What group members are called (e.g., 'Coworkers', 'Friends', 'Students')." },
+            { "name": "settings",
+              "type": "wix-groups-backend.Group_GroupSettings_6548797592",
+              "doc": "Group settings." },
+            { "name": "lastActivityDate",
+              "type": "Date",
+              "doc": "Date and time the group was last active (e.g., last post or comment)." },
+            { "name": "createdBy",
+              "type": "string",
+              "doc": "Site member ID of the group creator." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "UpdateGroupResult_38888899823",
         "locations":
           [ { "lineno": 22,
@@ -642,6 +872,7 @@
               "doc": "Requested group." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] } ],
   "extra":
     {  } }

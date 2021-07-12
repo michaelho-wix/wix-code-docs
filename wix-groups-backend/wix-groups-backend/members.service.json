@@ -1,7 +1,8 @@
 { "name": "members",
   "memberOf": "wix-groups-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 29,
       "filename": "index.js" },
@@ -13,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "addGroupMembers",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "identifiers",
@@ -25,10 +27,12 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-groups-backend.members.AddGroupMembersResult_13035191820" ] },
-            "doc": "" },
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-groups-backend.GroupMember_11598825520" ] } ] },
+            "doc": "Fulfilled - Added group members." },
         "locations":
-          [ { "lineno": 14,
+          [ { "lineno": 8,
               "filename": "wix_social_groups_api_v2_GroupMembersService_AddGroupMembers_addGroupMembers.js" } ],
         "docs":
           { "summary": "Add site members to a specific group.",
@@ -396,7 +400,8 @@
               "doc": "Added group members." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "GroupRole_6888303931",
         "locations":
           [ { "lineno": 55,

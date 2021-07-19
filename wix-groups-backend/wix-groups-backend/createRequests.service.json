@@ -1,8 +1,7 @@
 { "name": "createRequests",
   "memberOf": "wix-groups-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 17,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "approveCreateRequests",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "groupRequestIds",
@@ -222,8 +220,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "rejectCreateRequests",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "rejections",

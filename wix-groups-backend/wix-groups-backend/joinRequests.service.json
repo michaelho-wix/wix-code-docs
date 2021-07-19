@@ -1,8 +1,7 @@
 { "name": "joinRequests",
   "memberOf": "wix-groups-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 41,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "approveJoinRequests",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "identifiers",
@@ -177,8 +175,7 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "rejectJoinRequests",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "groupId",

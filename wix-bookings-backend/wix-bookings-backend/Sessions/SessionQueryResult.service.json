@@ -1,7 +1,8 @@
 { "name": "SessionQueryResult",
   "memberOf": "wix-bookings-backend.Sessions",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "removed" ],
   "location":
     { "lineno": 2,
       "filename": "SessionQueryResult.js" },

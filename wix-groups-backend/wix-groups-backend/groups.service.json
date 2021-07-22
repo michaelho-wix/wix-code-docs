@@ -1,7 +1,8 @@
 { "name": "groups",
   "memberOf": "wix-groups-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -347,11 +348,12 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "updateGroup",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "group",
-              "type": "wix-groups-backend.groups.Group_31923536997",
+              "type": "wix-groups-backend.groups.Group_31830848276",
               "doc": "Group to update." },
             { "name": "options",
               "type": "wix-groups-backend.Options_936495653",
@@ -704,6 +706,49 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "Group_31830848276",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_UpdateGroup_updateGroup.js" } ],
+        "docs":
+          { "summary": "Group to update.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group ID.",
+              "optional": true },
+            { "name": "name",
+              "type": "string",
+              "doc": "Group title.",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format.",
+              "optional": true },
+            { "name": "privacyStatus",
+              "type": "string",
+              "doc": "Group privacy level.\n- `PUBLIC` - Anyone can see group in groups list and its content. Anyone can join group.\n- `PRIVATE` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `SECRET` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.\nOne of:\n + `\"UNKNOWN\"`\n + `\"PUBLIC\"`\n + `\"PRIVATE\"`\n + `\"SECRET\"`",
+              "optional": true },
+            { "name": "coverImage",
+              "type": "wix-groups-backend.Group_GroupDetails_6027800230",
+              "doc": "Group details.",
+              "optional": true },
+            { "name": "memberTitle",
+              "type": "string",
+              "doc": "What group members are called (e.g., 'Coworkers', 'Friends', 'Students').",
+              "optional": true },
+            { "name": "settings",
+              "type": "wix-groups-backend.Group_GroupSettings_6085353987",
+              "doc": "Group settings.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Group_31923536997",
         "locations":
           [ { "lineno": 1,
@@ -744,7 +789,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "ListGroupsRequest_2540096142",
         "locations":
           [ { "lineno": 1,

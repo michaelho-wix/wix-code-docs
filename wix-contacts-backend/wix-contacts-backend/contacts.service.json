@@ -20,7 +20,7 @@
         "params":
           [ { "name": "contactInfo",
               "type": "wix-contacts-backend.ContactInfo_106294058002",
-              "doc": "Contact's information.\nTo reconcile with an existing contact,\na phone or email must be provided,\nor the current session identity must be attached to a contact or member.\n\nIf no existing contact can be found,\na new contact is created with the specified information.\n\n<!--ONLY:REST-->\nRequired if there's no contextual identity or given `contactId`.\n<!--END:ONLY:REST-->" } ],
+              "doc": "Contact's information.\nTo reconcile with an existing contact,\na phone or email must be provided,\nor the current session identity must be attached to a contact or member.\n\nIf no existing contact can be found,\na new contact is created with the specified information.\n\n<!--ONLY:REST\nRequired if there's no contextual identity or given `contactId`.\n<!--END:ONLY:REST-->" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -33,12 +33,12 @@
         "docs":
           { "summary": "Appends an existing contact or creates a contact if it doesn't exist.",
             "description":
-              [ "<!--ONLY:REST-->",
+              [ "<!--ONLY:REST",
                 "For internal docs, see",
                 "[Submit Contacts](crm.contact-submit-service.introduction).",
                 "<!--END:ONLY:REST-->",
                 "",
-                "<!--ONLY:VELO",
+                "<!--ONLY:VELO-->",
                 "The `appendOrCreateContact()` function returns a Promise",
                 "that resolves to a contact ID and identity type when a contact is found or created.",
                 "",
@@ -209,7 +209,7 @@
         "docs":
           { "summary": "Creates a new contact.",
             "description":
-              [ "<!--ONLY:REST-->",
+              [ "<!--ONLY:REST",
                 "The request body must include a name, a phone number, or an email address.",
                 "If all 3 of these parameters are missing,",
                 "the contact won't be created.",
@@ -220,7 +220,7 @@
                 "To override this behavior, set `allowDuplicates` to `true`.",
                 "<!--END:ONLY:REST-->",
                 "",
-                "<!--ONLY:VELO",
+                "<!--ONLY:VELO-->",
                 "The `createContact()` function returns a Promise",
                 "that resolves to the new contact when it is created.",
                 "",
@@ -324,7 +324,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "deleteContact",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "contactId",
@@ -345,11 +346,11 @@
         "docs":
           { "summary": "Deletes a contact who is not a site member or contributor.",
             "description":
-              [ "<!--ONLY:REST-->",
+              [ "<!--ONLY:REST",
                 "Deleting a contact permanently removes them from the Contact List.",
                 "<!--END:ONLY:REST-->",
                 "",
-                "<!--ONLY:VELO",
+                "<!--ONLY:VELO-->",
                 "The `deleteContact()` function returns a Promise",
                 "that resolves when the specified contact is deleted.",
                 "",
@@ -395,7 +396,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "deleteExtendedField",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "key",
@@ -416,7 +418,7 @@
         "docs":
           { "summary": "Deletes an extended field.",
             "description":
-              [ "<!--ONLY:VELO",
+              [ "<!--ONLY:VELO-->",
                 "The `deleteExtendedField()` function returns a Promise that resolves",
                 "when the specified extended field is deleted.",
                 "<!--END:ONLY:VELO-->",
@@ -452,7 +454,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "deleteLabel",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "key",
@@ -473,7 +476,7 @@
         "docs":
           { "summary": "Deletes a label from the site and removes it from contacts it applies to.",
             "description":
-              [ "<!--ONLY:VELO",
+              [ "<!--ONLY:VELO-->",
                 "The `deleteLabel()` function returns a Promise",
                 "that resolves when the specified label is deleted.",
                 "<!--END:ONLY:VELO-->" ],
@@ -506,7 +509,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "findOrCreateExtendedField",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "extendedFieldInfo",
@@ -527,7 +531,7 @@
         "docs":
           { "summary": "Retrieves a custom field with a given name, or creates one if it doesn't exist.",
             "description":
-              [ "<!--ONLY:REST-->",
+              [ "<!--ONLY:REST",
                 "Successful calls to this endpoint always return a field,",
                 "which can be passed to subsequent requests.",
                 "",
@@ -536,7 +540,7 @@
                 "[List Extended Fields](https:dev.wix.com/api/rest/contacts/extended-fields/list-extended-fields).",
                 "<!--END:ONLY:REST-->",
                 "",
-                "<!--ONLY:VELO",
+                "<!--ONLY:VELO-->",
                 "The `findOrCreateExtendedField()` function returns a Promise",
                 "that resolves when the specified custom field is found or created.",
                 "",
@@ -580,7 +584,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "findOrCreateLabel",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "displayName",
@@ -601,7 +606,7 @@
         "docs":
           { "summary": "Retrieves a label with a given name, or creates one if it doesn't exist.",
             "description":
-              [ "<!--ONLY:REST-->",
+              [ "<!--ONLY:REST",
                 "Successful calls to this endpoint always return a label,",
                 "which can be passed to subsequent requests.",
                 "",
@@ -617,7 +622,7 @@
                 "[List Labels](https://dev.wix.com/api/rest/contacts/labels/list-labels).",
                 "<!--END:ONLY:REST-->",
                 "",
-                "<!--ONLY:VELO",
+                "<!--ONLY:VELO-->",
                 "The `findOrCreateLabel()` function returns a Promise",
                 "that resolves when the specified label is found or created.",
                 "",
@@ -657,7 +662,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getContact",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "contactId",
@@ -678,7 +684,7 @@
         "docs":
           { "summary": "Retrieves a contact.",
             "description":
-              [ "<!--ONLY:VELO",
+              [ "<!--ONLY:VELO-->",
                 "The `getContact()` function returns a Promise",
                 "that resolves when the contact is found.",
                 "",
@@ -718,12 +724,13 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getExtendedField",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "key",
               "type": "string",
-              "doc": "Extended field key.\n\n<!--ONLY:REST-->\nWhen accessing contact data,\nextended field values are available at `info.extendedFields.items[key]`.\nFor example, if the key is \"custom.patronus\",\nthe value can be accessed at `info.extendedFields.items[\"custom.patronus\"]`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nWhen accessing contact data,\nextended field values are available at `extendedFields[key]`.\nFor example, if the key is \"custom.notes\",\nthe value can be accessed at `extendedfields[\"custom.notes\"]`.\n<!--END:ONLY:VELO-->\n\nOnce set, `key` cannot be modified, even if `displayName` changes." },
+              "doc": "Extended field key.\n\n<!--ONLY:REST\nWhen accessing contact data,\nextended field values are available at `info.extendedFields.items[key]`.\nFor example, if the key is \"custom.patronus\",\nthe value can be accessed at `info.extendedFields.items[\"custom.patronus\"]`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nWhen accessing contact data,\nextended field values are available at `extendedFields[key]`.\nFor example, if the key is \"custom.notes\",\nthe value can be accessed at `extendedfields[\"custom.notes\"]`.\n<!--END:ONLY:VELO-->\n\nOnce set, `key` cannot be modified, even if `displayName` changes." },
             { "name": "options",
               "type": "wix-contacts-backend.Options_936495653",
               "doc": "Authorization options." } ],
@@ -739,7 +746,7 @@
         "docs":
           { "summary": "Retrieves an extended field.",
             "description":
-              [ "<!--ONLY:VELO",
+              [ "<!--ONLY:VELO-->",
                 "The `getExtendedField()` function returns a Promise",
                 "that resolves when the extended field is retrieved.",
                 "<!--END:ONLY:VELO-->" ],
@@ -772,7 +779,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "getLabel",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "key",
@@ -793,7 +801,7 @@
         "docs":
           { "summary": "Retrieves a label.",
             "description":
-              [ "<!--ONLY:VELO",
+              [ "<!--ONLY:VELO-->",
                 "The `getLabel()` function returns a Promise",
                 "that resolves when the specified label is retrieved.",
                 "<!--END:ONLY:VELO-->" ],
@@ -826,7 +834,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "labelContact",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "contactId",
@@ -837,7 +846,7 @@
                 { "name": "Array",
                   "typeParams":
                     [ "string" ] },
-              "doc": "List of label keys to add to the contact.\n\n<!--ONLY:REST-->\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[Find or Create Label](https://dev.wix.com/api/rest/contacts/labels/find-or-create-label)\nor\n[List Labels](https://dev.wix.com/api/rest/contacts/labels/list-labels).\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[`findOrCreateLabel()`](wix-crm-backend/contacts-obj/findorcreatelabel)\nor\n[`queryLabels()`](wix-crm-backend/contacts-obj/querylabels).\n<!--END:ONLY:VELO-->" },
+              "doc": "List of label keys to add to the contact.\n\n<!--ONLY:REST\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[Find or Create Label](https://dev.wix.com/api/rest/contacts/labels/find-or-create-label)\nor\n[List Labels](https://dev.wix.com/api/rest/contacts/labels/list-labels).\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[`findOrCreateLabel()`](wix-crm-backend/contacts-obj/findorcreatelabel)\nor\n[`queryLabels()`](wix-crm-backend/contacts-obj/querylabels).\n<!--END:ONLY:VELO-->" },
             { "name": "options",
               "type": "wix-contacts-backend.Options_936495653",
               "doc": "Authorization options." } ],
@@ -853,7 +862,7 @@
         "docs":
           { "summary": "Adds labels to a contact.",
             "description":
-              [ "<!--ONLY:REST-->",
+              [ "<!--ONLY:REST",
                 "- **To create new labels:** Use",
                 "[Find or Create Label](https://dev.wix.com/api/rest/contacts/labels/find-or-create-label).",
                 "- **To find labels:** Use",
@@ -862,7 +871,7 @@
                 "[List Labels](https://dev.wix.com/api/rest/contacts/labels/list-labels).",
                 "<!--END:ONLY:REST-->",
                 "",
-                "<!--ONLY:VELO",
+                "<!--ONLY:VELO-->",
                 "The `labelContact()` function returns a Promise",
                 "that resolves when the specified labels are added to the contact.",
                 "",
@@ -899,7 +908,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listExtendedFields",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "options",
@@ -917,7 +927,7 @@
         "docs":
           { "summary": "Retrieves a list of extended fields.",
             "description":
-              [ "<!--ONLY:VELO",
+              [ "<!--ONLY:VELO-->",
                 "The `listExtendedFields()` function returns a Promise that resolves",
                 "when the site's extended fields are retrieved.",
                 "<!--END:ONLY:VELO-->" ],
@@ -955,7 +965,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "listLabels",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "options",
@@ -973,7 +984,7 @@
         "docs":
           { "summary": "Lists all contact labels for a site.",
             "description":
-              [ "<!--ONLY:VELO",
+              [ "<!--ONLY:VELO-->",
                 "The `listLabels()` function returns a Promise",
                 "that resolves when the site's labels are retrieved.",
                 "<!--END:ONLY:VELO-->" ],
@@ -1011,7 +1022,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "queryContacts",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -1021,7 +1033,7 @@
           [ { "lineno": 205,
               "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContacts_queryContacts.js" } ],
         "docs":
-          { "summary": "<!--ONLY:REST-->",
+          { "summary": "<!--ONLY:REST",
             "description":
               [ "Retrieves a list of contacts, given the provided paging, filtering, and sorting.",
                 "Up to 1,000 contacts can be returned per request.",
@@ -1048,6 +1060,69 @@
                       "    .queryContacts()",
                       "    .eq(\"key\", \"value\")",
                       "    .find(options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "queryContactsCursor",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "queryContactsCursorRequest",
+              "type": "wix-contacts-backend.contacts.QueryContactsCursorRequest_23926911964" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-contacts-backend.contacts.QueryContactsCursorResult_247190799427" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 343,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { contacts } from \"wix-contacts-backend\";",
+                      "",
+                      "export function queryContactsCursor() {",
+                      "  const queryContactsCursorRequest = {",
+                      "    search: \"a string\",",
+                      "    query: {",
+                      "      filter: {",
+                      "        someKey: \"some-value\"",
+                      "      },",
+                      "      sort: [",
+                      "        {",
+                      "          fieldName: \"a string\",",
+                      "          order: \"ASC\"",
+                      "        }",
+                      "      ],",
+                      "      fields: [\"a string\"],",
+                      "      fieldsets: [\"BASIC\"],",
+                      "      pagingMethod: {",
+                      "        paging: {",
+                      "          limit: 42,",
+                      "          offset: 42",
+                      "        }",
+                      "      }",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return contacts",
+                      "    .queryContactsCursor(queryContactsCursorRequest)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -1142,7 +1217,8 @@
         "extra":
           {  } },
       { "name": "renameExtendedField",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "key",
@@ -1164,13 +1240,13 @@
           [ { "lineno": 73,
               "filename": "com_wixpress_contacts_fields_v4_ContactExtendedFieldsServiceV4_UpdateExtendedField_renameExtendedField.js" } ],
         "docs":
-          { "summary": "<!--ONLY:VELO Renames an extended field.",
+          { "summary": "<!--ONLY:VELO--> Renames an extended field.",
             "description":
               [ "The `renameExtendedField()` function returns a Promise",
                 "that resolves when the specified extended field's display name is changed.",
                 "<!--END:ONLY:VELO-->",
                 "",
-                "<!--ONLY:REST-->",
+                "<!--ONLY:REST",
                 "Updates an extended field's specified properties.",
                 "<!--END:ONLY:REST-->" ],
             "links": [],
@@ -1203,7 +1279,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "renameLabel",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "key",
@@ -1225,13 +1302,13 @@
           [ { "lineno": 44,
               "filename": "com_wixpress_contacts_labels_v4_ContactLabelsServiceV4_UpdateLabel_renameLabel.js" } ],
         "docs":
-          { "summary": "<!--ONLY:VELO Renames a label.",
+          { "summary": "<!--ONLY:VELO--> Renames a label.",
             "description":
               [ "The `renameLabel()` function returns a Promise",
                 "that resolves when the specified label's display name is changed.",
                 "<!--END:ONLY:VELO-->",
                 "",
-                "<!--ONLY:REST-->",
+                "<!--ONLY:REST",
                 "Updates a label's specified properties.",
                 "<!--END:ONLY:REST-->" ],
             "links": [],
@@ -1264,7 +1341,8 @@
           { "customLabels":
               [ { "id": "maturity-beta" } ] } },
       { "name": "unlabelContact",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "contactId",
@@ -1291,7 +1369,7 @@
         "docs":
           { "summary": "Removes labels from a contact.",
             "description":
-              [ "<!--ONLY:REST-->",
+              [ "<!--ONLY:REST",
                 "If a label is no longer needed",
                 "and you want to remove it from all contacts,",
                 "you can delete it with",
@@ -1299,7 +1377,7 @@
                 "(in the Labels API).",
                 "<!--END:ONLY:REST-->",
                 "",
-                "<!--ONLY:VELO",
+                "<!--ONLY:VELO-->",
                 "The `unlabelContact()` function returns a Promise",
                 "that resolves when the specified labels are removed from the contact.",
                 "",
@@ -1356,12 +1434,12 @@
                   [ "wix-contacts-backend.contacts.UpdateContactResult_184364685210" ] },
             "doc": "Fulfilled - Updated contact." },
         "locations":
-          [ { "lineno": 105,
+          [ { "lineno": 106,
               "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_UpdateContact_updateContact.js" } ],
         "docs":
           { "summary": "Updates a contact's properties.",
             "description":
-              [ "<!--ONLY:REST-->",
+              [ "<!--ONLY:REST",
                 "Fields that are included in `fieldMask.paths` are updated,",
                 "while all other fields are ignored.",
                 "",
@@ -1369,7 +1447,7 @@
                 "- **To clear a field:** List the field in `fieldMask.paths` only. Don't provide a value in `contactInfo`.",
                 "<!--END:ONLY:REST-->",
                 "",
-                "<!--ONLY:VELO",
+                "<!--ONLY:VELO-->",
                 "The `updateContact()` function returns a Promise that resolves",
                 "when the specified contact's information is updated.",
                 "",
@@ -1474,7 +1552,155 @@
               [ { "id": "maturity-beta" } ] } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "ContactInfo_105063031896",
+    [ { "name": "Address_70202791331",
+        "locations":
+          [ { "lineno": 216,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Street address.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "country",
+              "type": "string",
+              "doc": "2-letter country code in an\n [ISO-3166 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format." },
+            { "name": "subdivision",
+              "type": "string",
+              "doc": "Code for a subdivision (such as state, prefecture, or province) in an\n [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) format." },
+            { "name": "city",
+              "type": "string",
+              "doc": "City name." },
+            { "name": "postalCode",
+              "type": "string",
+              "doc": "Postal or zip code." },
+            { "name": "streetAddress",
+              "type": "wix-contacts-backend.StreetAddress_7695613948",
+              "doc": "Street address object, with number and name in separate fields.",
+              "optional": true },
+            { "name": "addressLine",
+              "type": "string",
+              "doc": "Main address line, usually street and number, as free text.",
+              "optional": true },
+            { "name": "addressLine2",
+              "type": "string",
+              "doc": "Free text providing more detailed address information,\n such as apartment, suite, or floor." },
+            { "name": "formattedAddress",
+              "type": "string",
+              "doc": "Human-readable address string.\n If not provided, the value is generated from the available address data." },
+            { "name": "hint",
+              "type": "string",
+              "doc": "Instructions to help someone find the address, such as landmarks or where the entrance is." },
+            { "name": "geocode",
+              "type": "wix-contacts-backend.AddressLocation_5110011762",
+              "doc": "Coordinates of the physical address." },
+            { "name": "countryFullname",
+              "type": "string",
+              "doc": "Full country name." },
+            { "name": "subdivisions",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-contacts-backend.contacts.Subdivision_22771286178" ] },
+              "doc": "Hierarchical list of subdivisions, where the first array item is the highest level of hierarchy, and so on." } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "street",
+                  "members":
+                    [ "addressLine",
+                      "streetAddress" ] } ] },
+        "labels":
+          [ "new" ] },
+      { "name": "AssigneesWrapper_4680464276",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Site contributors",
+            "description":
+              [ "who are assigned to manage communication with the contact." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "items",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "List of site contributor user IDs." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ContactAddress_76969272486",
+        "locations":
+          [ { "lineno": 24,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Street address ID." },
+            { "name": "tag",
+              "type": "string",
+              "doc": "<!--ONLY:REST\nAddress type.\n`UNTAGGED` is shown as \"Other\" in the Contact List.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nAddress type.\n`\"UNTAGGED\"` is shown as \"Other\" in the Contact List.\n\nOne of:\n\n- `\"UNTAGGED\"`\n- `\"HOME\"`\n- `\"WORK\"`\n- `\"BILLING\"`\n- `\"SHIPPING\"`\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNTAGGED\"`\n + `\"HOME\"`\n + `\"WORK\"`\n + `\"BILLING\"`\n + `\"SHIPPING\"`" },
+            { "name": "address",
+              "type": "wix-contacts-backend.contacts.Address_70202791331",
+              "doc": "Street address." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ContactAddressesWrapper_78744023061",
+        "locations":
+          [ { "lineno": 54,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Contact's street addresses.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "items",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-contacts-backend.contacts.ContactAddress_76969272486" ] },
+              "doc": "List of up to 50 addresses." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ContactEmailsWrapper_16886944159",
+        "locations":
+          [ { "lineno": 61,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Contact's email addresses.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "items",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-contacts-backend.ContactEmail_13584880675" ] },
+              "doc": "List of up to 50 email addresses." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ContactInfo_105063031896",
         "locations":
           [ { "lineno": 1,
               "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_UpdateContact_updateContact.js" } ],
@@ -1495,7 +1721,7 @@
               "optional": true },
             { "name": "jobTitle",
               "type": "string",
-              "doc": "Contact's job title.",
+              "doc": "Contact's job title.\n Corresponds to the **Position** field in the Dashboard.",
               "optional": true },
             { "name": "locale",
               "type": "string",
@@ -1524,11 +1750,11 @@
                 { "name": "Array",
                   "typeParams":
                     [ "string" ] },
-              "doc": "List of contact label keys.\n[Contact labels](https://support.wix.com/en/article/adding-labels-to-contacts-in-your-contact-list)\nhelp categorize contacts.\n\n<!--ONLY:REST-->\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[Find or Create Label](https://dev.wix.com/api/rest/contacts/labels/find-or-create-label)\nor\n[List Labels](https://dev.wix.com/api/rest/contacts/labels/list-labels)\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[`findOrCreateLabel()`](wix-crm-backend/contacts-obj/findorcreatelabel)\nor\n[`queryLabels()`](wix-crm-backend/contacts-obj/queryLabels).\n<!--END:ONLY:VELO-->",
+              "doc": "List of contact label keys.\n[Contact labels](https://support.wix.com/en/article/adding-labels-to-contacts-in-your-contact-list)\nhelp categorize contacts.\n\n<!--ONLY:REST\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[Find or Create Label](https://dev.wix.com/api/rest/contacts/labels/find-or-create-label)\nor\n[List Labels](https://dev.wix.com/api/rest/contacts/labels/list-labels)\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[`findOrCreateLabel()`](wix-crm-backend/contacts-obj/findorcreatelabel)\nor\n[`queryLabels()`](wix-crm-backend/contacts-obj/queryLabels).\n<!--END:ONLY:VELO-->",
               "optional": true },
             { "name": "extendedFields",
               "type": "Object",
-              "doc": "Set of key-value pairs.\n<!--ONLY:REST-->\nContact's extended fields,\nwhere each key is the field key,\nand each value is the field's value for the contact.\n\nTo view and manage extended fields, use the\n[Extended Fields API](https://dev.wix.com/api/rest/contacts/extended-fields).\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nContact's\n[extended fields](wix-crm-backend/contacts-obj/introduction#about-extended-fields),\nwhich allow you to store additional information about your contacts.\n\nTo view or create extended fields, use\n[`findOrCreateExtendedField()`](wix-crm-backend/contacts-obj/findorcreateextendedfield),\n[`getExtendedField()`](wix-crm-backend/contacts-obj/getextendedfield), or\n[`queryExtendedFields()`](wix-crm-backend/contacts-obj/queryextendedfields).\n<!--END:ONLY:VELO-->",
+              "doc": "Set of key-value pairs.\n<!--ONLY:REST\nContact's extended fields,\nwhere each key is the field key,\nand each value is the field's value for the contact.\n\nTo view and manage extended fields, use the\n[Extended Fields API](https://dev.wix.com/api/rest/contacts/extended-fields).\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nContact's\n[extended fields](wix-crm-backend/contacts-obj/introduction#about-extended-fields),\nwhich allow you to store additional information about your contacts.\n\nTo view or create extended fields, use\n[`findOrCreateExtendedField()`](wix-crm-backend/contacts-obj/findorcreateextendedfield),\n[`getExtendedField()`](wix-crm-backend/contacts-obj/getextendedfield), or\n[`queryExtendedFields()`](wix-crm-backend/contacts-obj/queryextendedfields).\n<!--END:ONLY:VELO-->",
               "optional": true },
             { "name": "addresses",
               "type":
@@ -1539,7 +1765,101 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
+      { "name": "ContactInfo_176801256848",
+        "locations":
+          [ { "lineno": 68,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Contact's details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "wix-contacts-backend.ContactName_220445514",
+              "doc": "Contact's first and last name." },
+            { "name": "emails",
+              "type": "wix-contacts-backend.contacts.ContactEmailsWrapper_16886944159",
+              "doc": "Contact's email addresses." },
+            { "name": "phones",
+              "type": "wix-contacts-backend.contacts.ContactPhonesWrapper_24749327311",
+              "doc": "Contact's phone numbers." },
+            { "name": "addresses",
+              "type": "wix-contacts-backend.contacts.ContactAddressesWrapper_78744023061",
+              "doc": "Contact's street addresses." },
+            { "name": "company",
+              "type": "string",
+              "doc": "Contact's company name." },
+            { "name": "jobTitle",
+              "type": "string",
+              "doc": "Contact's job title.\n Corresponds to the **Position** field in the Dashboard." },
+            { "name": "birthdate",
+              "type": "string",
+              "doc": "Contact's birthdate, formatted as `\"YYYY-MM-DD\"`.\n\n Example: `\"2020-03-15\"` for March 15, 2020." },
+            { "name": "assignedUserIds",
+              "type": "wix-contacts-backend.contacts.AssigneesWrapper_4680464276",
+              "doc": "Site contributors\n who are assigned to manage communication with the contact." },
+            { "name": "locale",
+              "type": "string",
+              "doc": "Contact's locale, formatted as an\n [IETF BCP 47 language tag](https://tools.ietf.org/html/rfc5646).\n Typically, this is a lowercase 2-letter language code,\n followed by a hyphen,\n followed by an uppercase 2-letter country code.\n\n For example, German from Germany is formatted as `de-DE`,\n and U.S. English is formatted as `en-US`." },
+            { "name": "labelKeys",
+              "type": "wix-contacts-backend.contacts.LabelsWrapper_4698985271",
+              "doc": "List of contact's labels.\n Labels are used to organize contacts.\n When setting the `labelKeys` property,\n only labels that already exist in the site's Contacts List can be used.\n Labels can be added and removed using\n [Label Contact](https://dev.wix.com/api/rest/contacts/contacts/contacts-v4/label-contact) and\n [Unlabel Contact](https://dev.wix.com/api/rest/contacts/contacts/contacts-v4/unlabel-contact),\n respectively.\n\n To view or manage site labels, use the\n [Labels API](https://dev.wix.com/api/rest/contacts/labels)." },
+            { "name": "extendedFields",
+              "type": "wix-contacts-backend.contacts.ExtendedFieldsWrapper_16175193769",
+              "doc": "Additional custom fields.\n This includes fields managed by Wix, by 3rd-party apps, and by the site.\n\n Empty fields are not returned." },
+            { "name": "locations",
+              "type": "wix-contacts-backend.contacts.LocationsWrapper_4869843886",
+              "doc": "Contact locations" },
+            { "name": "picture",
+              "type": "wix-contacts-backend.contacts.ContactPicture_9820520712",
+              "doc": "Contact's profile picture." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ContactPhonesWrapper_24749327311",
+        "locations":
+          [ { "lineno": 111,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Contact's phone numbers.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "items",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-contacts-backend.ContactPhone_21266581029" ] },
+              "doc": "List of up to 50 phone numbers." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ContactPicture_9820520712",
+        "locations":
+          [ { "lineno": 118,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Contact's profile picture.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "image",
+              "type": "wix-contacts-backend.contacts.Image_7192463671",
+              "doc": "Image.\n This can contain an image URL or a Wix Media image ID." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Contact_185577673458",
         "locations":
           [ { "lineno": 1,
@@ -1577,6 +1897,44 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "Contact_241561940482",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Contact ID." },
+            { "name": "revision",
+              "type": "number",
+              "doc": "Revision number, which increments by 1 each time the contact is updated.\n To prevent conflicting changes,\n the existing `revision` must be used when updating a contact." },
+            { "name": "source",
+              "type": "wix-contacts-backend.ContactSource_18251037697",
+              "doc": "Details about the contact's source." },
+            { "name": "_createdDate",
+              "type": "Date",
+              "doc": "Date and time the contact was created." },
+            { "name": "_updatedDate",
+              "type": "Date",
+              "doc": "Date and time the contact was last updated." },
+            { "name": "lastActivity",
+              "type": "wix-contacts-backend.ContactActivity_34099261231",
+              "doc": "Details about the contact's last action in the site." },
+            { "name": "primaryInfo",
+              "type": "wix-contacts-backend.PrimaryContactInfo_8495030145",
+              "doc": "Contact's primary phone and email." },
+            { "name": "info",
+              "type": "wix-contacts-backend.contacts.ContactInfo_176801256848",
+              "doc": "Contact's details." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "CountContactsResult_267997068",
         "locations":
           [ { "lineno": 1,
@@ -1652,6 +2010,72 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "CursorPaging_463792654",
+        "locations":
+          [ { "lineno": 239,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Cursor pointing to page of results. Can't be used together with 'paging'. 'cursorPaging.cursor' can not be used together with 'filter' or 'sort'",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "doc": "The number of contacts to load (default = 50, max = 1000)",
+              "optional": true },
+            { "name": "cursor",
+              "type": "string",
+              "doc": "Cursor returned in last query response. Should not be provided on first page request",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Cursors_1952694617",
+        "locations":
+          [ { "lineno": 247,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Cursors to navigate through result pages. Returned if cursor paging was used",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "next",
+              "type": "string",
+              "doc": "Cursor pointing to next result page" },
+            { "name": "prev",
+              "type": "string",
+              "doc": "Cursor pointing to previous result page" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ExtendedFieldsWrapper_16175193769",
+        "locations":
+          [ { "lineno": 126,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Additional custom fields.",
+            "description":
+              [ "This includes fields managed by Wix, by 3rd-party apps, and by the site.",
+                "",
+                "Empty fields are not returned." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "items",
+              "type": "Object",
+              "doc": "Set of key-value pairs.\n<!--ONLY:REST\nContact's extended fields,\nwhere each key is the field key,\nand each value is the field's value for the contact.\n\nTo view and manage extended fields, use the\n[Extended Fields API](https://dev.wix.com/api/rest/contacts/extended-fields).\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nContact's\n[extended fields](wix-crm-backend/contacts-obj/introduction#about-extended-fields),\nwhich allow you to store additional information about your contacts.\n\nTo view or create extended fields, use\n[`findOrCreateExtendedField()`](wix-crm-backend/contacts-obj/findorcreateextendedfield),\n[`getExtendedField()`](wix-crm-backend/contacts-obj/getextendedfield), or\n[`queryExtendedFields()`](wix-crm-backend/contacts-obj/queryextendedfields).\n<!--END:ONLY:VELO-->" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "FindOrCreateExtendedFieldRequest_12857468660",
         "locations":
           [ { "lineno": 1,
@@ -1668,11 +2092,12 @@
               "doc": "Display name to find or create.\n\n If an existing custom field is an exact match\n for the specified `displayName`,\n the existing field is returned.\n If not, a new field is created and returned." },
             { "name": "dataType",
               "type": "string",
-              "doc": "Type of data the field holds.\nIgnored if an existing field is an exact match\nfor the specified display name.\n\n<!--ONLY:REST-->\n- `TEXT`: Accepts strings.\n- `URL`: Accepts strings.\n- `DATE`: Accepts dates formatted as `YYYY-MM-DD`.\n- `NUMBER`: Accepts integers. For decimals, use type `TEXT`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nOne of:\n\n- `\"TEXT\"`: Accepts strings.\n- `\"URL\"`: Accepts strings.\n- `\"DATE\"`: Accepts dates formatted as `\"YYYY-MM-DD\"`.\n- `\"NUMBER\"`: Accepts integers. For decimals, use type `\"TEXT\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN_DATA_TYPE\"`\n + `\"TEXT\"`\n + `\"NUMBER\"`\n + `\"DATE\"`\n + `\"URL\"`",
+              "doc": "Type of data the field holds.\nIgnored if an existing field is an exact match\nfor the specified display name.\n\n<!--ONLY:REST\n- `TEXT`: Accepts strings.\n- `URL`: Accepts strings.\n- `DATE`: Accepts dates formatted as `YYYY-MM-DD`.\n- `NUMBER`: Accepts integers. For decimals, use type `TEXT`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nOne of:\n\n- `\"TEXT\"`: Accepts strings.\n- `\"URL\"`: Accepts strings.\n- `\"DATE\"`: Accepts dates formatted as `\"YYYY-MM-DD\"`.\n- `\"NUMBER\"`: Accepts integers. For decimals, use type `\"TEXT\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN_DATA_TYPE\"`\n + `\"TEXT\"`\n + `\"NUMBER\"`\n + `\"DATE\"`\n + `\"URL\"`",
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "FindOrCreateExtendedFieldResult_31258049778",
         "locations":
           [ { "lineno": 38,
@@ -1770,10 +2195,10 @@
               "doc": "Human-readable name shown in the Contact List." },
             { "name": "dataType",
               "type": "string",
-              "doc": "Type of data the field holds.\n\n<!--ONLY:REST-->\n- `TEXT`: Accepts strings.\n- `URL`: Accepts strings.\n- `DATE`: Accepts dates formatted as `YYYY-MM-DD`.\n- `NUMBER`: Accepts integers. For decimals, use type `TEXT`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nOne of:\n\n- `\"TEXT\"`: Accepts strings.\n- `\"URL\"`: Accepts strings.\n- `\"DATE\"`: Accepts dates formatted as `\"YYYY-MM-DD\"`.\n- `\"NUMBER\"`: Accepts integers. For decimals, use type `\"TEXT\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN_DATA_TYPE\"`\n + `\"TEXT\"`\n + `\"NUMBER\"`\n + `\"DATE\"`\n + `\"URL\"`" },
+              "doc": "Type of data the field holds.\n\n<!--ONLY:REST\n- `TEXT`: Accepts strings.\n- `URL`: Accepts strings.\n- `DATE`: Accepts dates formatted as `YYYY-MM-DD`.\n- `NUMBER`: Accepts integers. For decimals, use type `TEXT`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nOne of:\n\n- `\"TEXT\"`: Accepts strings.\n- `\"URL\"`: Accepts strings.\n- `\"DATE\"`: Accepts dates formatted as `\"YYYY-MM-DD\"`.\n- `\"NUMBER\"`: Accepts integers. For decimals, use type `\"TEXT\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN_DATA_TYPE\"`\n + `\"TEXT\"`\n + `\"NUMBER\"`\n + `\"DATE\"`\n + `\"URL\"`" },
             { "name": "fieldType",
               "type": "string",
-              "doc": "<!--ONLY:REST-->\nIndicates whether the extended field is a system field or custom field.\n\n- `SYSTEM`: The field is a system field managed by Wix. System fields cannot be modified by 3rd-party apps or site contributors.\n- `USER_DEFINED`: The field is a custom field and can be modified by 3rd-party apps or site contributors.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nIndicates whether the extended field is a\n[system field or custom field](wix-crm-backend/contacts-obj/introduction#about-extended-fields).\n\nOne of:\n\n- `\"SYSTEM\"`: The field is a system field managed by Wix. System fields cannot be modified by 3rd-party apps or site contributors.\n- `\"USER_DEFINED\"`: The field is a custom field and can be modified by 3rd-party apps or site contributors.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN\"`\n + `\"SYSTEM\"`\n + `\"USER_DEFINED\"`" },
+              "doc": "<!--ONLY:REST\nIndicates whether the extended field is a system field or custom field.\n\n- `SYSTEM`: The field is a system field managed by Wix. System fields cannot be modified by 3rd-party apps or site contributors.\n- `USER_DEFINED`: The field is a custom field and can be modified by 3rd-party apps or site contributors.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nIndicates whether the extended field is a\n[system field or custom field](wix-crm-backend/contacts-obj/introduction#about-extended-fields).\n\nOne of:\n\n- `\"SYSTEM\"`: The field is a system field managed by Wix. System fields cannot be modified by 3rd-party apps or site contributors.\n- `\"USER_DEFINED\"`: The field is a custom field and can be modified by 3rd-party apps or site contributors.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN\"`\n + `\"SYSTEM\"`\n + `\"USER_DEFINED\"`" },
             { "name": "_createdDate",
               "type": "Date",
               "doc": "Date and time the field was created." },
@@ -1782,13 +2207,14 @@
               "doc": "Date and time the field was last updated." },
             { "name": "namespace",
               "type": "string",
-              "doc": "<!--ONLY:REST-->\nExtended field namespace.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nExtended field [namespace](wix-crm-backend/contacts-obj/introduction#the-namespace-and-key-properties-in-labels-and-extended-fields).\n<!--END:ONLY:VELO-->\n\nExtended fields created by site contributors or 3rd-party apps\nare automatically assigned to the `custom` namespace." },
+              "doc": "<!--ONLY:REST\nExtended field namespace.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nExtended field [namespace](wix-crm-backend/contacts-obj/introduction#the-namespace-and-key-properties-in-labels-and-extended-fields).\n<!--END:ONLY:VELO-->\n\nExtended fields created by site contributors or 3rd-party apps\nare automatically assigned to the `custom` namespace." },
             { "name": "description",
               "type": "string",
               "doc": "Field description, if the field is a system field." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "GetLabelResult_16610519109",
         "locations":
           [ { "lineno": 1,
@@ -1808,7 +2234,7 @@
               "doc": "Human-readable label name shown in the Dashboard." },
             { "name": "labelType",
               "type": "string",
-              "doc": "Label type.\n\n<!--ONLY:REST-->\n- `SYSTEM`: The label is a default system label for the Contact List.\n- `USER_DEFINED`: The label was created by a site contributor or 3rd-party app.\n- `WIX_APP_DEFINED`: The label was created by a Wix app.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nOne of:\n\n- `\"SYSTEM\"`: The label is a predefined system label for the Contact List.\n- `\"USER_DEFINED\"`: The label was created by a site contributor or app.\n- `\"WIX_APP_DEFINED\"`: The label was created by a Wix app.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN\"`\n + `\"SYSTEM\"`\n + `\"USER_DEFINED\"`\n + `\"WIX_APP_DEFINED\"`" },
+              "doc": "Label type.\n\n<!--ONLY:REST\n- `SYSTEM`: The label is a default system label for the Contact List.\n- `USER_DEFINED`: The label was created by a site contributor or 3rd-party app.\n- `WIX_APP_DEFINED`: The label was created by a Wix app.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nOne of:\n\n- `\"SYSTEM\"`: The label is a predefined system label for the Contact List.\n- `\"USER_DEFINED\"`: The label was created by a site contributor or app.\n- `\"WIX_APP_DEFINED\"`: The label was created by a Wix app.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN\"`\n + `\"SYSTEM\"`\n + `\"USER_DEFINED\"`\n + `\"WIX_APP_DEFINED\"`" },
             { "name": "_createdDate",
               "type": "Date",
               "doc": "Date and time the label was created." },
@@ -1817,10 +2243,46 @@
               "doc": "Date and time the label was last updated." },
             { "name": "namespace",
               "type": "string",
-              "doc": "<!--ONLY:REST-->\nLabel namespace.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nLabel [namespace](wix-crm-backend/contacts-obj/introduction#the-namespace-and-key-properties-in-labels-and-extended-fields).\n<!--END:ONLY:VELO-->\n\nLabels created by site contributors or 3rd-party apps\nare automatically assigned to the `custom` namespace." } ],
+              "doc": "<!--ONLY:REST\nLabel namespace.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nLabel [namespace](wix-crm-backend/contacts-obj/introduction#the-namespace-and-key-properties-in-labels-and-extended-fields).\n<!--END:ONLY:VELO-->\n\nLabels created by site contributors or 3rd-party apps\nare automatically assigned to the `custom` namespace." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
+      { "name": "Image_7192463671",
+        "locations":
+          [ { "lineno": 255,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Image.",
+            "description":
+              [ "This can contain an image URL or a Wix Media image ID." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "WixMedia image ID.\n This property is written by Wix when an image is uploaded to the Wix Media Manager." },
+            { "name": "url",
+              "type": "string",
+              "doc": "Image source: Either a Media Manager URL or external URL." },
+            { "name": "height",
+              "type": "number",
+              "doc": "Height of the original image." },
+            { "name": "width",
+              "type": "number",
+              "doc": "Width of the original image." },
+            { "name": "altText",
+              "type": "string",
+              "doc": "Image alt text. Optional." },
+            { "name": "urlExpirationDate",
+              "type": "Date",
+              "doc": "Image URL expiration date (when relevant). Optional" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "LabelContactResult_185835099997",
         "locations":
           [ { "lineno": 1,
@@ -1859,6 +2321,38 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "LabelsWrapper_4698985271",
+        "locations":
+          [ { "lineno": 155,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "List of contact's labels.",
+            "description":
+              [ "Labels are used to organize contacts.",
+                "When setting the `labelKeys` property,",
+                "only labels that already exist in the site's Contacts List can be used.",
+                "Labels can be added and removed using",
+                "[Label Contact](https://dev.wix.com/api/rest/contacts/contacts/contacts-v4/label-contact) and",
+                "[Unlabel Contact](https://dev.wix.com/api/rest/contacts/contacts/contacts-v4/unlabel-contact),",
+                "respectively.",
+                "",
+                "To view or manage site labels, use the",
+                "[Labels API](https://dev.wix.com/api/rest/contacts/labels)." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "items",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "List of contact label keys.\n[Contact labels](https://support.wix.com/en/article/adding-labels-to-contacts-in-your-contact-list)\nhelp categorize contacts.\n\n<!--ONLY:REST\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[Find or Create Label](https://dev.wix.com/api/rest/contacts/labels/find-or-create-label)\nor\n[List Labels](https://dev.wix.com/api/rest/contacts/labels/list-labels)\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nLabel keys must exist to be added to the contact.\nContact labels can be created or retrieved with\n[`findOrCreateLabel()`](wix-crm-backend/contacts-obj/findorcreatelabel)\nor\n[`queryLabels()`](wix-crm-backend/contacts-obj/queryLabels).\n<!--END:ONLY:VELO-->" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ListExtendedFieldsResult_35909956769",
         "locations":
           [ { "lineno": 1,
@@ -1905,6 +2399,57 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "LocationsWrapper_4869843886",
+        "locations":
+          [ { "lineno": 190,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Contact locations",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "items",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "List of location ids." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "PagingMetadataV2_5131427542",
+        "locations":
+          [ { "lineno": 277,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Details on the paged set of results returned.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "count",
+              "type": "number",
+              "doc": "The number of items returned in this response" },
+            { "name": "offset",
+              "type": "number",
+              "doc": "The offset which was requested. Returned if offset paging was used" },
+            { "name": "total",
+              "type": "number",
+              "doc": "The total number of items that match the query. Returned if offset paging was used and 'too_many_to_count' flag is not set" },
+            { "name": "tooManyToCount",
+              "type": "boolean",
+              "doc": "A flag that indicates the server failed to calculate 'total' field" },
+            { "name": "cursors",
+              "type": "wix-contacts-backend.contacts.Cursors_1952694617",
+              "doc": "Cursors to navigate through result pages. Returned if cursor paging was used" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "PagingMetadata_3356054371",
         "locations":
           [ { "lineno": 23,
@@ -1951,6 +2496,29 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "Paging_1474975956",
+        "locations":
+          [ { "lineno": 269,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Pointer to page of results using offset. Can not be used together with 'cursorPaging'",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "doc": "Number of items to return.",
+              "optional": true },
+            { "name": "offset",
+              "type": "number",
+              "doc": "Number of items to skip in the current sort order.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Paging_3483965478",
         "locations":
           [ { "lineno": 9,
@@ -2011,6 +2579,51 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "QueryContactsCursorRequest_23926911964",
+        "locations":
+          [ { "lineno": 197,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "search",
+              "type": "string",
+              "doc": "Plain text search for an exact match, up to 100 characters.\nSearchable fields:\n- `info.name.first`\n- `info.name.last`\n- `info.emails.email`\n- `info.phones.phone`",
+              "optional": true },
+            { "name": "query",
+              "type": "wix-contacts-backend.contacts.QueryV2_18775906466",
+              "doc": "Query options.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "QueryContactsCursorResult_247190799427",
+        "locations":
+          [ { "lineno": 209,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contacts",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-contacts-backend.contacts.Contact_241561940482" ] },
+              "doc": "List of contacts." },
+            { "name": "pagingMetadata",
+              "type": "wix-contacts-backend.contacts.PagingMetadataV2_5131427542",
+              "doc": "Details on the paged set of results returned." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "QueryOptions_114952375",
         "locations":
           [ { "lineno": 174,
@@ -2077,6 +2690,80 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "QueryV2_18775906466",
+        "locations":
+          [ { "lineno": 321,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "summary": "Query options.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "filter",
+              "type": "Object",
+              "doc": "Filter options.\n For a detailed list of supported filters, see\n [Field Support for Filtering, Sorting, and Searching](https://dev.wix.com/api/rest/contacts/contacts/sort-and-filter#contacts_contacts_sort-and-filter_field-support-for-filtering-sorting-and-searching).",
+              "optional": true },
+            { "name": "sort",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-contacts-backend.contacts.Sorting_6490104114" ] },
+              "doc": "Sorting options (only one sortable field is supported)",
+              "optional": true },
+            { "name": "fields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "List of projected fields to return.\n\n If used in the request,\n all the fields contained in `fields` and `fieldsets` are returned.\n If left blank, `fieldsets` is used to determine which fields to return.\n\n For a list of valid projected fields, see\n [Valid Contact Projection Fields](https://dev.wix.com/api/rest/contacts/contacts/fieldsets-and-projected-fields#contacts_contacts_fieldsets-and-projected-fields_valid-contact-projection-fields).",
+              "optional": true },
+            { "name": "fieldsets",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Projection on the result object - list of named projections. E.g. \"basic\" will return id and name fields. Specifying multiple fieldsets will return the union of fields from all. Specifying fieldsets and fields will also return the union of fields.",
+              "optional": true },
+            { "name": "paging",
+              "type": "wix-contacts-backend.contacts.Paging_1474975956",
+              "doc": "Pointer to page of results using offset. Can not be used together with 'cursorPaging'",
+              "optional": true },
+            { "name": "cursorPaging",
+              "type": "wix-contacts-backend.contacts.CursorPaging_463792654",
+              "doc": "Cursor pointing to page of results. Can't be used together with 'paging'. 'cursorPaging.cursor' can not be used together with 'filter' or 'sort'",
+              "optional": true } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "pagingMethod",
+                  "members":
+                    [ "cursorPaging",
+                      "paging" ] } ] },
+        "labels":
+          [ "new" ] },
+      { "name": "Sorting_6490104114",
+        "locations":
+          [ { "lineno": 288,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "fieldName",
+              "type": "string",
+              "doc": "Field to sort by.\n For a list of sortable fields, see\n [Field Support for Filtering, Sorting, and Searching](https://dev.wix.com/api/rest/contacts/contacts/sort-and-filter#contacts_contacts_sort-and-filter_field-support-for-filtering-sorting-and-searching).",
+              "optional": true },
+            { "name": "order",
+              "type": "string",
+              "doc": "Sort order.\n Use `ASC` for ascending order or `DESC` for descending order.\n\n Defaults to `ASC`.\nOne of:\n + `\"ASC\"`\n + `\"DESC\"`",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Sorting_7533181984",
         "locations":
           [ { "lineno": 33,
@@ -2094,11 +2781,12 @@
               "optional": true },
             { "name": "order",
               "type": "string",
-              "doc": "Sort order.\n\n<!--ONLY:REST-->\n- `ASC`: Ascending order\n- `DESC`: Descending order.\n\nDefaults to `ASC`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nOne of:\n\n- `\"ASC\"`: Ascending order\n- `\"DESC\"`: Descending order\n\nDefaults to `\"ASC\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"ASC\"`\n + `\"DESC\"`",
+              "doc": "Sort order.\n\n<!--ONLY:REST\n- `ASC`: Ascending order\n- `DESC`: Descending order.\n\nDefaults to `ASC`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nOne of:\n\n- `\"ASC\"`: Ascending order\n- `\"DESC\"`: Descending order\n\nDefaults to `\"ASC\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"ASC\"`\n + `\"DESC\"`",
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "Sorting_8031618598",
         "locations":
           [ { "lineno": 33,
@@ -2116,11 +2804,38 @@
               "optional": true },
             { "name": "order",
               "type": "string",
-              "doc": "Sort order.\n\n<!--ONLY:REST-->\n- `ASC`: Ascending order\n- `DESC`: Descending order.\n\nDefaults to `ASC`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nOne of:\n\n- `\"ASC\"`: Ascending order\n- `\"DESC\"`: Descending order\n\nDefaults to `\"ASC\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"ASC\"`\n + `\"DESC\"`",
+              "doc": "Sort order.\n\n<!--ONLY:REST\n- `ASC`: Ascending order\n- `DESC`: Descending order.\n\nDefaults to `ASC`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nOne of:\n\n- `\"ASC\"`: Ascending order\n- `\"DESC\"`: Descending order\n\nDefaults to `\"ASC\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"ASC\"`\n + `\"DESC\"`",
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
+      { "name": "Subdivision_22771286178",
+        "locations":
+          [ { "lineno": 303,
+              "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_QueryContactsCursor_queryContactsCursor.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "code",
+              "type": "string",
+              "doc": "subdivision short code" },
+            { "name": "name",
+              "type": "string",
+              "doc": "Full subdivision name." },
+            { "name": "type",
+              "type": "string",
+              "doc": "One of:\n + `\"UNKNOWN_SUBDIVISION_TYPE\"`\n + `\"ADMINISTRATIVE_AREA_LEVEL_1\"`\n + `\"ADMINISTRATIVE_AREA_LEVEL_2\"`\n + `\"ADMINISTRATIVE_AREA_LEVEL_3\"`\n + `\"ADMINISTRATIVE_AREA_LEVEL_4\"`\n + `\"ADMINISTRATIVE_AREA_LEVEL_5\"`\n + `\"COUNTRY\"`" },
+            { "name": "typeInfo",
+              "type": "string",
+              "doc": "Free text that describes the subdivision type.\n\n Examples: `\"state\"`, `\"province\"`, `\"prefecture\"`." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "SubmitContactResult_13088734135",
         "locations":
           [ { "lineno": 1,
@@ -2136,10 +2851,11 @@
               "doc": "ID of the contact that was found or created." },
             { "name": "identityType",
               "type": "string",
-              "doc": "Identity type of the returned contact.\n\n<!--ONLY:REST-->\n- `CONTACT`: The returned contact ID belongs to a new or existing contact.\n- `MEMBER`: The returned contact ID belongs to the currently logged-in site member.\n- `NOT_AUTHENTICATED_MEMBER`: The returned contact ID belongs to a site member who is not currently logged in.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nOne of:\n\n- `\"CONTACT\"`: The returned contact ID belongs to a new or existing contact.\n- `\"MEMBER\"`: The returned contact ID belongs to the currently logged-in site member.\n- `\"NOT_AUTHENTICATED_MEMBER\"`: The returned contact ID belongs to a site member who is not currently logged in.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN\"`\n + `\"CONTACT\"`\n + `\"MEMBER\"`\n + `\"NOT_AUTHENTICATED_MEMBER\"`" } ],
+              "doc": "Identity type of the returned contact.\n\n<!--ONLY:REST\n- `CONTACT`: The returned contact ID belongs to a new or existing contact.\n- `MEMBER`: The returned contact ID belongs to the currently logged-in site member.\n- `NOT_AUTHENTICATED_MEMBER`: The returned contact ID belongs to a site member who is not currently logged in.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nOne of:\n\n- `\"CONTACT\"`: The returned contact ID belongs to a new or existing contact.\n- `\"MEMBER\"`: The returned contact ID belongs to the currently logged-in site member.\n- `\"NOT_AUTHENTICATED_MEMBER\"`: The returned contact ID belongs to a site member who is not currently logged in.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN\"`\n + `\"CONTACT\"`\n + `\"MEMBER\"`\n + `\"NOT_AUTHENTICATED_MEMBER\"`" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "UnlabelContactResult_184241817668",
         "locations":
           [ { "lineno": 1,
@@ -2180,7 +2896,7 @@
         "labels": [] },
       { "name": "UpdateContactRequest_2881667278",
         "locations":
-          [ { "lineno": 74,
+          [ { "lineno": 75,
               "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_UpdateContact_updateContact.js" } ],
         "docs":
           { "links": [],
@@ -2201,7 +2917,7 @@
         "labels": [] },
       { "name": "UpdateContactRequest_5249253530",
         "locations":
-          [ { "lineno": 63,
+          [ { "lineno": 64,
               "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_UpdateContact_updateContact.js" } ],
         "docs":
           { "links": [],
@@ -2221,8 +2937,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "UpdateContactRequest_6128665908",
         "locations":
           [ { "lineno": 63,
@@ -2249,7 +2964,7 @@
           [ "removed" ] },
       { "name": "UpdateContactResult_184364685210",
         "locations":
-          [ { "lineno": 89,
+          [ { "lineno": 90,
               "filename": "com_wixpress_contacts_core_api_v4_ContactsServiceV4_UpdateContact_updateContact.js" } ],
         "docs":
           { "summary": "Updated contact.",
@@ -2304,10 +3019,10 @@
               "doc": "Human-readable name shown in the Contact List." },
             { "name": "dataType",
               "type": "string",
-              "doc": "Type of data the field holds.\n\n<!--ONLY:REST-->\n- `TEXT`: Accepts strings.\n- `URL`: Accepts strings.\n- `DATE`: Accepts dates formatted as `YYYY-MM-DD`.\n- `NUMBER`: Accepts integers. For decimals, use type `TEXT`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nOne of:\n\n- `\"TEXT\"`: Accepts strings.\n- `\"URL\"`: Accepts strings.\n- `\"DATE\"`: Accepts dates formatted as `\"YYYY-MM-DD\"`.\n- `\"NUMBER\"`: Accepts integers. For decimals, use type `\"TEXT\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN_DATA_TYPE\"`\n + `\"TEXT\"`\n + `\"NUMBER\"`\n + `\"DATE\"`\n + `\"URL\"`" },
+              "doc": "Type of data the field holds.\n\n<!--ONLY:REST\n- `TEXT`: Accepts strings.\n- `URL`: Accepts strings.\n- `DATE`: Accepts dates formatted as `YYYY-MM-DD`.\n- `NUMBER`: Accepts integers. For decimals, use type `TEXT`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nOne of:\n\n- `\"TEXT\"`: Accepts strings.\n- `\"URL\"`: Accepts strings.\n- `\"DATE\"`: Accepts dates formatted as `\"YYYY-MM-DD\"`.\n- `\"NUMBER\"`: Accepts integers. For decimals, use type `\"TEXT\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN_DATA_TYPE\"`\n + `\"TEXT\"`\n + `\"NUMBER\"`\n + `\"DATE\"`\n + `\"URL\"`" },
             { "name": "fieldType",
               "type": "string",
-              "doc": "<!--ONLY:REST-->\nIndicates whether the extended field is a system field or custom field.\n\n- `SYSTEM`: The field is a system field managed by Wix. System fields cannot be modified by 3rd-party apps or site contributors.\n- `USER_DEFINED`: The field is a custom field and can be modified by 3rd-party apps or site contributors.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nIndicates whether the extended field is a\n[system field or custom field](wix-crm-backend/contacts-obj/introduction#about-extended-fields).\n\nOne of:\n\n- `\"SYSTEM\"`: The field is a system field managed by Wix. System fields cannot be modified by 3rd-party apps or site contributors.\n- `\"USER_DEFINED\"`: The field is a custom field and can be modified by 3rd-party apps or site contributors.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN\"`\n + `\"SYSTEM\"`\n + `\"USER_DEFINED\"`" },
+              "doc": "<!--ONLY:REST\nIndicates whether the extended field is a system field or custom field.\n\n- `SYSTEM`: The field is a system field managed by Wix. System fields cannot be modified by 3rd-party apps or site contributors.\n- `USER_DEFINED`: The field is a custom field and can be modified by 3rd-party apps or site contributors.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nIndicates whether the extended field is a\n[system field or custom field](wix-crm-backend/contacts-obj/introduction#about-extended-fields).\n\nOne of:\n\n- `\"SYSTEM\"`: The field is a system field managed by Wix. System fields cannot be modified by 3rd-party apps or site contributors.\n- `\"USER_DEFINED\"`: The field is a custom field and can be modified by 3rd-party apps or site contributors.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN\"`\n + `\"SYSTEM\"`\n + `\"USER_DEFINED\"`" },
             { "name": "_createdDate",
               "type": "Date",
               "doc": "Date and time the field was created." },
@@ -2316,13 +3031,14 @@
               "doc": "Date and time the field was last updated." },
             { "name": "namespace",
               "type": "string",
-              "doc": "<!--ONLY:REST-->\nExtended field namespace.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nExtended field [namespace](wix-crm-backend/contacts-obj/introduction#the-namespace-and-key-properties-in-labels-and-extended-fields).\n<!--END:ONLY:VELO-->\n\nExtended fields created by site contributors or 3rd-party apps\nare automatically assigned to the `custom` namespace." },
+              "doc": "<!--ONLY:REST\nExtended field namespace.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nExtended field [namespace](wix-crm-backend/contacts-obj/introduction#the-namespace-and-key-properties-in-labels-and-extended-fields).\n<!--END:ONLY:VELO-->\n\nExtended fields created by site contributors or 3rd-party apps\nare automatically assigned to the `custom` namespace." },
             { "name": "description",
               "type": "string",
               "doc": "Field description, if the field is a system field." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "UpdateLabelResult_17504426248",
         "locations":
           [ { "lineno": 1,
@@ -2342,7 +3058,7 @@
               "doc": "Human-readable label name shown in the Dashboard." },
             { "name": "labelType",
               "type": "string",
-              "doc": "Label type.\n\n<!--ONLY:REST-->\n- `SYSTEM`: The label is a default system label for the Contact List.\n- `USER_DEFINED`: The label was created by a site contributor or 3rd-party app.\n- `WIX_APP_DEFINED`: The label was created by a Wix app.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nOne of:\n\n- `\"SYSTEM\"`: The label is a predefined system label for the Contact List.\n- `\"USER_DEFINED\"`: The label was created by a site contributor or app.\n- `\"WIX_APP_DEFINED\"`: The label was created by a Wix app.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN\"`\n + `\"SYSTEM\"`\n + `\"USER_DEFINED\"`\n + `\"WIX_APP_DEFINED\"`" },
+              "doc": "Label type.\n\n<!--ONLY:REST\n- `SYSTEM`: The label is a default system label for the Contact List.\n- `USER_DEFINED`: The label was created by a site contributor or 3rd-party app.\n- `WIX_APP_DEFINED`: The label was created by a Wix app.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nOne of:\n\n- `\"SYSTEM\"`: The label is a predefined system label for the Contact List.\n- `\"USER_DEFINED\"`: The label was created by a site contributor or app.\n- `\"WIX_APP_DEFINED\"`: The label was created by a Wix app.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"UNKNOWN\"`\n + `\"SYSTEM\"`\n + `\"USER_DEFINED\"`\n + `\"WIX_APP_DEFINED\"`" },
             { "name": "_createdDate",
               "type": "Date",
               "doc": "Date and time the label was created." },
@@ -2351,9 +3067,10 @@
               "doc": "Date and time the label was last updated." },
             { "name": "namespace",
               "type": "string",
-              "doc": "<!--ONLY:REST-->\nLabel namespace.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nLabel [namespace](wix-crm-backend/contacts-obj/introduction#the-namespace-and-key-properties-in-labels-and-extended-fields).\n<!--END:ONLY:VELO-->\n\nLabels created by site contributors or 3rd-party apps\nare automatically assigned to the `custom` namespace." } ],
+              "doc": "<!--ONLY:REST\nLabel namespace.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO-->\nLabel [namespace](wix-crm-backend/contacts-obj/introduction#the-namespace-and-key-properties-in-labels-and-extended-fields).\n<!--END:ONLY:VELO-->\n\nLabels created by site contributors or 3rd-party apps\nare automatically assigned to the `custom` namespace." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "changed" ] } ],
   "extra":
     {  } }

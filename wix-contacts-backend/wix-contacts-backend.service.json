@@ -31,7 +31,7 @@
   "messages":
     [ { "name": "AddressLocation_4924634320",
         "locations":
-          [ { "lineno": 525,
+          [ { "lineno": 527,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Coordinates of the physical address.",
@@ -53,7 +53,7 @@
         "labels": [] },
       { "name": "AddressLocation_5110011762",
         "locations":
-          [ { "lineno": 533,
+          [ { "lineno": 535,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Coordinates of the physical address.",
@@ -73,7 +73,7 @@
         "labels": [] },
       { "name": "Address_37210032107",
         "locations":
-          [ { "lineno": 485,
+          [ { "lineno": 487,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Street [address](https://www.wix.com/velo/reference/$w/addressinput/value).",
@@ -127,7 +127,7 @@
         "labels": [] },
       { "name": "Address_38600362922",
         "locations":
-          [ { "lineno": 505,
+          [ { "lineno": 507,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Street [address](https://www.wix.com/velo/reference/$w/addressinput/value).",
@@ -191,8 +191,7 @@
               "doc": "Contact's last action in the site.\n\n<!--ONLY:REST-->\nFor descriptions of each value, see\n[Last Activity Types](https://dev.wix.com/api/rest/contacts/contacts/last-activity-types).\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nSome possible values:\n`\"GENERAL\"`, `\"CONTACT_CREATED\"`, `\"MEMBER_LOGIN\"`, `\"MEMBER_REGISTER\"`,\n`\"MEMBER_STATUS_CHANGED\"`, `\"FORM_SUBMITTED\"`, `\"INBOX_FORM_SUBMITTED\"`,\n`\"INBOX_PAYMENT_REQUEST_PAID\"`, `\"INBOX_MESSAGE_TO_CUSTOMER\"`,\n`\"INBOX_MESSAGE_FROM_CUSTOMER\"`, `\"NEWSLETTER_SUBSCRIPTION_FORM_SUBMITTED\"`,\n`\"NEWSLETTER_SUBSCRIPTION_UNSUBSCRIBE\"`, `\"ECOM_PURCHASE\"`,\n`\"ECOM_CART_ABANDON\"`, `\"ECOM_CHECKOUT_BUYER\"`, `\"BOOKINGS_APPOINTMENT\"`,\n`\"HOTELS_RESERVATION\"`, `\"HOTELS_PURCHASE\"`, `\"HOTELS_CONFIRMATION\"`,\n`\"HOTELS_CANCEL\"`, `\"VIDEO_PURCHASE\"`, `\"VIDEO_RENT\"`,\n`\"CASHIER_BUTTON_PURCHASE\"`, `\"ARENA_NEW_LEAD\"`, `\"EVENTS_RSVP\"`,\n`\"INVOICE_PAY\"`, `\"INVOICE_OVERDUE\"`, `\"PRICE_QUOTE_ACCEPT\"`,\n`\"PRICE_QUOTE_EXPIRE\"`, `\"RESTAURANTS_ORDER\"`, `\"RESTAURANTS_RESERVATION\"`,\n`\"SHOUTOUT_OPEN\"`, `\"SHOUTOUT_CLICK\"`, `\"CONTACT_MERGED\"`.\n<!--END:ONLY:VELO-->\nOne of:\n + `\"GENERAL\"`\n + `\"CONTACT_CREATED\"`\n + `\"MEMBER_LOGIN\"`\n + `\"MEMBER_REGISTER\"`\n + `\"MEMBER_STATUS_CHANGED\"`\n + `\"FORM_SUBMITTED\"`\n + `\"INBOX_FORM_SUBMITTED\"`\n + `\"INBOX_PAYMENT_REQUEST_PAID\"`\n + `\"INBOX_MESSAGE_TO_CUSTOMER\"`\n + `\"INBOX_MESSAGE_FROM_CUSTOMER\"`\n + `\"NEWSLETTER_SUBSCRIPTION_FORM_SUBMITTED\"`\n + `\"NEWSLETTER_SUBSCRIPTION_UNSUBSCRIBE\"`\n + `\"ECOM_PURCHASE\"`\n + `\"ECOM_CART_ABANDON\"`\n + `\"ECOM_CHECKOUT_BUYER\"`\n + `\"BOOKINGS_APPOINTMENT\"`\n + `\"HOTELS_RESERVATION\"`\n + `\"HOTELS_PURCHASE\"`\n + `\"HOTELS_CONFIRMATION\"`\n + `\"HOTELS_CANCEL\"`\n + `\"VIDEO_PURCHASE\"`\n + `\"VIDEO_RENT\"`\n + `\"CASHIER_BUTTON_PURCHASE\"`\n + `\"ARENA_NEW_LEAD\"`\n + `\"EVENTS_RSVP\"`\n + `\"INVOICE_PAY\"`\n + `\"INVOICE_OVERDUE\"`\n + `\"PRICE_QUOTE_ACCEPT\"`\n + `\"PRICE_QUOTE_EXPIRE\"`\n + `\"RESTAURANTS_ORDER\"`\n + `\"RESTAURANTS_RESERVATION\"`\n + `\"SHOUTOUT_OPEN\"`\n + `\"SHOUTOUT_CLICK\"`\n + `\"CONTACT_MERGED\"`" } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ContactAddress_42866033430",
         "locations":
           [ { "lineno": 65,
@@ -213,8 +212,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ContactAddress_45366844077",
         "locations":
           [ { "lineno": 94,
@@ -236,8 +234,7 @@
               "doc": "Street [address](https://www.wix.com/velo/reference/$w/addressinput/value)." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ContactEmail_12381712122",
         "locations":
           [ { "lineno": 124,
@@ -262,8 +259,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ContactEmail_13584880675",
         "locations":
           [ { "lineno": 154,
@@ -288,8 +284,7 @@
               "doc": "Indicates whether this is the contact's primary email address.\n When changing `primary` to `true` for an email,\n the contact's other emails become `false`." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ContactInfo_106294058002",
         "locations":
           [ { "lineno": 185,
@@ -322,7 +317,7 @@
               "optional": true },
             { "name": "jobTitle",
               "type": "string",
-              "doc": "Contact's job title.",
+              "doc": "Contact's job title.\n Corresponds to the **Position** field in the Dashboard.",
               "optional": true },
             { "name": "locale",
               "type": "string",
@@ -456,7 +451,7 @@
           [ "removed" ] },
       { "name": "ContactInfo_120816989824",
         "locations":
-          [ { "lineno": 259,
+          [ { "lineno": 260,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contact's details.",
@@ -473,7 +468,7 @@
               "doc": "Contact's company name." },
             { "name": "jobTitle",
               "type": "string",
-              "doc": "Contact's job title." },
+              "doc": "Contact's job title.\n Corresponds to the **Position** field in the Dashboard." },
             { "name": "locale",
               "type": "string",
               "doc": "Contact's locale, formatted as an\n [IETF BCP 47 language tag](https://tools.ietf.org/html/rfc5646).\n Typically, this is a lowercase 2-letter language code,\n followed by a hyphen,\n followed by an uppercase 2-letter country code.\n\n For example, German from Germany is formatted as `de-DE`,\n and U.S. English is formatted as `en-US`." },
@@ -519,7 +514,7 @@
           [ "changed" ] },
       { "name": "ContactLabel_19402415408",
         "locations":
-          [ { "lineno": 631,
+          [ { "lineno": 633,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Label that was found or created.",
@@ -548,11 +543,10 @@
               "doc": "<!--ONLY:REST-->\nLabel namespace.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nLabel [namespace](wix-crm-backend/contacts-obj/introduction#the-namespace-and-key-properties-in-labels-and-extended-fields).\n<!--END:ONLY:VELO-->\n\nLabels created by site contributors or 3rd-party apps\nare automatically assigned to the `custom` namespace." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ContactName_220445514",
         "locations":
-          [ { "lineno": 332,
+          [ { "lineno": 334,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contact's first and last name.",
@@ -572,7 +566,7 @@
         "labels": [] },
       { "name": "ContactName_35068072",
         "locations":
-          [ { "lineno": 324,
+          [ { "lineno": 326,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contact's first and last name.",
@@ -594,7 +588,7 @@
         "labels": [] },
       { "name": "ContactPhone_15453814565",
         "locations":
-          [ { "lineno": 340,
+          [ { "lineno": 342,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -620,11 +614,10 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ContactPhone_21266581029",
         "locations":
-          [ { "lineno": 375,
+          [ { "lineno": 377,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -652,11 +645,10 @@
               "doc": "Whether this is the contact's primary phone number.\n When changing `primary` to `true` for a phone,\n the contact's other phones become `false`." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ContactPicture_1998727965",
         "locations":
-          [ { "lineno": 415,
+          [ { "lineno": 417,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contact's profile picture.",
@@ -673,7 +665,7 @@
         "labels": [] },
       { "name": "ContactSource_18251037697",
         "locations":
-          [ { "lineno": 423,
+          [ { "lineno": 425,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Details about the contact's source.",
@@ -690,11 +682,10 @@
               "doc": "App ID, if the contact was created by an app." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ExtendedField_29199126759",
         "locations":
-          [ { "lineno": 559,
+          [ { "lineno": 561,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Extended field that was found or created.",
@@ -729,11 +720,10 @@
               "doc": "Field description, if the field is a system field." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Options_936495653",
         "locations":
-          [ { "lineno": 674,
+          [ { "lineno": 676,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Authorization options.",
@@ -751,7 +741,7 @@
         "labels": [] },
       { "name": "PrimaryContactInfo_8495030145",
         "locations":
-          [ { "lineno": 457,
+          [ { "lineno": 459,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contact's primary phone and email.",
@@ -768,11 +758,10 @@
               "doc": "Primary phone number.\n\n<!--ONLY:REST-->\nThis property reflects the phone number in `info.phones`\nwhere `primary` is `true`.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nThis property reflects the phone number in `contactInfo.phones`\nwhere `primary` is `true`.\n<!--END:ONLY:VELO-->" } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "StreetAddress_7417547785",
         "locations":
-          [ { "lineno": 541,
+          [ { "lineno": 543,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Street address object, with number and name in separate fields.",
@@ -798,7 +787,7 @@
         "labels": [] },
       { "name": "StreetAddress_7695613948",
         "locations":
-          [ { "lineno": 550,
+          [ { "lineno": 552,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Street address object, with number and name in separate fields.",
@@ -821,7 +810,7 @@
         "labels": [] },
       { "name": "Value_11948408011",
         "locations":
-          [ { "lineno": 1679,
+          [ { "lineno": 1681,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "`key` of type string, `value` of type object",
@@ -870,7 +859,7 @@
         "labels": [] },
       { "name": "Value_12597229058",
         "locations":
-          [ { "lineno": 1694,
+          [ { "lineno": 1696,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "`key` of type string, `value` of type object",

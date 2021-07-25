@@ -3,7 +3,7 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 683,
+    { "lineno": 681,
       "filename": "shared.js" },
   "docs":
     { "summary": "Contains functionality for refining a contacts query.",

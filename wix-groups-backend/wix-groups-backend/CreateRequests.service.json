@@ -1,0 +1,271 @@
+{ "name": "CreateRequests",
+  "memberOf": "wix-groups-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "createRequests.js" },
+  "docs":
+    { "summary": "The Groups createRequests API provides functionality for managing requests to create a group.",
+      "description":
+        [ "The Groups createRequests API provides functionality for managing requests to create a group.",
+          "",
+          "",
+          "```javascript",
+          "import { createRequests } from \"wix-groups-backend\";",
+          "```" ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "approveCreateRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "createRequestIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Group request IDs to approve." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-groups-backend.CreateRequests.CreateRequest" ] } ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 38,
+              "filename": "createRequests.js" } ],
+        "docs":
+          { "summary": "Approves group requests.",
+            "description":
+              [ "Group managers have access to this functionality." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "cancelCreateRequest",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "createRequestId",
+              "type": "string",
+              "doc": "Group Request ID to cancel." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.CreateRequests.CreateRequest" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 51,
+              "filename": "createRequests.js" } ],
+        "docs":
+          { "summary": "Cancels a group request.",
+            "description":
+              [ "Group managers always have access to this functionality. Site members can cancel their own group requests.",
+                "This endpoint doesn't support server signing." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listCreateRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "paging",
+              "type": "wix-groups-backend.PagingOptions" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.CreateRequests.ListCreateRequests" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 72,
+              "filename": "createRequests.js" } ],
+        "docs":
+          { "summary": "Lists group requests across the site.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "queryCreateRequests",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "wix-groups-backend.CreateRequests.GroupsQueryBuilder_15720021790",
+            "doc": "Contains functionality for refining a groups query.\nThe `GroupsQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the groups query functions,\nrefine the query by chaining `GroupsQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixGroupsBackend from 'wix-groups-backend';\n\nwixGroupsBackend.queryGroups()\n  .eq(\"<property1>\", \"<value1>\")\n  .ascending(\"<property2>\")\n  .limit(5)\n  .find()\n  .then( (results) => {\n    console.log(results.items);\n  } );\n```" },
+        "locations":
+          [ { "lineno": 1289,
+              "filename": "createRequests.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of groups requests across the site.",
+            "description":
+              [ "Supported fields for filtering:",
+                "- `status`",
+                "",
+                "Supported fields for sorting:",
+                "- `createdDate`" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "rejectCreateRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "rejections",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.CreateRequests.RejectCreateRequest" ] },
+              "doc": "Rejection data." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.CreateRequests.CreateRequest" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 91,
+              "filename": "createRequests.js" } ],
+        "docs":
+          { "summary": "Rejects group requests.",
+            "description":
+              [ "Group managers have access to this functionality." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "CreateRequest",
+        "locations":
+          [ { "lineno": 20,
+              "filename": "createRequests.js" } ],
+        "docs":
+          { "summary": "Site owners may choose to require that site members request approval when creating groups (available in the Wix Business Manager under Groups Application Settings).",
+            "description":
+              [ "When approval is required, only a groups manager can approve a request to create a new group.",
+                "When a group request is approved, the new group is added to the groups lists in the Wix UI." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group request ID" },
+            { "name": "status",
+              "type": "string",
+              "doc": "Status of group request.\nOne of:\n + `\"UNKNOWN_STATUS\"`\n + `\"PENDING\"`\n + `\"APPROVED\"`\n + `\"REJECTED\"`\n + `\"CANCELLED\"`" },
+            { "name": "rejectionReason",
+              "type": "string",
+              "doc": "Group request rejection reason." },
+            { "name": "group",
+              "type": "wix-groups-backend.Group",
+              "doc": "Group requested for creation." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListCreateRequests",
+        "locations":
+          [ { "lineno": 65,
+              "filename": "createRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "createRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.CreateRequests.CreateRequest" ] },
+              "doc": "Group requests." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.Metadata" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryOptions_7474206393",
+        "locations":
+          [ { "lineno": 1278,
+              "filename": "createRequests.js" } ],
+        "docs":
+          { "summary": "The `options` parameter is an optional parameter that can be used when calling the query [`find()`](#find) function.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "ownershipFilter",
+              "type": "string",
+              "doc": "Ownership filter. In case of server signing `ALL` value has to be used.\nOne of:\n- `\"ALL\"` - All group requests.\n- `\"CURRENT_MEMBER\"` - Group requests for current site member.",
+              "optional": true },
+            { "name": "suppressAuth",
+              "type": "boolean",
+              "doc": "When `true`, prevents permission checks from running for the operation.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RejectCreateRequest",
+        "locations":
+          [ { "lineno": 84,
+              "filename": "createRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "createRequestId",
+              "type": "string",
+              "doc": "Group request IDs to reject.",
+              "optional": true },
+            { "name": "reason",
+              "type": "string",
+              "doc": "Rejection reason. Free text that will be displayed to the creator of the rejected group request (max 1,000 characters).",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

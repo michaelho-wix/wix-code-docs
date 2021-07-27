@@ -1,0 +1,294 @@
+{ "name": "JoinRequests",
+  "memberOf": "wix-groups-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "joinRequests.js" },
+  "docs":
+    { "summary": "The Groups joinRequests API provides functionality for managing requests to join a group.",
+      "description":
+        [ "The Groups joinRequests API provides functionality for managing requests to join a group." ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "approveJoinGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "identifiers",
+              "type": "wix-groups-backend.JoinRequests.Identifiers" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.JoinRequests.ApproveJoinGroupRequestsResult_11213051240" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 49,
+              "filename": "joinRequests.js" } ],
+        "docs":
+          { "summary": "Approves pending join group requests.",
+            "description":
+              [ "Group managers always have access to this functionality. In some cases, site owners will allow group members to use this functionality as well." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listJoinGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "paging",
+              "type": "wix-groups-backend.PagingOptions" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.JoinRequests.ListJoinGroupRequestsResult_16992387138" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 69,
+              "filename": "joinRequests.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 join group requests, given the provided paging.",
+            "description":
+              [ "Group managers always have access to this functionality (site members can access their own join group requests in the site)." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "queryJoinGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "wix-groups-backend.JoinRequests.GroupsQueryBuilder_13618944661",
+            "doc": "Contains functionality for refining a groups query.\nThe `GroupsQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the groups query functions,\nrefine the query by chaining `GroupsQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixGroupsBackend from 'wix-groups-backend';\n\nwixGroupsBackend.queryGroups()\n  .eq(\"<property1>\", \"<value1>\")\n  .ascending(\"<property2>\")\n  .limit(5)\n  .find()\n  .then( (results) => {\n    console.log(results.items);\n  } );\n```" },
+        "locations":
+          [ { "lineno": 1299,
+              "filename": "joinRequests.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 join group requests, given the provided paging and filtering.",
+            "description":
+              [ "Group managers always have access to this functionality (site members can access their own join group requests in the site).",
+                "",
+                "Supported fields for filtering:",
+                "- `status`",
+                "",
+                "No supported fields for sorting" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "rejectJoinGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "rejections",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.JoinRequests.RejectJoinRequest" ] },
+              "doc": "Rejection data." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.JoinRequests.RejectJoinGroupRequestsResult_13520655515" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 98,
+              "filename": "joinRequests.js" } ],
+        "docs":
+          { "summary": "Rejects pending join group requests.",
+            "description":
+              [ "Group managers always have access to this functionality. In some cases, site owners will allow group members to use this functionality as well." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "ApproveJoinGroupRequestsResult_11213051240",
+        "locations":
+          [ { "lineno": 24,
+              "filename": "joinRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "joinGroupRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.JoinRequests.JoinGroupRequest_7108516840" ] },
+              "doc": "Approved join group requests." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Identifiers",
+        "locations":
+          [ { "lineno": 17,
+              "filename": "joinRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "memberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Site member IDs to approve." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "JoinGroupRequest_7108516840",
+        "locations":
+          [ { "lineno": 30,
+              "filename": "joinRequests.js" } ],
+        "docs":
+          { "summary": "To join a private group, a site member must submit a join group request, which can be approved or rejected by a group admin or a groups manager.",
+            "description":
+              [ "When a join group request is approved, the site member becomes a group member." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "memberId",
+              "type": "string",
+              "doc": "Site member ID of requester" },
+            { "name": "status",
+              "type": "string",
+              "doc": "Join group request status.\n- `PENDING` - Pending join group request.\n- `APPROVED` - Approved join group request.\n- `REJECTED` - Rejected join group request.\n- `CANCELLED` - Cancelled join group request.\nOne of:\n + `\"UNKNOWN_STATUS\"`\n + `\"PENDING\"`\n + `\"APPROVED\"`\n + `\"REJECTED\"`\n + `\"CANCELLED\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListJoinGroupRequestsResult_16992387138",
+        "locations":
+          [ { "lineno": 62,
+              "filename": "joinRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "joinGroupRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.JoinRequest" ] },
+              "doc": "Join group requests." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.Metadata" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryOptions_9738720367",
+        "locations":
+          [ { "lineno": 1285,
+              "filename": "joinRequests.js" } ],
+        "docs":
+          { "summary": "The `options` parameter is an optional parameter that can be used when calling the query [`find()`](#find) function.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "ownershipFilter",
+              "type": "string",
+              "doc": "Ownership filter. In case of server signing `ALL` value must be used.\n- `ALL` - All join group requests.\n- `CURRENT_MEMBER` - Join group requests for current site member.\nOne of:\n + `\"ALL\"`\n + `\"CURRENT_MEMBER\"`",
+              "optional": true },
+            { "name": "suppressAuth",
+              "type": "boolean",
+              "doc": "When `true`, prevents permission checks from running for the operation.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RejectJoinGroupRequestsResult_13520655515",
+        "locations":
+          [ { "lineno": 92,
+              "filename": "joinRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "joinGroupRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.JoinRequest" ] },
+              "doc": "Rejected join group requests." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RejectJoinRequest",
+        "locations":
+          [ { "lineno": 85,
+              "filename": "joinRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "siteMemberId",
+              "type": "string",
+              "doc": "Site member ID to reject.",
+              "optional": true },
+            { "name": "reason",
+              "type": "string",
+              "doc": "Rejection reason. Free text that will be displayed to the rejected site member (max 1,000 characters).",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

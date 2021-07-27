@@ -1,0 +1,405 @@
+{ "name": "Groups",
+  "memberOf": "wix-groups-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "groups.js" },
+  "docs":
+    { "summary": "The Groups groups API provides functionality for creating, deleting, updating, and querying groups.",
+      "description":
+        [ "The Groups groups API provides functionality for creating, deleting, updating, and querying groups." ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "createGroup",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupInfo",
+              "type": "wix-groups-backend.Groups.GroupInfo",
+              "doc": "Group to create." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.Group" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 38,
+              "filename": "groups.js" } ],
+        "docs":
+          { "summary": "Creates a group.",
+            "description":
+              [ "Group managers always have access to this functionality. In some cases, site owners will allow site members to use this functionality as well.",
+                "Specify a `creatorId` to set the group's creator, who will be added as a group admin." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "deleteGroup",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "ID of group to delete." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.Groups.DeleteGroupResult_43628976262" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 58,
+              "filename": "groups.js" } ],
+        "docs":
+          { "summary": "Deletes a group.",
+            "description":
+              [ "Group managers and group admins have access to this functionality.",
+                "The group will no longer be accessible in the live site or the Wix business manager." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "getGroup",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "ID of requested group." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.Group" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 78,
+              "filename": "groups.js" } ],
+        "docs":
+          { "summary": "Retrieves a group by ID.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "getGroupBySlug",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "slug",
+              "type": "string",
+              "doc": "Slug (part of a group's URL, e.g., 'https:/example.com/groups/{slug}'). Pass only the slug. Case-sensitive." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.Group" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 90,
+              "filename": "groups.js" } ],
+        "docs":
+          { "summary": "Retrieves a group by slug.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listGroups",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "paging",
+              "type": "wix-groups-backend.PagingOptions" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.Groups.ListGroupsResult_47282875904" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 131,
+              "filename": "groups.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 groups across the site.",
+            "description":
+              [ "Groups managers can see all existing groups." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "queryGroups",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "wix-groups-backend.Groups.GroupsQueryBuilder_19769261536",
+            "doc": "Contains functionality for refining a groups query.\nThe `GroupsQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the groups query functions,\nrefine the query by chaining `GroupsQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixGroupsBackend from 'wix-groups-backend';\n\nwixGroupsBackend.queryGroups()\n  .eq(\"<property1>\", \"<value1>\")\n  .ascending(\"<property2>\")\n  .limit(5)\n  .find()\n  .then( (results) => {\n    console.log(results.items);\n  } );\n```" },
+        "locations":
+          [ { "lineno": 1340,
+              "filename": "groups.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 groups across a site.",
+            "description":
+              [ "Groups managers can see all groups.",
+                "",
+                "Supported fields for filtering:",
+                "- `title`",
+                "",
+                "Supported fields for sorting:",
+                "- `title`",
+                "- `createdDate`",
+                "- `membersCount`",
+                "- `recentActivityDate`" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "updateGroup",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupInfo",
+              "type": "wix-groups-backend.Groups.GroupInfoUpdate",
+              "doc": "Group to update." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.Group" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 145,
+              "filename": "groups.js" } ],
+        "docs":
+          { "summary": "Updates a group.",
+            "description":
+              [ "Group managers and group admins have access to this functionality.",
+                "",
+                "When `group.privacyLevel` is updated from `PRIVATE` to `PUBLIC`, all pending group join requests are automatically approved.",
+                "",
+                "When `group.privacyLevel` is updated from `PRIVATE` to `SECRET`, all pending group join requests are automatically rejected." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "CreateGroupResult_41702639671",
+        "locations":
+          [ { "lineno": 15,
+              "filename": "groups.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "group",
+              "type": "wix-groups-backend.Group",
+              "doc": "Requested group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "DeleteGroupResult_43628976262",
+        "locations":
+          [ { "lineno": 52,
+              "filename": "groups.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "group",
+              "type": "wix-groups-backend.Group",
+              "doc": "Requested group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetGroupResult_43649920823",
+        "locations":
+          [ { "lineno": 72,
+              "filename": "groups.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "group",
+              "type": "wix-groups-backend.Group",
+              "doc": "Requested group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupInfo",
+        "locations":
+          [ { "lineno": 21,
+              "filename": "groups.js" } ],
+        "docs":
+          { "summary": "Group to create.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Group name." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format.",
+              "optional": true },
+            { "name": "privacyStatus",
+              "type": "string",
+              "doc": "Group privacy level.\nOne of:\n- `\"PUBLIC\"` - Anyone can see group in groups list and its content. Anyone can join group.\n- `\"PRIVATE\"` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `\"SECRET\"` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.",
+              "optional": true },
+            { "name": "coverImage",
+              "type": "wix-groups-backend.CoverImage",
+              "doc": "Group cover image.",
+              "optional": true },
+            { "name": "memberTitle",
+              "type": "string",
+              "doc": "What group members are called (e.g., 'Coworkers', 'Friends', 'Students').",
+              "optional": true },
+            { "name": "settings",
+              "type": "wix-groups-backend.GroupSettings",
+              "doc": "Group settings.",
+              "optional": true },
+            { "name": "owner",
+              "type": "string",
+              "doc": "Site member ID of the group creator." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupInfoUpdate",
+        "locations":
+          [ { "lineno": 109,
+              "filename": "groups.js" } ],
+        "docs":
+          { "summary": "Group to update.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Group title.",
+              "optional": true },
+            { "name": "teaser",
+              "type": "string",
+              "doc": "Group teaser.",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format.",
+              "optional": true },
+            { "name": "privacyStatus",
+              "type": "string",
+              "doc": "Group privacy level.\n- `PUBLIC` - Anyone can see group in groups list and its content. Anyone can join group.\n- `PRIVATE` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `SECRET` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.\nOne of:\n + `\"UNKNOWN\"`\n + `\"PUBLIC\"`\n + `\"PRIVATE\"`\n + `\"SECRET\"`",
+              "optional": true },
+            { "name": "coverImage",
+              "type": "wix-groups-backend.CoverImageOptions",
+              "doc": "Group details.",
+              "optional": true },
+            { "name": "memberTitle",
+              "type": "string",
+              "doc": "What group members are called (e.g., 'Coworkers', 'Friends', 'Students').",
+              "optional": true },
+            { "name": "settings",
+              "type": "wix-groups-backend.GroupSettingsOptions",
+              "doc": "Group settings.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListGroupsResult_47282875904",
+        "locations":
+          [ { "lineno": 102,
+              "filename": "groups.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groups",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.Group" ] },
+              "doc": "Groups." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.Metadata" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryOptions_114952375",
+        "locations":
+          [ { "lineno": 1333,
+              "filename": "groups.js" } ],
+        "docs":
+          { "summary": "The `options` parameter is an optional parameter that can be used when calling the query [`find()`](#find) function.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "suppressAuth",
+              "type": "boolean",
+              "doc": "When `true`, prevents permission checks from running for the operation.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

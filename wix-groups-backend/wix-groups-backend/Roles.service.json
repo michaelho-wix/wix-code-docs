@@ -1,0 +1,162 @@
+{ "name": "Roles",
+  "memberOf": "wix-groups-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "roles.js" },
+  "docs":
+    { "summary": "The Bookings Resources API provides functionality for creating, managing, and querying resources.",
+      "description":
+        [ "The Bookings Resources API provides functionality for creating, managing, and querying resources." ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "assignRole",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "identifiers",
+              "type": "wix-groups-backend.Roles.Identifiers" },
+            { "name": "role",
+              "type": "string",
+              "doc": "Group member role. One of:\n- `MEMBER` - Regular group member\n- `ADMIN` - Group admin" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.Roles.Role" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 32,
+              "filename": "roles.js" } ],
+        "docs":
+          { "summary": "Assigns a specific group role to group members (relevant for existing group members only).",
+            "description":
+              [ "Can be used only by a group admin or a groups manager." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "unassignRole",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "identifiers",
+              "type": "wix-groups-backend.Roles.UnassignRoleRequest_5683815885" },
+            { "name": "role",
+              "type": "string",
+              "doc": "Group member role. One of:\n- `MEMBER` - Regular group member\n- `ADMIN` - Group admin" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.Roles.UnassignRoleResult_4215245214" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 65,
+              "filename": "roles.js" } ],
+        "docs":
+          { "summary": "Unassigns a specific group role from group members (currently relevant only for group admins - members can't be unassigned).",
+            "description":
+              [ "Can be used only by a group admin or a groups manager." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "Identifiers",
+        "locations":
+          [ { "lineno": 17,
+              "filename": "roles.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "siteMemberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Group member IDs for this role." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Role",
+        "locations":
+          [ { "lineno": 24,
+              "filename": "roles.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "role",
+              "type": "string",
+              "doc": "Group member role. One of:\n- `MEMBER` - Regular group member\n- `ADMIN` - Group admin" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UnassignRoleRequest_5683815885",
+        "locations":
+          [ { "lineno": 50,
+              "filename": "roles.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "memberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Group member IDs to unassign from this role." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UnassignRoleResult_4215245214",
+        "locations":
+          [ { "lineno": 57,
+              "filename": "roles.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "role",
+              "type": "string",
+              "doc": "Group member role. One of:\n- `MEMBER` - Regular group member\n- `ADMIN` - Group admin" } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
